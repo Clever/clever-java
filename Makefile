@@ -7,7 +7,6 @@ test:
 	echo "TODO test app"
 
 build:
-	echo "TODO build app"
+	cd override && ./override.sh
+	mvn package
 
-run: build
-	echo "TODO run app"
