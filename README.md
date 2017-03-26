@@ -29,18 +29,18 @@ import io.swagger.client.auth.OAuth;
 public class CleverAPI {
 
     public static void main(String[] args) {
-    	ApiClient defaultClient = Configuration.getDefaultApiClient();
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-   		// Configure OAuth2 access token for authorization: oauth
-	    OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-	    oauth.setAccessToken("TODO: SET ME!");
+        // Configure OAuth2 access token for authorization: oauth
+        OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+        oauth.setAccessToken("TODO: SET ME!");
 
-	    api = new DefaultApi();
-	    StudentsResponse students = api.getStudents(10, null, null);
-	    for (StudentResponse student : students.getData()) {
-	    	System.out.println("Student IDs: ", student.getData().getId());
-	    }
-	}
+        api = new DefaultApi();
+        StudentsResponse students = api.getStudents(10, null, null);
+        for (StudentResponse student : students.getData()) {
+            System.out.println("Student IDs: ", student.getData().getId());
+        }
+    }
 }
 ```
 
