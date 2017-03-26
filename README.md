@@ -64,7 +64,7 @@ public void processEvents(DefaultApi api) {
 
 2. Git clone Clever's swagger-api repo (https://github.com/Clever/swagger-api)
 
-3. Install Java
+3. Install Java and Maven
 
 4. In the root directory of the swagger repo run:
 ```
@@ -78,3 +78,10 @@ mvn package
 ```
 
 That will put the jar in: `src/target/swagger-java-client-1.0.0-tests.jar`
+
+
+## Publishing
+
+Use the clever-eng user for Sonatype.
+
+TODO: Add more details
