@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * TeachersResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-23T15:48:07.205-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
 public class TeachersResponse {
   @SerializedName("data")
   private List<TeacherResponse> data = new ArrayList<TeacherResponse>();

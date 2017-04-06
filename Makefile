@@ -7,6 +7,7 @@ test:
 	echo "TODO test app"
 
 build:
+	rm -r target || true
 	cd override && ./override.sh
 	mvn package
 

@@ -16,7 +16,6 @@ Name | Type | Description | Notes
 **period** | **String** |  |  [optional]
 **school** | **String** |  |  [optional]
 **sectionNumber** | **String** |  |  [optional]
-**sectionGroup** | **String** |  |  [optional]
 **sisId** | **String** |  |  [optional]
 **students** | **List&lt;String&gt;** |  |  [optional]
 **subject** | **String** |  |  [optional]
