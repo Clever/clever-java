@@ -10,3 +10,5 @@ build:
 	cd override && ./override.sh
 	mvn package
 
+release:
+	mvn clean deploy
