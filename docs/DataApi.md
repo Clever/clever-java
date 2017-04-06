@@ -1,54 +1,47 @@
-# DefaultApi
+# DataApi
 
 All URIs are relative to *https://api.clever.com/v1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getContact**](DefaultApi.md#getContact) | **GET** /contacts/{id} | Get only a specific studentcontact&#39;s information.
-[**getContacts**](DefaultApi.md#getContacts) | **GET** /contacts | Gets a list of student contacts you have access to.
-[**getContactsForStudent**](DefaultApi.md#getContactsForStudent) | **GET** /students/{id}/contacts | Retrieves all contacts for a student.
-[**getDistrict**](DefaultApi.md#getDistrict) | **GET** /districts/{id} | Get only a specific district&#39;s information.
-[**getDistrictAdmin**](DefaultApi.md#getDistrictAdmin) | **GET** /district_admins/{id} | Retrieves a district admin
-[**getDistrictAdmins**](DefaultApi.md#getDistrictAdmins) | **GET** /district_admins | Retrieves all users with admin access to a district.
-[**getDistrictForSchool**](DefaultApi.md#getDistrictForSchool) | **GET** /schools/{id}/district | Retrieves district information for a school.
-[**getDistrictForSection**](DefaultApi.md#getDistrictForSection) | **GET** /sections/{id}/district | Retrieves district information for a section.
-[**getDistrictForStudent**](DefaultApi.md#getDistrictForStudent) | **GET** /students/{id}/district | Retrieves district information for a student.
-[**getDistrictForStudentContact**](DefaultApi.md#getDistrictForStudentContact) | **GET** /contacts/{id}/district | Retrieves the district for a contact.
-[**getDistrictForTeacher**](DefaultApi.md#getDistrictForTeacher) | **GET** /teachers/{id}/district | Retrieves district information for a teacher.
-[**getDistricts**](DefaultApi.md#getDistricts) | **GET** /districts | Gets a list of districts you have access to.
-[**getEvent**](DefaultApi.md#getEvent) | **GET** /events/{id} | Retrieves a single event.
-[**getEvents**](DefaultApi.md#getEvents) | **GET** /events | Retrieves all events
-[**getEventsForSchool**](DefaultApi.md#getEventsForSchool) | **GET** /schools/{id}/events | Retrieves events for schools.
-[**getEventsForSchoolAdmin**](DefaultApi.md#getEventsForSchoolAdmin) | **GET** /school_admins/{id}/events | Retrieves events for school_admins.
-[**getEventsForSection**](DefaultApi.md#getEventsForSection) | **GET** /sections/{id}/events | Retrieves events for sections.
-[**getEventsForStudent**](DefaultApi.md#getEventsForStudent) | **GET** /students/{id}/events | Retrieves events for students.
-[**getEventsForTeacher**](DefaultApi.md#getEventsForTeacher) | **GET** /teachers/{id}/events | Retrieves events for teachers.
-[**getGradeLevelsForTeacher**](DefaultApi.md#getGradeLevelsForTeacher) | **GET** /teachers/{id}/grade_levels | Retrieves a list of all grade levels taught by a specific teacher.
-[**getSchool**](DefaultApi.md#getSchool) | **GET** /schools/{id} | Get only a specific school&#39;s information.
-[**getSchoolAdmin**](DefaultApi.md#getSchoolAdmin) | **GET** /school_admins/{id} | Get only a specific schooladmin&#39;s information.
-[**getSchoolAdmins**](DefaultApi.md#getSchoolAdmins) | **GET** /school_admins | Gets a list of school_admins you have access to.
-[**getSchoolForSection**](DefaultApi.md#getSchoolForSection) | **GET** /sections/{id}/school | Retrieves information about the school for a section
-[**getSchoolForStudent**](DefaultApi.md#getSchoolForStudent) | **GET** /students/{id}/school | Retrieves information about the school for a student
-[**getSchoolForTeacher**](DefaultApi.md#getSchoolForTeacher) | **GET** /teachers/{id}/school | Retrieves information about the school for a teacher
-[**getSchools**](DefaultApi.md#getSchools) | **GET** /schools | Gets a list of schools you have access to.
-[**getSchoolsForSchoolAdmin**](DefaultApi.md#getSchoolsForSchoolAdmin) | **GET** /school_admins/{id}/schools | Retrieves all schools for a school admin.
-[**getSection**](DefaultApi.md#getSection) | **GET** /sections/{id} | Get only a specific section&#39;s information.
-[**getSections**](DefaultApi.md#getSections) | **GET** /sections | Gets a list of sections you have access to.
-[**getSectionsForSchool**](DefaultApi.md#getSectionsForSchool) | **GET** /schools/{id}/sections | Retrieves a list of all sections for a specific school.
-[**getSectionsForStudent**](DefaultApi.md#getSectionsForStudent) | **GET** /students/{id}/sections | Retrieves a list of all sections for a student.
-[**getSectionsForTeacher**](DefaultApi.md#getSectionsForTeacher) | **GET** /teachers/{id}/sections | Retrieves a list of all sections for a teacher.
-[**getStudent**](DefaultApi.md#getStudent) | **GET** /students/{id} | Get only a specific student&#39;s information.
-[**getStudentForContact**](DefaultApi.md#getStudentForContact) | **GET** /contacts/{id}/student | Retrieves the student for a contact.
-[**getStudents**](DefaultApi.md#getStudents) | **GET** /students | Gets a list of students you have access to.
-[**getStudentsForSchool**](DefaultApi.md#getStudentsForSchool) | **GET** /schools/{id}/students | Retrieves a list of all students for a specific school.
-[**getStudentsForSection**](DefaultApi.md#getStudentsForSection) | **GET** /sections/{id}/students | Retrieves a list of all the section&#39;s students.
-[**getStudentsForTeacher**](DefaultApi.md#getStudentsForTeacher) | **GET** /teachers/{id}/students | Retrieves all students that a teacher has in their sections.
-[**getTeacher**](DefaultApi.md#getTeacher) | **GET** /teachers/{id} | Get only a specific teacher&#39;s information.
-[**getTeacherForSection**](DefaultApi.md#getTeacherForSection) | **GET** /sections/{id}/teacher | Retrieves information about the primary teacher of a section.
-[**getTeachers**](DefaultApi.md#getTeachers) | **GET** /teachers | Gets a list of teachers you have access to.
-[**getTeachersForSchool**](DefaultApi.md#getTeachersForSchool) | **GET** /schools/{id}/teachers | Retrieves a list of all teachers for a specific school.
-[**getTeachersForSection**](DefaultApi.md#getTeachersForSection) | **GET** /sections/{id}/teachers | Retrieves a list of all the section&#39;s teachers.
-[**getTeachersForStudent**](DefaultApi.md#getTeachersForStudent) | **GET** /students/{id}/teachers | Retrieves all teachers for a student.
+[**getContact**](DataApi.md#getContact) | **GET** /contacts/{id} | Get only a specific studentcontact&#39;s information.
+[**getContacts**](DataApi.md#getContacts) | **GET** /contacts | Gets a list of student contacts you have access to.
+[**getContactsForStudent**](DataApi.md#getContactsForStudent) | **GET** /students/{id}/contacts | Retrieves all contacts for a student.
+[**getDistrict**](DataApi.md#getDistrict) | **GET** /districts/{id} | Get only a specific district&#39;s information.
+[**getDistrictAdmin**](DataApi.md#getDistrictAdmin) | **GET** /district_admins/{id} | Retrieves a district admin
+[**getDistrictAdmins**](DataApi.md#getDistrictAdmins) | **GET** /district_admins | Retrieves all users with admin access to a district.
+[**getDistrictForSchool**](DataApi.md#getDistrictForSchool) | **GET** /schools/{id}/district | Retrieves district information for a school.
+[**getDistrictForSection**](DataApi.md#getDistrictForSection) | **GET** /sections/{id}/district | Retrieves district information for a section.
+[**getDistrictForStudent**](DataApi.md#getDistrictForStudent) | **GET** /students/{id}/district | Retrieves district information for a student.
+[**getDistrictForStudentContact**](DataApi.md#getDistrictForStudentContact) | **GET** /contacts/{id}/district | Retrieves the district for a contact.
+[**getDistrictForTeacher**](DataApi.md#getDistrictForTeacher) | **GET** /teachers/{id}/district | Retrieves district information for a teacher.
+[**getDistricts**](DataApi.md#getDistricts) | **GET** /districts | Gets a list of districts you have access to.
+[**getGradeLevelsForTeacher**](DataApi.md#getGradeLevelsForTeacher) | **GET** /teachers/{id}/grade_levels | Retrieves a list of all grade levels taught by a specific teacher.
+[**getSchool**](DataApi.md#getSchool) | **GET** /schools/{id} | Get only a specific school&#39;s information.
+[**getSchoolAdmin**](DataApi.md#getSchoolAdmin) | **GET** /school_admins/{id} | Get only a specific schooladmin&#39;s information.
+[**getSchoolAdmins**](DataApi.md#getSchoolAdmins) | **GET** /school_admins | Gets a list of school_admins you have access to.
+[**getSchoolForSection**](DataApi.md#getSchoolForSection) | **GET** /sections/{id}/school | Retrieves information about the school for a section
+[**getSchoolForStudent**](DataApi.md#getSchoolForStudent) | **GET** /students/{id}/school | Retrieves information about the school for a student
+[**getSchoolForTeacher**](DataApi.md#getSchoolForTeacher) | **GET** /teachers/{id}/school | Retrieves information about the school for a teacher
+[**getSchools**](DataApi.md#getSchools) | **GET** /schools | Gets a list of schools you have access to.
+[**getSchoolsForSchoolAdmin**](DataApi.md#getSchoolsForSchoolAdmin) | **GET** /school_admins/{id}/schools | Retrieves all schools for a school admin.
+[**getSection**](DataApi.md#getSection) | **GET** /sections/{id} | Get only a specific section&#39;s information.
+[**getSections**](DataApi.md#getSections) | **GET** /sections | Gets a list of sections you have access to.
+[**getSectionsForSchool**](DataApi.md#getSectionsForSchool) | **GET** /schools/{id}/sections | Retrieves a list of all sections for a specific school.
+[**getSectionsForStudent**](DataApi.md#getSectionsForStudent) | **GET** /students/{id}/sections | Retrieves a list of all sections for a student.
+[**getSectionsForTeacher**](DataApi.md#getSectionsForTeacher) | **GET** /teachers/{id}/sections | Retrieves a list of all sections for a teacher.
+[**getStudent**](DataApi.md#getStudent) | **GET** /students/{id} | Get only a specific student&#39;s information.
+[**getStudentForContact**](DataApi.md#getStudentForContact) | **GET** /contacts/{id}/student | Retrieves the student for a contact.
+[**getStudents**](DataApi.md#getStudents) | **GET** /students | Gets a list of students you have access to.
+[**getStudentsForSchool**](DataApi.md#getStudentsForSchool) | **GET** /schools/{id}/students | Retrieves a list of all students for a specific school.
+[**getStudentsForSection**](DataApi.md#getStudentsForSection) | **GET** /sections/{id}/students | Retrieves a list of all the section&#39;s students.
+[**getStudentsForTeacher**](DataApi.md#getStudentsForTeacher) | **GET** /teachers/{id}/students | Retrieves all students that a teacher has in their sections.
+[**getTeacher**](DataApi.md#getTeacher) | **GET** /teachers/{id} | Get only a specific teacher&#39;s information.
+[**getTeacherForSection**](DataApi.md#getTeacherForSection) | **GET** /sections/{id}/teacher | Retrieves information about the primary teacher of a section.
+[**getTeachers**](DataApi.md#getTeachers) | **GET** /teachers | Gets a list of teachers you have access to.
+[**getTeachersForSchool**](DataApi.md#getTeachersForSchool) | **GET** /schools/{id}/teachers | Retrieves a list of all teachers for a specific school.
+[**getTeachersForSection**](DataApi.md#getTeachersForSection) | **GET** /sections/{id}/teachers | Retrieves a list of all the section&#39;s teachers.
+[**getTeachersForStudent**](DataApi.md#getTeachersForStudent) | **GET** /students/{id}/teachers | Retrieves all teachers for a student.
 
 
 <a name="getContact"></a>
@@ -66,7 +59,7 @@ Returns a specific student contact
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -74,13 +67,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     StudentContactResponse result = apiInstance.getContact(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getContact");
+    System.err.println("Exception when calling DataApi#getContact");
     e.printStackTrace();
 }
 ```
@@ -119,7 +112,7 @@ Returns a list of student contacts
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -127,7 +120,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
 String endingBefore = "endingBefore_example"; // String | 
@@ -135,7 +128,7 @@ try {
     StudentContactsResponse result = apiInstance.getContacts(limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getContacts");
+    System.err.println("Exception when calling DataApi#getContacts");
     e.printStackTrace();
 }
 ```
@@ -176,7 +169,7 @@ Returns the contacts for a student
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -184,14 +177,14 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 try {
     StudentContactsResponse result = apiInstance.getContactsForStudent(id, limit);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getContactsForStudent");
+    System.err.println("Exception when calling DataApi#getContactsForStudent");
     e.printStackTrace();
 }
 ```
@@ -231,7 +224,7 @@ Returns a specific district
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -239,13 +232,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     DistrictResponse result = apiInstance.getDistrict(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getDistrict");
+    System.err.println("Exception when calling DataApi#getDistrict");
     e.printStackTrace();
 }
 ```
@@ -284,7 +277,7 @@ Returns a specific district admin
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -292,13 +285,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     DistrictAdminResponse result = apiInstance.getDistrictAdmin(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getDistrictAdmin");
+    System.err.println("Exception when calling DataApi#getDistrictAdmin");
     e.printStackTrace();
 }
 ```
@@ -337,7 +330,7 @@ Returns a list of district admins
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -345,14 +338,14 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String startingAfter = "startingAfter_example"; // String | 
 String endingBefore = "endingBefore_example"; // String | 
 try {
     DistrictAdminsResponse result = apiInstance.getDistrictAdmins(startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getDistrictAdmins");
+    System.err.println("Exception when calling DataApi#getDistrictAdmins");
     e.printStackTrace();
 }
 ```
@@ -392,7 +385,7 @@ Returns the district for a school
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -400,13 +393,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     DistrictResponse result = apiInstance.getDistrictForSchool(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getDistrictForSchool");
+    System.err.println("Exception when calling DataApi#getDistrictForSchool");
     e.printStackTrace();
 }
 ```
@@ -445,7 +438,7 @@ Returns the district for a section
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -453,13 +446,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     DistrictResponse result = apiInstance.getDistrictForSection(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getDistrictForSection");
+    System.err.println("Exception when calling DataApi#getDistrictForSection");
     e.printStackTrace();
 }
 ```
@@ -498,7 +491,7 @@ Returns the district for a student
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -506,13 +499,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     DistrictResponse result = apiInstance.getDistrictForStudent(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getDistrictForStudent");
+    System.err.println("Exception when calling DataApi#getDistrictForStudent");
     e.printStackTrace();
 }
 ```
@@ -551,7 +544,7 @@ Returns the district for a student contact
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -559,13 +552,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     DistrictResponse result = apiInstance.getDistrictForStudentContact(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getDistrictForStudentContact");
+    System.err.println("Exception when calling DataApi#getDistrictForStudentContact");
     e.printStackTrace();
 }
 ```
@@ -604,7 +597,7 @@ Returns the district for a teacher
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -612,13 +605,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     DistrictResponse result = apiInstance.getDistrictForTeacher(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getDistrictForTeacher");
+    System.err.println("Exception when calling DataApi#getDistrictForTeacher");
     e.printStackTrace();
 }
 ```
@@ -657,7 +650,7 @@ Returns a list of districts
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -665,7 +658,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
 String endingBefore = "endingBefore_example"; // String | 
@@ -673,7 +666,7 @@ try {
     DistrictsResponse result = apiInstance.getDistricts(limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getDistricts");
+    System.err.println("Exception when calling DataApi#getDistricts");
     e.printStackTrace();
 }
 ```
@@ -699,411 +692,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getEvent"></a>
-# **getEvent**
-> EventResponse getEvent(id)
-
-Retrieves a single event.
-
-Returns the specific event
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth
-OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-oauth.setAccessToken("YOUR ACCESS TOKEN");
-
-DefaultApi apiInstance = new DefaultApi();
-String id = "id_example"; // String | 
-try {
-    EventResponse result = apiInstance.getEvent(id);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getEvent");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
-
-### Return type
-
-[**EventResponse**](EventResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getEvents"></a>
-# **getEvents**
-> EventsResponse getEvents(limit, startingAfter, endingBefore)
-
-Retrieves all events
-
-Returns a list of events
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth
-OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-oauth.setAccessToken("YOUR ACCESS TOKEN");
-
-DefaultApi apiInstance = new DefaultApi();
-Integer limit = 56; // Integer | 
-String startingAfter = "startingAfter_example"; // String | 
-String endingBefore = "endingBefore_example"; // String | 
-try {
-    EventsResponse result = apiInstance.getEvents(limit, startingAfter, endingBefore);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getEvents");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **limit** | **Integer**|  | [optional]
- **startingAfter** | **String**|  | [optional]
- **endingBefore** | **String**|  | [optional]
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getEventsForSchool"></a>
-# **getEventsForSchool**
-> EventsResponse getEventsForSchool(id, limit, startingAfter, endingBefore)
-
-Retrieves events for schools.
-
-Returns a list of events for a school
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth
-OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-oauth.setAccessToken("YOUR ACCESS TOKEN");
-
-DefaultApi apiInstance = new DefaultApi();
-String id = "id_example"; // String | 
-Integer limit = 56; // Integer | 
-String startingAfter = "startingAfter_example"; // String | 
-String endingBefore = "endingBefore_example"; // String | 
-try {
-    EventsResponse result = apiInstance.getEventsForSchool(id, limit, startingAfter, endingBefore);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getEventsForSchool");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **limit** | **Integer**|  | [optional]
- **startingAfter** | **String**|  | [optional]
- **endingBefore** | **String**|  | [optional]
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getEventsForSchoolAdmin"></a>
-# **getEventsForSchoolAdmin**
-> EventsResponse getEventsForSchoolAdmin(id, limit, startingAfter, endingBefore)
-
-Retrieves events for school_admins.
-
-Returns a list of events for a school admin
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth
-OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-oauth.setAccessToken("YOUR ACCESS TOKEN");
-
-DefaultApi apiInstance = new DefaultApi();
-String id = "id_example"; // String | 
-Integer limit = 56; // Integer | 
-String startingAfter = "startingAfter_example"; // String | 
-String endingBefore = "endingBefore_example"; // String | 
-try {
-    EventsResponse result = apiInstance.getEventsForSchoolAdmin(id, limit, startingAfter, endingBefore);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getEventsForSchoolAdmin");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **limit** | **Integer**|  | [optional]
- **startingAfter** | **String**|  | [optional]
- **endingBefore** | **String**|  | [optional]
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getEventsForSection"></a>
-# **getEventsForSection**
-> EventsResponse getEventsForSection(id, limit, startingAfter, endingBefore)
-
-Retrieves events for sections.
-
-Returns a list of events for a section
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth
-OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-oauth.setAccessToken("YOUR ACCESS TOKEN");
-
-DefaultApi apiInstance = new DefaultApi();
-String id = "id_example"; // String | 
-Integer limit = 56; // Integer | 
-String startingAfter = "startingAfter_example"; // String | 
-String endingBefore = "endingBefore_example"; // String | 
-try {
-    EventsResponse result = apiInstance.getEventsForSection(id, limit, startingAfter, endingBefore);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getEventsForSection");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **limit** | **Integer**|  | [optional]
- **startingAfter** | **String**|  | [optional]
- **endingBefore** | **String**|  | [optional]
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getEventsForStudent"></a>
-# **getEventsForStudent**
-> EventsResponse getEventsForStudent(id, limit, startingAfter, endingBefore)
-
-Retrieves events for students.
-
-Returns a list of events for a student
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth
-OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-oauth.setAccessToken("YOUR ACCESS TOKEN");
-
-DefaultApi apiInstance = new DefaultApi();
-String id = "id_example"; // String | 
-Integer limit = 56; // Integer | 
-String startingAfter = "startingAfter_example"; // String | 
-String endingBefore = "endingBefore_example"; // String | 
-try {
-    EventsResponse result = apiInstance.getEventsForStudent(id, limit, startingAfter, endingBefore);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getEventsForStudent");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **limit** | **Integer**|  | [optional]
- **startingAfter** | **String**|  | [optional]
- **endingBefore** | **String**|  | [optional]
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getEventsForTeacher"></a>
-# **getEventsForTeacher**
-> EventsResponse getEventsForTeacher(id, limit, startingAfter, endingBefore)
-
-Retrieves events for teachers.
-
-Returns a list of events for a teacher
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth
-OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-oauth.setAccessToken("YOUR ACCESS TOKEN");
-
-DefaultApi apiInstance = new DefaultApi();
-String id = "id_example"; // String | 
-Integer limit = 56; // Integer | 
-String startingAfter = "startingAfter_example"; // String | 
-String endingBefore = "endingBefore_example"; // String | 
-try {
-    EventsResponse result = apiInstance.getEventsForTeacher(id, limit, startingAfter, endingBefore);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getEventsForTeacher");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **limit** | **Integer**|  | [optional]
- **startingAfter** | **String**|  | [optional]
- **endingBefore** | **String**|  | [optional]
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a name="getGradeLevelsForTeacher"></a>
 # **getGradeLevelsForTeacher**
 > GradeLevelsResponse getGradeLevelsForTeacher(id)
@@ -1119,7 +707,7 @@ Returns the grade levels for sections a teacher teaches
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1127,13 +715,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     GradeLevelsResponse result = apiInstance.getGradeLevelsForTeacher(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getGradeLevelsForTeacher");
+    System.err.println("Exception when calling DataApi#getGradeLevelsForTeacher");
     e.printStackTrace();
 }
 ```
@@ -1172,7 +760,7 @@ Returns a specific school
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1180,13 +768,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     SchoolResponse result = apiInstance.getSchool(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSchool");
+    System.err.println("Exception when calling DataApi#getSchool");
     e.printStackTrace();
 }
 ```
@@ -1225,7 +813,7 @@ Returns a specific school admin
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1233,13 +821,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     SchoolAdminResponse result = apiInstance.getSchoolAdmin(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSchoolAdmin");
+    System.err.println("Exception when calling DataApi#getSchoolAdmin");
     e.printStackTrace();
 }
 ```
@@ -1278,7 +866,7 @@ Returns a list of school admins
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1286,7 +874,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
 String endingBefore = "endingBefore_example"; // String | 
@@ -1294,7 +882,7 @@ try {
     SchoolAdminsResponse result = apiInstance.getSchoolAdmins(limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSchoolAdmins");
+    System.err.println("Exception when calling DataApi#getSchoolAdmins");
     e.printStackTrace();
 }
 ```
@@ -1335,7 +923,7 @@ Returns the school for a section
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1343,13 +931,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     SchoolResponse result = apiInstance.getSchoolForSection(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSchoolForSection");
+    System.err.println("Exception when calling DataApi#getSchoolForSection");
     e.printStackTrace();
 }
 ```
@@ -1388,7 +976,7 @@ Returns the primary school for a student
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1396,13 +984,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     SchoolResponse result = apiInstance.getSchoolForStudent(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSchoolForStudent");
+    System.err.println("Exception when calling DataApi#getSchoolForStudent");
     e.printStackTrace();
 }
 ```
@@ -1441,7 +1029,7 @@ Retrieves school info for a teacher.
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1449,13 +1037,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     SchoolResponse result = apiInstance.getSchoolForTeacher(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSchoolForTeacher");
+    System.err.println("Exception when calling DataApi#getSchoolForTeacher");
     e.printStackTrace();
 }
 ```
@@ -1494,7 +1082,7 @@ Returns a list of schools
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1502,7 +1090,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
 String endingBefore = "endingBefore_example"; // String | 
@@ -1510,7 +1098,7 @@ try {
     SchoolsResponse result = apiInstance.getSchools(limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSchools");
+    System.err.println("Exception when calling DataApi#getSchools");
     e.printStackTrace();
 }
 ```
@@ -1551,7 +1139,7 @@ Returns the schools for a school admin
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1559,7 +1147,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
@@ -1568,7 +1156,7 @@ try {
     SchoolsResponse result = apiInstance.getSchoolsForSchoolAdmin(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSchoolsForSchoolAdmin");
+    System.err.println("Exception when calling DataApi#getSchoolsForSchoolAdmin");
     e.printStackTrace();
 }
 ```
@@ -1610,7 +1198,7 @@ Returns a specific section
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1618,13 +1206,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     SectionResponse result = apiInstance.getSection(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSection");
+    System.err.println("Exception when calling DataApi#getSection");
     e.printStackTrace();
 }
 ```
@@ -1663,7 +1251,7 @@ Returns a list of sections
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1671,7 +1259,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
 String endingBefore = "endingBefore_example"; // String | 
@@ -1679,7 +1267,7 @@ try {
     SectionsResponse result = apiInstance.getSections(limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSections");
+    System.err.println("Exception when calling DataApi#getSections");
     e.printStackTrace();
 }
 ```
@@ -1720,7 +1308,7 @@ Returns the sections for a school
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1728,7 +1316,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
@@ -1737,7 +1325,7 @@ try {
     SectionsResponse result = apiInstance.getSectionsForSchool(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSectionsForSchool");
+    System.err.println("Exception when calling DataApi#getSectionsForSchool");
     e.printStackTrace();
 }
 ```
@@ -1779,7 +1367,7 @@ Returns the sections for a student
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1787,7 +1375,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
@@ -1796,7 +1384,7 @@ try {
     SectionsResponse result = apiInstance.getSectionsForStudent(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSectionsForStudent");
+    System.err.println("Exception when calling DataApi#getSectionsForStudent");
     e.printStackTrace();
 }
 ```
@@ -1838,7 +1426,7 @@ Returns the sections for a teacher
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1846,7 +1434,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
@@ -1855,7 +1443,7 @@ try {
     SectionsResponse result = apiInstance.getSectionsForTeacher(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getSectionsForTeacher");
+    System.err.println("Exception when calling DataApi#getSectionsForTeacher");
     e.printStackTrace();
 }
 ```
@@ -1897,7 +1485,7 @@ Returns a specific student
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1905,13 +1493,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     StudentResponse result = apiInstance.getStudent(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getStudent");
+    System.err.println("Exception when calling DataApi#getStudent");
     e.printStackTrace();
 }
 ```
@@ -1950,7 +1538,7 @@ Returns the student for a student contact
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1958,13 +1546,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     StudentResponse result = apiInstance.getStudentForContact(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getStudentForContact");
+    System.err.println("Exception when calling DataApi#getStudentForContact");
     e.printStackTrace();
 }
 ```
@@ -2003,7 +1591,7 @@ Returns a list of students
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2011,7 +1599,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
 String endingBefore = "endingBefore_example"; // String | 
@@ -2019,7 +1607,7 @@ try {
     StudentsResponse result = apiInstance.getStudents(limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getStudents");
+    System.err.println("Exception when calling DataApi#getStudents");
     e.printStackTrace();
 }
 ```
@@ -2060,7 +1648,7 @@ Returns the students for a school
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2068,7 +1656,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
@@ -2077,7 +1665,7 @@ try {
     StudentsResponse result = apiInstance.getStudentsForSchool(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getStudentsForSchool");
+    System.err.println("Exception when calling DataApi#getStudentsForSchool");
     e.printStackTrace();
 }
 ```
@@ -2119,7 +1707,7 @@ Returns the students for a section
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2127,7 +1715,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
@@ -2136,7 +1724,7 @@ try {
     StudentsResponse result = apiInstance.getStudentsForSection(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getStudentsForSection");
+    System.err.println("Exception when calling DataApi#getStudentsForSection");
     e.printStackTrace();
 }
 ```
@@ -2178,7 +1766,7 @@ Returns the students for a teacher
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2186,7 +1774,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
@@ -2195,7 +1783,7 @@ try {
     StudentsResponse result = apiInstance.getStudentsForTeacher(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getStudentsForTeacher");
+    System.err.println("Exception when calling DataApi#getStudentsForTeacher");
     e.printStackTrace();
 }
 ```
@@ -2237,7 +1825,7 @@ Returns a specific teacher
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2245,13 +1833,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     TeacherResponse result = apiInstance.getTeacher(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getTeacher");
+    System.err.println("Exception when calling DataApi#getTeacher");
     e.printStackTrace();
 }
 ```
@@ -2290,7 +1878,7 @@ Returns the primary teacher for a section
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2298,13 +1886,13 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
     TeacherResponse result = apiInstance.getTeacherForSection(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getTeacherForSection");
+    System.err.println("Exception when calling DataApi#getTeacherForSection");
     e.printStackTrace();
 }
 ```
@@ -2343,7 +1931,7 @@ Returns a list of teachers
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2351,7 +1939,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
 String endingBefore = "endingBefore_example"; // String | 
@@ -2359,7 +1947,7 @@ try {
     TeachersResponse result = apiInstance.getTeachers(limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getTeachers");
+    System.err.println("Exception when calling DataApi#getTeachers");
     e.printStackTrace();
 }
 ```
@@ -2400,7 +1988,7 @@ Returns the teachers for a school
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2408,7 +1996,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
@@ -2417,7 +2005,7 @@ try {
     TeachersResponse result = apiInstance.getTeachersForSchool(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getTeachersForSchool");
+    System.err.println("Exception when calling DataApi#getTeachersForSchool");
     e.printStackTrace();
 }
 ```
@@ -2459,7 +2047,7 @@ Returns the teachers for a section
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2467,7 +2055,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
@@ -2476,7 +2064,7 @@ try {
     TeachersResponse result = apiInstance.getTeachersForSection(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getTeachersForSection");
+    System.err.println("Exception when calling DataApi#getTeachersForSection");
     e.printStackTrace();
 }
 ```
@@ -2518,7 +2106,7 @@ Returns the teachers for a student
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import io.swagger.client.api.DataApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2526,7 +2114,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
-DefaultApi apiInstance = new DefaultApi();
+DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
@@ -2535,7 +2123,7 @@ try {
     TeachersResponse result = apiInstance.getTeachersForStudent(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#getTeachersForStudent");
+    System.err.println("Exception when calling DataApi#getTeachersForStudent");
     e.printStackTrace();
 }
 ```

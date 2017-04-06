@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * Section
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-23T15:48:07.205-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
 public class Section {
   @SerializedName("id")
   private String id = null;
@@ -61,9 +61,6 @@ public class Section {
 
   @SerializedName("section_number")
   private String sectionNumber = null;
-
-  @SerializedName("section_group")
-  private String sectionGroup = null;
 
   @SerializedName("sis_id")
   private String sisId = null;
@@ -299,24 +296,6 @@ public class Section {
     this.sectionNumber = sectionNumber;
   }
 
-  public Section sectionGroup(String sectionGroup) {
-    this.sectionGroup = sectionGroup;
-    return this;
-  }
-
-   /**
-   * Get sectionGroup
-   * @return sectionGroup
-  **/
-  @ApiModelProperty(value = "")
-  public String getSectionGroup() {
-    return sectionGroup;
-  }
-
-  public void setSectionGroup(String sectionGroup) {
-    this.sectionGroup = sectionGroup;
-  }
-
   public Section sisId(String sisId) {
     this.sisId = sisId;
     return this;
@@ -457,7 +436,6 @@ public class Section {
         Objects.equals(this.period, section.period) &&
         Objects.equals(this.school, section.school) &&
         Objects.equals(this.sectionNumber, section.sectionNumber) &&
-        Objects.equals(this.sectionGroup, section.sectionGroup) &&
         Objects.equals(this.sisId, section.sisId) &&
         Objects.equals(this.students, section.students) &&
         Objects.equals(this.subject, section.subject) &&
@@ -468,7 +446,7 @@ public class Section {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, courseDescription, courseName, courseNumber, created, district, grade, lastModified, name, period, school, sectionNumber, sectionGroup, sisId, students, subject, teacher, teachers, term);
+    return Objects.hash(id, courseDescription, courseName, courseNumber, created, district, grade, lastModified, name, period, school, sectionNumber, sisId, students, subject, teacher, teachers, term);
   }
 
 
@@ -489,7 +467,6 @@ public class Section {
     sb.append("    period: ").append(toIndentedString(period)).append("\n");
     sb.append("    school: ").append(toIndentedString(school)).append("\n");
     sb.append("    sectionNumber: ").append(toIndentedString(sectionNumber)).append("\n");
-    sb.append("    sectionGroup: ").append(toIndentedString(sectionGroup)).append("\n");
     sb.append("    sisId: ").append(toIndentedString(sisId)).append("\n");
     sb.append("    students: ").append(toIndentedString(students)).append("\n");
     sb.append("    subject: ").append(toIndentedString(subject)).append("\n");

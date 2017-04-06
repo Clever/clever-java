@@ -18,8 +18,6 @@ import io.swagger.client.model.DistrictAdminResponse;
 import io.swagger.client.model.DistrictAdminsResponse;
 import io.swagger.client.model.DistrictResponse;
 import io.swagger.client.model.DistrictsResponse;
-import io.swagger.client.model.EventResponse;
-import io.swagger.client.model.EventsResponse;
 import io.swagger.client.model.GradeLevelsResponse;
 import io.swagger.client.model.NotFound;
 import io.swagger.client.model.SchoolAdminResponse;
@@ -43,12 +41,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API tests for DefaultApi
+ * API tests for DataApi
  */
 @Ignore
-public class DefaultApiTest {
+public class DataApiTest {
 
-    private final DefaultApi api = new DefaultApi();
+    private final DataApi api = new DataApi();
 
     
     /**
@@ -245,135 +243,6 @@ public class DefaultApiTest {
         String startingAfter = null;
         String endingBefore = null;
         DistrictsResponse response = api.getDistricts(limit, startingAfter, endingBefore);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Retrieves a single event.
-     *
-     * Returns the specific event
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getEventTest() throws ApiException {
-        String id = null;
-        EventResponse response = api.getEvent(id);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Retrieves all events
-     *
-     * Returns a list of events
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getEventsTest() throws ApiException {
-        Integer limit = null;
-        String startingAfter = null;
-        String endingBefore = null;
-        EventsResponse response = api.getEvents(limit, startingAfter, endingBefore);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Retrieves events for schools.
-     *
-     * Returns a list of events for a school
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getEventsForSchoolTest() throws ApiException {
-        String id = null;
-        Integer limit = null;
-        String startingAfter = null;
-        String endingBefore = null;
-        EventsResponse response = api.getEventsForSchool(id, limit, startingAfter, endingBefore);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Retrieves events for school_admins.
-     *
-     * Returns a list of events for a school admin
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getEventsForSchoolAdminTest() throws ApiException {
-        String id = null;
-        Integer limit = null;
-        String startingAfter = null;
-        String endingBefore = null;
-        EventsResponse response = api.getEventsForSchoolAdmin(id, limit, startingAfter, endingBefore);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Retrieves events for sections.
-     *
-     * Returns a list of events for a section
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getEventsForSectionTest() throws ApiException {
-        String id = null;
-        Integer limit = null;
-        String startingAfter = null;
-        String endingBefore = null;
-        EventsResponse response = api.getEventsForSection(id, limit, startingAfter, endingBefore);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Retrieves events for students.
-     *
-     * Returns a list of events for a student
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getEventsForStudentTest() throws ApiException {
-        String id = null;
-        Integer limit = null;
-        String startingAfter = null;
-        String endingBefore = null;
-        EventsResponse response = api.getEventsForStudent(id, limit, startingAfter, endingBefore);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Retrieves events for teachers.
-     *
-     * Returns a list of events for a teacher
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getEventsForTeacherTest() throws ApiException {
-        String id = null;
-        Integer limit = null;
-        String startingAfter = null;
-        String endingBefore = null;
-        EventsResponse response = api.getEventsForTeacher(id, limit, startingAfter, endingBefore);
 
         // TODO: test validations
     }

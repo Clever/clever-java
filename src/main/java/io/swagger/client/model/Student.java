@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * Student
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-23T15:48:07.205-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
 public class Student {
   @SerializedName("id")
   private String id = null;
@@ -44,9 +44,6 @@ public class Student {
 
   @SerializedName("email")
   private String email = null;
-
-  @SerializedName("fcat_reading_level")
-  private String fcatReadingLevel = null;
 
   @SerializedName("frl_status")
   private String frlStatus = null;
@@ -74,27 +71,6 @@ public class Student {
 
   @SerializedName("race")
   private String race = null;
-
-  @SerializedName("rti_behavior")
-  private String rtiBehavior = null;
-
-  @SerializedName("rti_communication")
-  private String rtiCommunication = null;
-
-  @SerializedName("rti_ela")
-  private String rtiEla = null;
-
-  @SerializedName("rti_gifted")
-  private String rtiGifted = null;
-
-  @SerializedName("rti_health")
-  private String rtiHealth = null;
-
-  @SerializedName("rti_math")
-  private String rtiMath = null;
-
-  @SerializedName("rti_social")
-  private String rtiSocial = null;
 
   @SerializedName("school")
   private String school = null;
@@ -217,24 +193,6 @@ public class Student {
 
   public void setEmail(String email) {
     this.email = email;
-  }
-
-  public Student fcatReadingLevel(String fcatReadingLevel) {
-    this.fcatReadingLevel = fcatReadingLevel;
-    return this;
-  }
-
-   /**
-   * Get fcatReadingLevel
-   * @return fcatReadingLevel
-  **/
-  @ApiModelProperty(value = "")
-  public String getFcatReadingLevel() {
-    return fcatReadingLevel;
-  }
-
-  public void setFcatReadingLevel(String fcatReadingLevel) {
-    this.fcatReadingLevel = fcatReadingLevel;
   }
 
   public Student frlStatus(String frlStatus) {
@@ -399,132 +357,6 @@ public class Student {
     this.race = race;
   }
 
-  public Student rtiBehavior(String rtiBehavior) {
-    this.rtiBehavior = rtiBehavior;
-    return this;
-  }
-
-   /**
-   * Get rtiBehavior
-   * @return rtiBehavior
-  **/
-  @ApiModelProperty(value = "")
-  public String getRtiBehavior() {
-    return rtiBehavior;
-  }
-
-  public void setRtiBehavior(String rtiBehavior) {
-    this.rtiBehavior = rtiBehavior;
-  }
-
-  public Student rtiCommunication(String rtiCommunication) {
-    this.rtiCommunication = rtiCommunication;
-    return this;
-  }
-
-   /**
-   * Get rtiCommunication
-   * @return rtiCommunication
-  **/
-  @ApiModelProperty(value = "")
-  public String getRtiCommunication() {
-    return rtiCommunication;
-  }
-
-  public void setRtiCommunication(String rtiCommunication) {
-    this.rtiCommunication = rtiCommunication;
-  }
-
-  public Student rtiEla(String rtiEla) {
-    this.rtiEla = rtiEla;
-    return this;
-  }
-
-   /**
-   * Get rtiEla
-   * @return rtiEla
-  **/
-  @ApiModelProperty(value = "")
-  public String getRtiEla() {
-    return rtiEla;
-  }
-
-  public void setRtiEla(String rtiEla) {
-    this.rtiEla = rtiEla;
-  }
-
-  public Student rtiGifted(String rtiGifted) {
-    this.rtiGifted = rtiGifted;
-    return this;
-  }
-
-   /**
-   * Get rtiGifted
-   * @return rtiGifted
-  **/
-  @ApiModelProperty(value = "")
-  public String getRtiGifted() {
-    return rtiGifted;
-  }
-
-  public void setRtiGifted(String rtiGifted) {
-    this.rtiGifted = rtiGifted;
-  }
-
-  public Student rtiHealth(String rtiHealth) {
-    this.rtiHealth = rtiHealth;
-    return this;
-  }
-
-   /**
-   * Get rtiHealth
-   * @return rtiHealth
-  **/
-  @ApiModelProperty(value = "")
-  public String getRtiHealth() {
-    return rtiHealth;
-  }
-
-  public void setRtiHealth(String rtiHealth) {
-    this.rtiHealth = rtiHealth;
-  }
-
-  public Student rtiMath(String rtiMath) {
-    this.rtiMath = rtiMath;
-    return this;
-  }
-
-   /**
-   * Get rtiMath
-   * @return rtiMath
-  **/
-  @ApiModelProperty(value = "")
-  public String getRtiMath() {
-    return rtiMath;
-  }
-
-  public void setRtiMath(String rtiMath) {
-    this.rtiMath = rtiMath;
-  }
-
-  public Student rtiSocial(String rtiSocial) {
-    this.rtiSocial = rtiSocial;
-    return this;
-  }
-
-   /**
-   * Get rtiSocial
-   * @return rtiSocial
-  **/
-  @ApiModelProperty(value = "")
-  public String getRtiSocial() {
-    return rtiSocial;
-  }
-
-  public void setRtiSocial(String rtiSocial) {
-    this.rtiSocial = rtiSocial;
-  }
-
   public Student school(String school) {
     this.school = school;
     return this;
@@ -636,7 +468,6 @@ public class Student {
         Objects.equals(this.dob, student.dob) &&
         Objects.equals(this.ellStatus, student.ellStatus) &&
         Objects.equals(this.email, student.email) &&
-        Objects.equals(this.fcatReadingLevel, student.fcatReadingLevel) &&
         Objects.equals(this.frlStatus, student.frlStatus) &&
         Objects.equals(this.gender, student.gender) &&
         Objects.equals(this.grade, student.grade) &&
@@ -646,13 +477,6 @@ public class Student {
         Objects.equals(this.location, student.location) &&
         Objects.equals(this.name, student.name) &&
         Objects.equals(this.race, student.race) &&
-        Objects.equals(this.rtiBehavior, student.rtiBehavior) &&
-        Objects.equals(this.rtiCommunication, student.rtiCommunication) &&
-        Objects.equals(this.rtiEla, student.rtiEla) &&
-        Objects.equals(this.rtiGifted, student.rtiGifted) &&
-        Objects.equals(this.rtiHealth, student.rtiHealth) &&
-        Objects.equals(this.rtiMath, student.rtiMath) &&
-        Objects.equals(this.rtiSocial, student.rtiSocial) &&
         Objects.equals(this.school, student.school) &&
         Objects.equals(this.schools, student.schools) &&
         Objects.equals(this.sisId, student.sisId) &&
@@ -662,7 +486,7 @@ public class Student {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, created, district, dob, ellStatus, email, fcatReadingLevel, frlStatus, gender, grade, hispanicEthnicity, iepStatus, lastModified, location, name, race, rtiBehavior, rtiCommunication, rtiEla, rtiGifted, rtiHealth, rtiMath, rtiSocial, school, schools, sisId, stateId, studentNumber);
+    return Objects.hash(id, created, district, dob, ellStatus, email, frlStatus, gender, grade, hispanicEthnicity, iepStatus, lastModified, location, name, race, school, schools, sisId, stateId, studentNumber);
   }
 
 
@@ -677,7 +501,6 @@ public class Student {
     sb.append("    dob: ").append(toIndentedString(dob)).append("\n");
     sb.append("    ellStatus: ").append(toIndentedString(ellStatus)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    fcatReadingLevel: ").append(toIndentedString(fcatReadingLevel)).append("\n");
     sb.append("    frlStatus: ").append(toIndentedString(frlStatus)).append("\n");
     sb.append("    gender: ").append(toIndentedString(gender)).append("\n");
     sb.append("    grade: ").append(toIndentedString(grade)).append("\n");
@@ -687,13 +510,6 @@ public class Student {
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    race: ").append(toIndentedString(race)).append("\n");
-    sb.append("    rtiBehavior: ").append(toIndentedString(rtiBehavior)).append("\n");
-    sb.append("    rtiCommunication: ").append(toIndentedString(rtiCommunication)).append("\n");
-    sb.append("    rtiEla: ").append(toIndentedString(rtiEla)).append("\n");
-    sb.append("    rtiGifted: ").append(toIndentedString(rtiGifted)).append("\n");
-    sb.append("    rtiHealth: ").append(toIndentedString(rtiHealth)).append("\n");
-    sb.append("    rtiMath: ").append(toIndentedString(rtiMath)).append("\n");
-    sb.append("    rtiSocial: ").append(toIndentedString(rtiSocial)).append("\n");
     sb.append("    school: ").append(toIndentedString(school)).append("\n");
     sb.append("    schools: ").append(toIndentedString(schools)).append("\n");
     sb.append("    sisId: ").append(toIndentedString(sisId)).append("\n");
