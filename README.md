@@ -82,6 +82,13 @@ That will put the jar in: `src/target/swagger-java-client-1.0.0-tests.jar`
 
 ## Publishing
 
-Use the clever-eng user for Sonatype.
+To publish this library first set up your settings.xml (~/.m2/settings.xml) as described here: http://central.sonatype.org/pages/apache-maven.html. In particular setting up the ossrh profile using the clever-eng username / password and setting up the GPG profile with the security@clever.com PGP key.
 
-TODO: Add more details
+Then run:
+```
+make publish
+```
+
+This will deploy to: https://oss.sonatype.org/content/groups/public/com/clever/client/
+
+The jar will be synced over to the Maven central repository within the next few hours.
