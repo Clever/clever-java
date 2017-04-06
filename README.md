@@ -92,3 +92,5 @@ make publish
 This will deploy to: https://oss.sonatype.org/content/groups/public/com/clever/client/
 
 The jar will be synced over to the Maven central repository within the next few hours.
+
+If you get an `Inappropriate ioctl for device error` try the commands here: https://github.com/pstadler/keybase-gpg-github/pull/13/files
