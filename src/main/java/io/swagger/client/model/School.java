@@ -23,19 +23,83 @@ import io.swagger.client.model.Principal;
 /**
  * School
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class School {
-  @SerializedName("id")
-  private String id = null;
-
   @SerializedName("created")
   private String created = null;
 
   @SerializedName("district")
   private String district = null;
 
+  /**
+   * Gets or Sets highGrade
+   */
+  public enum HighGradeEnum {
+    @SerializedName("1")
+    _1("1"),
+    
+    @SerializedName("2")
+    _2("2"),
+    
+    @SerializedName("3")
+    _3("3"),
+    
+    @SerializedName("4")
+    _4("4"),
+    
+    @SerializedName("5")
+    _5("5"),
+    
+    @SerializedName("6")
+    _6("6"),
+    
+    @SerializedName("7")
+    _7("7"),
+    
+    @SerializedName("8")
+    _8("8"),
+    
+    @SerializedName("9")
+    _9("9"),
+    
+    @SerializedName("10")
+    _10("10"),
+    
+    @SerializedName("11")
+    _11("11"),
+    
+    @SerializedName("12")
+    _12("12"),
+    
+    @SerializedName("PreKindergarten")
+    PREKINDERGARTEN("PreKindergarten"),
+    
+    @SerializedName("Kindergarten")
+    KINDERGARTEN("Kindergarten"),
+    
+    @SerializedName("PostGraduate")
+    POSTGRADUATE("PostGraduate"),
+    
+    @SerializedName("Other")
+    OTHER("Other");
+
+    private String value;
+
+    HighGradeEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
   @SerializedName("high_grade")
-  private String highGrade = null;
+  private HighGradeEnum highGrade = null;
+
+  @SerializedName("id")
+  private String id = null;
 
   @SerializedName("last_modified")
   private String lastModified = null;
@@ -43,8 +107,75 @@ public class School {
   @SerializedName("location")
   private Location location = null;
 
+  /**
+   * Gets or Sets lowGrade
+   */
+  public enum LowGradeEnum {
+    @SerializedName("1")
+    _1("1"),
+    
+    @SerializedName("2")
+    _2("2"),
+    
+    @SerializedName("3")
+    _3("3"),
+    
+    @SerializedName("4")
+    _4("4"),
+    
+    @SerializedName("5")
+    _5("5"),
+    
+    @SerializedName("6")
+    _6("6"),
+    
+    @SerializedName("7")
+    _7("7"),
+    
+    @SerializedName("8")
+    _8("8"),
+    
+    @SerializedName("9")
+    _9("9"),
+    
+    @SerializedName("10")
+    _10("10"),
+    
+    @SerializedName("11")
+    _11("11"),
+    
+    @SerializedName("12")
+    _12("12"),
+    
+    @SerializedName("PreKindergarten")
+    PREKINDERGARTEN("PreKindergarten"),
+    
+    @SerializedName("Kindergarten")
+    KINDERGARTEN("Kindergarten"),
+    
+    @SerializedName("PostGraduate")
+    POSTGRADUATE("PostGraduate"),
+    
+    @SerializedName("Other")
+    OTHER("Other");
+
+    private String value;
+
+    LowGradeEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
   @SerializedName("low_grade")
-  private String lowGrade = null;
+  private LowGradeEnum lowGrade = null;
+
+  @SerializedName("mdr_number")
+  private String mdrNumber = null;
 
   @SerializedName("name")
   private String name = null;
@@ -66,27 +197,6 @@ public class School {
 
   @SerializedName("state_id")
   private String stateId = null;
-
-  @SerializedName("mdr_number")
-  private String mdrNumber = null;
-
-  public School id(String id) {
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(value = "")
-  public String getId() {
-    return id;
-  }
-
-  public void setId(String id) {
-    this.id = id;
-  }
 
   public School created(String created) {
     this.created = created;
@@ -124,7 +234,7 @@ public class School {
     this.district = district;
   }
 
-  public School highGrade(String highGrade) {
+  public School highGrade(HighGradeEnum highGrade) {
     this.highGrade = highGrade;
     return this;
   }
@@ -134,12 +244,30 @@ public class School {
    * @return highGrade
   **/
   @ApiModelProperty(value = "")
-  public String getHighGrade() {
+  public HighGradeEnum getHighGrade() {
     return highGrade;
   }
 
-  public void setHighGrade(String highGrade) {
+  public void setHighGrade(HighGradeEnum highGrade) {
     this.highGrade = highGrade;
+  }
+
+  public School id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @ApiModelProperty(value = "")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
   }
 
   public School lastModified(String lastModified) {
@@ -178,7 +306,7 @@ public class School {
     this.location = location;
   }
 
-  public School lowGrade(String lowGrade) {
+  public School lowGrade(LowGradeEnum lowGrade) {
     this.lowGrade = lowGrade;
     return this;
   }
@@ -188,12 +316,30 @@ public class School {
    * @return lowGrade
   **/
   @ApiModelProperty(value = "")
-  public String getLowGrade() {
+  public LowGradeEnum getLowGrade() {
     return lowGrade;
   }
 
-  public void setLowGrade(String lowGrade) {
+  public void setLowGrade(LowGradeEnum lowGrade) {
     this.lowGrade = lowGrade;
+  }
+
+  public School mdrNumber(String mdrNumber) {
+    this.mdrNumber = mdrNumber;
+    return this;
+  }
+
+   /**
+   * Get mdrNumber
+   * @return mdrNumber
+  **/
+  @ApiModelProperty(value = "")
+  public String getMdrNumber() {
+    return mdrNumber;
+  }
+
+  public void setMdrNumber(String mdrNumber) {
+    this.mdrNumber = mdrNumber;
   }
 
   public School name(String name) {
@@ -322,24 +468,6 @@ public class School {
     this.stateId = stateId;
   }
 
-  public School mdrNumber(String mdrNumber) {
-    this.mdrNumber = mdrNumber;
-    return this;
-  }
-
-   /**
-   * Get mdrNumber
-   * @return mdrNumber
-  **/
-  @ApiModelProperty(value = "")
-  public String getMdrNumber() {
-    return mdrNumber;
-  }
-
-  public void setMdrNumber(String mdrNumber) {
-    this.mdrNumber = mdrNumber;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -350,26 +478,26 @@ public class School {
       return false;
     }
     School school = (School) o;
-    return Objects.equals(this.id, school.id) &&
-        Objects.equals(this.created, school.created) &&
+    return Objects.equals(this.created, school.created) &&
         Objects.equals(this.district, school.district) &&
         Objects.equals(this.highGrade, school.highGrade) &&
+        Objects.equals(this.id, school.id) &&
         Objects.equals(this.lastModified, school.lastModified) &&
         Objects.equals(this.location, school.location) &&
         Objects.equals(this.lowGrade, school.lowGrade) &&
+        Objects.equals(this.mdrNumber, school.mdrNumber) &&
         Objects.equals(this.name, school.name) &&
         Objects.equals(this.ncesId, school.ncesId) &&
         Objects.equals(this.phone, school.phone) &&
         Objects.equals(this.principal, school.principal) &&
         Objects.equals(this.schoolNumber, school.schoolNumber) &&
         Objects.equals(this.sisId, school.sisId) &&
-        Objects.equals(this.stateId, school.stateId) &&
-        Objects.equals(this.mdrNumber, school.mdrNumber);
+        Objects.equals(this.stateId, school.stateId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, created, district, highGrade, lastModified, location, lowGrade, name, ncesId, phone, principal, schoolNumber, sisId, stateId, mdrNumber);
+    return Objects.hash(created, district, highGrade, id, lastModified, location, lowGrade, mdrNumber, name, ncesId, phone, principal, schoolNumber, sisId, stateId);
   }
 
 
@@ -378,13 +506,14 @@ public class School {
     StringBuilder sb = new StringBuilder();
     sb.append("class School {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    district: ").append(toIndentedString(district)).append("\n");
     sb.append("    highGrade: ").append(toIndentedString(highGrade)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
     sb.append("    lowGrade: ").append(toIndentedString(lowGrade)).append("\n");
+    sb.append("    mdrNumber: ").append(toIndentedString(mdrNumber)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    ncesId: ").append(toIndentedString(ncesId)).append("\n");
     sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
@@ -392,7 +521,6 @@ public class School {
     sb.append("    schoolNumber: ").append(toIndentedString(schoolNumber)).append("\n");
     sb.append("    sisId: ").append(toIndentedString(sisId)).append("\n");
     sb.append("    stateId: ").append(toIndentedString(stateId)).append("\n");
-    sb.append("    mdrNumber: ").append(toIndentedString(mdrNumber)).append("\n");
     sb.append("}");
     return sb.toString();
   }

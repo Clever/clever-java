@@ -30,6 +30,7 @@ import java.io.IOException;
 import io.swagger.client.model.DistrictAdminResponse;
 import io.swagger.client.model.DistrictAdminsResponse;
 import io.swagger.client.model.DistrictResponse;
+import io.swagger.client.model.DistrictStatusResponse;
 import io.swagger.client.model.DistrictsResponse;
 import io.swagger.client.model.GradeLevelsResponse;
 import io.swagger.client.model.NotFound;
@@ -139,7 +140,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific studentcontact&#39;s information.
+     * 
      * Returns a specific student contact
      * @param id  (required)
      * @return StudentContactResponse
@@ -151,7 +152,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific studentcontact&#39;s information.
+     * 
      * Returns a specific student contact
      * @param id  (required)
      * @return ApiResponse&lt;StudentContactResponse&gt;
@@ -164,7 +165,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific studentcontact&#39;s information. (asynchronously)
+     *  (asynchronously)
      * Returns a specific student contact
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -267,7 +268,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of student contacts you have access to.
+     * 
      * Returns a list of student contacts
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -281,7 +282,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of student contacts you have access to.
+     * 
      * Returns a list of student contacts
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -296,7 +297,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of student contacts you have access to. (asynchronously)
+     *  (asynchronously)
      * Returns a list of student contacts
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -402,7 +403,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all contacts for a student.
+     * 
      * Returns the contacts for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -415,7 +416,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all contacts for a student.
+     * 
      * Returns the contacts for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -429,7 +430,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all contacts for a student. (asynchronously)
+     *  (asynchronously)
      * Returns the contacts for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -531,7 +532,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific district&#39;s information.
+     * 
      * Returns a specific district
      * @param id  (required)
      * @return DistrictResponse
@@ -543,7 +544,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific district&#39;s information.
+     * 
      * Returns a specific district
      * @param id  (required)
      * @return ApiResponse&lt;DistrictResponse&gt;
@@ -556,7 +557,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific district&#39;s information. (asynchronously)
+     *  (asynchronously)
      * Returns a specific district
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -657,7 +658,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a district admin
+     * 
      * Returns a specific district admin
      * @param id  (required)
      * @return DistrictAdminResponse
@@ -669,7 +670,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a district admin
+     * 
      * Returns a specific district admin
      * @param id  (required)
      * @return ApiResponse&lt;DistrictAdminResponse&gt;
@@ -682,7 +683,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a district admin (asynchronously)
+     *  (asynchronously)
      * Returns a specific district admin
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -782,7 +783,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all users with admin access to a district.
+     * 
      * Returns a list of district admins
      * @param startingAfter  (optional)
      * @param endingBefore  (optional)
@@ -795,7 +796,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all users with admin access to a district.
+     * 
      * Returns a list of district admins
      * @param startingAfter  (optional)
      * @param endingBefore  (optional)
@@ -809,7 +810,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all users with admin access to a district. (asynchronously)
+     *  (asynchronously)
      * Returns a list of district admins
      * @param startingAfter  (optional)
      * @param endingBefore  (optional)
@@ -911,7 +912,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a school.
+     * 
      * Returns the district for a school
      * @param id  (required)
      * @return DistrictResponse
@@ -923,7 +924,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a school.
+     * 
      * Returns the district for a school
      * @param id  (required)
      * @return ApiResponse&lt;DistrictResponse&gt;
@@ -936,7 +937,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a school. (asynchronously)
+     *  (asynchronously)
      * Returns the district for a school
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1037,7 +1038,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a section.
+     * 
      * Returns the district for a section
      * @param id  (required)
      * @return DistrictResponse
@@ -1049,7 +1050,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a section.
+     * 
      * Returns the district for a section
      * @param id  (required)
      * @return ApiResponse&lt;DistrictResponse&gt;
@@ -1062,7 +1063,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a section. (asynchronously)
+     *  (asynchronously)
      * Returns the district for a section
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1163,7 +1164,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a student.
+     * 
      * Returns the district for a student
      * @param id  (required)
      * @return DistrictResponse
@@ -1175,7 +1176,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a student.
+     * 
      * Returns the district for a student
      * @param id  (required)
      * @return ApiResponse&lt;DistrictResponse&gt;
@@ -1188,7 +1189,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a student. (asynchronously)
+     *  (asynchronously)
      * Returns the district for a student
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1289,7 +1290,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves the district for a contact.
+     * 
      * Returns the district for a student contact
      * @param id  (required)
      * @return DistrictResponse
@@ -1301,7 +1302,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves the district for a contact.
+     * 
      * Returns the district for a student contact
      * @param id  (required)
      * @return ApiResponse&lt;DistrictResponse&gt;
@@ -1314,7 +1315,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves the district for a contact. (asynchronously)
+     *  (asynchronously)
      * Returns the district for a student contact
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1415,7 +1416,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a teacher.
+     * 
      * Returns the district for a teacher
      * @param id  (required)
      * @return DistrictResponse
@@ -1427,7 +1428,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a teacher.
+     * 
      * Returns the district for a teacher
      * @param id  (required)
      * @return ApiResponse&lt;DistrictResponse&gt;
@@ -1440,7 +1441,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves district information for a teacher. (asynchronously)
+     *  (asynchronously)
      * Returns the district for a teacher
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1474,28 +1475,21 @@ public class DataApi {
         return call;
     }
     /**
-     * Build call for getDistricts
-     * @param limit  (optional)
-     * @param startingAfter  (optional)
-     * @param endingBefore  (optional)
+     * Build call for getDistrictStatus
+     * @param id  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getDistrictsCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getDistrictStatusCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
-        String localVarPath = "/districts";
+        String localVarPath = "/districts/{id}/status"
+            .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-        if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
-        if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1530,10 +1524,15 @@ public class DataApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getDistrictsValidateBeforeCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getDistrictStatusValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling getDistrictStatus(Async)");
+        }
         
         
-        com.squareup.okhttp.Call call = getDistrictsCall(limit, startingAfter, endingBefore, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getDistrictStatusCall(id, progressListener, progressRequestListener);
         return call;
 
         
@@ -1543,45 +1542,39 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of districts you have access to.
-     * Returns a list of districts
-     * @param limit  (optional)
-     * @param startingAfter  (optional)
-     * @param endingBefore  (optional)
-     * @return DistrictsResponse
+     * 
+     * Returns the status of the district
+     * @param id  (required)
+     * @return DistrictStatusResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public DistrictsResponse getDistricts(Integer limit, String startingAfter, String endingBefore) throws ApiException {
-        ApiResponse<DistrictsResponse> resp = getDistrictsWithHttpInfo(limit, startingAfter, endingBefore);
+    public DistrictStatusResponse getDistrictStatus(String id) throws ApiException {
+        ApiResponse<DistrictStatusResponse> resp = getDistrictStatusWithHttpInfo(id);
         return resp.getData();
     }
 
     /**
-     * Gets a list of districts you have access to.
-     * Returns a list of districts
-     * @param limit  (optional)
-     * @param startingAfter  (optional)
-     * @param endingBefore  (optional)
-     * @return ApiResponse&lt;DistrictsResponse&gt;
+     * 
+     * Returns the status of the district
+     * @param id  (required)
+     * @return ApiResponse&lt;DistrictStatusResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<DistrictsResponse> getDistrictsWithHttpInfo(Integer limit, String startingAfter, String endingBefore) throws ApiException {
-        com.squareup.okhttp.Call call = getDistrictsValidateBeforeCall(limit, startingAfter, endingBefore, null, null);
-        Type localVarReturnType = new TypeToken<DistrictsResponse>(){}.getType();
+    public ApiResponse<DistrictStatusResponse> getDistrictStatusWithHttpInfo(String id) throws ApiException {
+        com.squareup.okhttp.Call call = getDistrictStatusValidateBeforeCall(id, null, null);
+        Type localVarReturnType = new TypeToken<DistrictStatusResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Gets a list of districts you have access to. (asynchronously)
-     * Returns a list of districts
-     * @param limit  (optional)
-     * @param startingAfter  (optional)
-     * @param endingBefore  (optional)
+     *  (asynchronously)
+     * Returns the status of the district
+     * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getDistrictsAsync(Integer limit, String startingAfter, String endingBefore, final ApiCallback<DistrictsResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call getDistrictStatusAsync(String id, final ApiCallback<DistrictStatusResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1602,7 +1595,123 @@ public class DataApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getDistrictsValidateBeforeCall(limit, startingAfter, endingBefore, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getDistrictStatusValidateBeforeCall(id, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<DistrictStatusResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getDistricts
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getDistrictsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/districts";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getDistrictsValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        
+        com.squareup.okhttp.Call call = getDistrictsCall(progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * 
+     * Returns a list of districts
+     * @return DistrictsResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public DistrictsResponse getDistricts() throws ApiException {
+        ApiResponse<DistrictsResponse> resp = getDistrictsWithHttpInfo();
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * Returns a list of districts
+     * @return ApiResponse&lt;DistrictsResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<DistrictsResponse> getDistrictsWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = getDistrictsValidateBeforeCall(null, null);
+        Type localVarReturnType = new TypeToken<DistrictsResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * Returns a list of districts
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getDistrictsAsync(final ApiCallback<DistrictsResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getDistrictsValidateBeforeCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<DistrictsResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1675,7 +1784,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all grade levels taught by a specific teacher.
+     * 
      * Returns the grade levels for sections a teacher teaches
      * @param id  (required)
      * @return GradeLevelsResponse
@@ -1687,7 +1796,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all grade levels taught by a specific teacher.
+     * 
      * Returns the grade levels for sections a teacher teaches
      * @param id  (required)
      * @return ApiResponse&lt;GradeLevelsResponse&gt;
@@ -1700,7 +1809,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all grade levels taught by a specific teacher. (asynchronously)
+     *  (asynchronously)
      * Returns the grade levels for sections a teacher teaches
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1801,7 +1910,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific school&#39;s information.
+     * 
      * Returns a specific school
      * @param id  (required)
      * @return SchoolResponse
@@ -1813,7 +1922,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific school&#39;s information.
+     * 
      * Returns a specific school
      * @param id  (required)
      * @return ApiResponse&lt;SchoolResponse&gt;
@@ -1826,7 +1935,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific school&#39;s information. (asynchronously)
+     *  (asynchronously)
      * Returns a specific school
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1927,7 +2036,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific schooladmin&#39;s information.
+     * 
      * Returns a specific school admin
      * @param id  (required)
      * @return SchoolAdminResponse
@@ -1939,7 +2048,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific schooladmin&#39;s information.
+     * 
      * Returns a specific school admin
      * @param id  (required)
      * @return ApiResponse&lt;SchoolAdminResponse&gt;
@@ -1952,7 +2061,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific schooladmin&#39;s information. (asynchronously)
+     *  (asynchronously)
      * Returns a specific school admin
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2055,7 +2164,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of school_admins you have access to.
+     * 
      * Returns a list of school admins
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -2069,7 +2178,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of school_admins you have access to.
+     * 
      * Returns a list of school admins
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -2084,7 +2193,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of school_admins you have access to. (asynchronously)
+     *  (asynchronously)
      * Returns a list of school admins
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -2187,7 +2296,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the school for a section
+     * 
      * Returns the school for a section
      * @param id  (required)
      * @return SchoolResponse
@@ -2199,7 +2308,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the school for a section
+     * 
      * Returns the school for a section
      * @param id  (required)
      * @return ApiResponse&lt;SchoolResponse&gt;
@@ -2212,7 +2321,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the school for a section (asynchronously)
+     *  (asynchronously)
      * Returns the school for a section
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2313,7 +2422,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the school for a student
+     * 
      * Returns the primary school for a student
      * @param id  (required)
      * @return SchoolResponse
@@ -2325,7 +2434,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the school for a student
+     * 
      * Returns the primary school for a student
      * @param id  (required)
      * @return ApiResponse&lt;SchoolResponse&gt;
@@ -2338,7 +2447,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the school for a student (asynchronously)
+     *  (asynchronously)
      * Returns the primary school for a student
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2439,7 +2548,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the school for a teacher
+     * 
      * Retrieves school info for a teacher.
      * @param id  (required)
      * @return SchoolResponse
@@ -2451,7 +2560,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the school for a teacher
+     * 
      * Retrieves school info for a teacher.
      * @param id  (required)
      * @return ApiResponse&lt;SchoolResponse&gt;
@@ -2464,7 +2573,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the school for a teacher (asynchronously)
+     *  (asynchronously)
      * Retrieves school info for a teacher.
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2567,7 +2676,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of schools you have access to.
+     * 
      * Returns a list of schools
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -2581,7 +2690,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of schools you have access to.
+     * 
      * Returns a list of schools
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -2596,7 +2705,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of schools you have access to. (asynchronously)
+     *  (asynchronously)
      * Returns a list of schools
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -2708,7 +2817,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all schools for a school admin.
+     * 
      * Returns the schools for a school admin
      * @param id  (required)
      * @param limit  (optional)
@@ -2723,7 +2832,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all schools for a school admin.
+     * 
      * Returns the schools for a school admin
      * @param id  (required)
      * @param limit  (optional)
@@ -2739,7 +2848,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all schools for a school admin. (asynchronously)
+     *  (asynchronously)
      * Returns the schools for a school admin
      * @param id  (required)
      * @param limit  (optional)
@@ -2843,7 +2952,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific section&#39;s information.
+     * 
      * Returns a specific section
      * @param id  (required)
      * @return SectionResponse
@@ -2855,7 +2964,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific section&#39;s information.
+     * 
      * Returns a specific section
      * @param id  (required)
      * @return ApiResponse&lt;SectionResponse&gt;
@@ -2868,7 +2977,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific section&#39;s information. (asynchronously)
+     *  (asynchronously)
      * Returns a specific section
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2971,7 +3080,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of sections you have access to.
+     * 
      * Returns a list of sections
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -2985,7 +3094,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of sections you have access to.
+     * 
      * Returns a list of sections
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -3000,7 +3109,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of sections you have access to. (asynchronously)
+     *  (asynchronously)
      * Returns a list of sections
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -3112,7 +3221,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all sections for a specific school.
+     * 
      * Returns the sections for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -3127,7 +3236,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all sections for a specific school.
+     * 
      * Returns the sections for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -3143,7 +3252,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all sections for a specific school. (asynchronously)
+     *  (asynchronously)
      * Returns the sections for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -3256,7 +3365,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all sections for a student.
+     * 
      * Returns the sections for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -3271,7 +3380,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all sections for a student.
+     * 
      * Returns the sections for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -3287,7 +3396,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all sections for a student. (asynchronously)
+     *  (asynchronously)
      * Returns the sections for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -3400,7 +3509,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all sections for a teacher.
+     * 
      * Returns the sections for a teacher
      * @param id  (required)
      * @param limit  (optional)
@@ -3415,7 +3524,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all sections for a teacher.
+     * 
      * Returns the sections for a teacher
      * @param id  (required)
      * @param limit  (optional)
@@ -3431,7 +3540,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all sections for a teacher. (asynchronously)
+     *  (asynchronously)
      * Returns the sections for a teacher
      * @param id  (required)
      * @param limit  (optional)
@@ -3535,7 +3644,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific student&#39;s information.
+     * 
      * Returns a specific student
      * @param id  (required)
      * @return StudentResponse
@@ -3547,7 +3656,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific student&#39;s information.
+     * 
      * Returns a specific student
      * @param id  (required)
      * @return ApiResponse&lt;StudentResponse&gt;
@@ -3560,7 +3669,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific student&#39;s information. (asynchronously)
+     *  (asynchronously)
      * Returns a specific student
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -3661,7 +3770,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves the student for a contact.
+     * 
      * Returns the student for a student contact
      * @param id  (required)
      * @return StudentResponse
@@ -3673,7 +3782,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves the student for a contact.
+     * 
      * Returns the student for a student contact
      * @param id  (required)
      * @return ApiResponse&lt;StudentResponse&gt;
@@ -3686,7 +3795,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves the student for a contact. (asynchronously)
+     *  (asynchronously)
      * Returns the student for a student contact
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -3789,7 +3898,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of students you have access to.
+     * 
      * Returns a list of students
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -3803,7 +3912,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of students you have access to.
+     * 
      * Returns a list of students
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -3818,7 +3927,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of students you have access to. (asynchronously)
+     *  (asynchronously)
      * Returns a list of students
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -3930,7 +4039,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all students for a specific school.
+     * 
      * Returns the students for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -3945,7 +4054,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all students for a specific school.
+     * 
      * Returns the students for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -3961,7 +4070,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all students for a specific school. (asynchronously)
+     *  (asynchronously)
      * Returns the students for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -4074,7 +4183,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all the section&#39;s students.
+     * 
      * Returns the students for a section
      * @param id  (required)
      * @param limit  (optional)
@@ -4089,7 +4198,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all the section&#39;s students.
+     * 
      * Returns the students for a section
      * @param id  (required)
      * @param limit  (optional)
@@ -4105,7 +4214,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all the section&#39;s students. (asynchronously)
+     *  (asynchronously)
      * Returns the students for a section
      * @param id  (required)
      * @param limit  (optional)
@@ -4218,7 +4327,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all students that a teacher has in their sections.
+     * 
      * Returns the students for a teacher
      * @param id  (required)
      * @param limit  (optional)
@@ -4233,7 +4342,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all students that a teacher has in their sections.
+     * 
      * Returns the students for a teacher
      * @param id  (required)
      * @param limit  (optional)
@@ -4249,7 +4358,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all students that a teacher has in their sections. (asynchronously)
+     *  (asynchronously)
      * Returns the students for a teacher
      * @param id  (required)
      * @param limit  (optional)
@@ -4353,7 +4462,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific teacher&#39;s information.
+     * 
      * Returns a specific teacher
      * @param id  (required)
      * @return TeacherResponse
@@ -4365,7 +4474,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific teacher&#39;s information.
+     * 
      * Returns a specific teacher
      * @param id  (required)
      * @return ApiResponse&lt;TeacherResponse&gt;
@@ -4378,7 +4487,7 @@ public class DataApi {
     }
 
     /**
-     * Get only a specific teacher&#39;s information. (asynchronously)
+     *  (asynchronously)
      * Returns a specific teacher
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -4479,7 +4588,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the primary teacher of a section.
+     * 
      * Returns the primary teacher for a section
      * @param id  (required)
      * @return TeacherResponse
@@ -4491,7 +4600,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the primary teacher of a section.
+     * 
      * Returns the primary teacher for a section
      * @param id  (required)
      * @return ApiResponse&lt;TeacherResponse&gt;
@@ -4504,7 +4613,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves information about the primary teacher of a section. (asynchronously)
+     *  (asynchronously)
      * Returns the primary teacher for a section
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -4607,7 +4716,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of teachers you have access to.
+     * 
      * Returns a list of teachers
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -4621,7 +4730,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of teachers you have access to.
+     * 
      * Returns a list of teachers
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -4636,7 +4745,7 @@ public class DataApi {
     }
 
     /**
-     * Gets a list of teachers you have access to. (asynchronously)
+     *  (asynchronously)
      * Returns a list of teachers
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -4748,7 +4857,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all teachers for a specific school.
+     * 
      * Returns the teachers for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -4763,7 +4872,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all teachers for a specific school.
+     * 
      * Returns the teachers for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -4779,7 +4888,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all teachers for a specific school. (asynchronously)
+     *  (asynchronously)
      * Returns the teachers for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -4892,7 +5001,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all the section&#39;s teachers.
+     * 
      * Returns the teachers for a section
      * @param id  (required)
      * @param limit  (optional)
@@ -4907,7 +5016,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all the section&#39;s teachers.
+     * 
      * Returns the teachers for a section
      * @param id  (required)
      * @param limit  (optional)
@@ -4923,7 +5032,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves a list of all the section&#39;s teachers. (asynchronously)
+     *  (asynchronously)
      * Returns the teachers for a section
      * @param id  (required)
      * @param limit  (optional)
@@ -5036,7 +5145,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all teachers for a student.
+     * 
      * Returns the teachers for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -5051,7 +5160,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all teachers for a student.
+     * 
      * Returns the teachers for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -5067,7 +5176,7 @@ public class DataApi {
     }
 
     /**
-     * Retrieves all teachers for a student. (asynchronously)
+     *  (asynchronously)
      * Returns the teachers for a student
      * @param id  (required)
      * @param limit  (optional)

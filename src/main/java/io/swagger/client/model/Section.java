@@ -24,11 +24,8 @@ import java.util.List;
 /**
  * Section
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class Section {
-  @SerializedName("id")
-  private String id = null;
-
   @SerializedName("course_description")
   private String courseDescription = null;
 
@@ -44,8 +41,75 @@ public class Section {
   @SerializedName("district")
   private String district = null;
 
+  /**
+   * Gets or Sets grade
+   */
+  public enum GradeEnum {
+    @SerializedName("1")
+    _1("1"),
+    
+    @SerializedName("2")
+    _2("2"),
+    
+    @SerializedName("3")
+    _3("3"),
+    
+    @SerializedName("4")
+    _4("4"),
+    
+    @SerializedName("5")
+    _5("5"),
+    
+    @SerializedName("6")
+    _6("6"),
+    
+    @SerializedName("7")
+    _7("7"),
+    
+    @SerializedName("8")
+    _8("8"),
+    
+    @SerializedName("9")
+    _9("9"),
+    
+    @SerializedName("10")
+    _10("10"),
+    
+    @SerializedName("11")
+    _11("11"),
+    
+    @SerializedName("12")
+    _12("12"),
+    
+    @SerializedName("PreKindergarten")
+    PREKINDERGARTEN("PreKindergarten"),
+    
+    @SerializedName("Kindergarten")
+    KINDERGARTEN("Kindergarten"),
+    
+    @SerializedName("PostGraduate")
+    POSTGRADUATE("PostGraduate"),
+    
+    @SerializedName("Other")
+    OTHER("Other");
+
+    private String value;
+
+    GradeEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
   @SerializedName("grade")
-  private String grade = null;
+  private GradeEnum grade = null;
+
+  @SerializedName("id")
+  private String id = null;
 
   @SerializedName("last_modified")
   private String lastModified = null;
@@ -68,8 +132,57 @@ public class Section {
   @SerializedName("students")
   private List<String> students = new ArrayList<String>();
 
+  /**
+   * Gets or Sets subject
+   */
+  public enum SubjectEnum {
+    @SerializedName("english/language arts")
+    ENGLISH_LANGUAGE_ARTS("english/language arts"),
+    
+    @SerializedName("math")
+    MATH("math"),
+    
+    @SerializedName("science")
+    SCIENCE("science"),
+    
+    @SerializedName("social studies")
+    SOCIAL_STUDIES("social studies"),
+    
+    @SerializedName("language")
+    LANGUAGE("language"),
+    
+    @SerializedName("homeroom/advisory")
+    HOMEROOM_ADVISORY("homeroom/advisory"),
+    
+    @SerializedName("interventions/online learning")
+    INTERVENTIONS_ONLINE_LEARNING("interventions/online learning"),
+    
+    @SerializedName("technology and engineering")
+    TECHNOLOGY_AND_ENGINEERING("technology and engineering"),
+    
+    @SerializedName("PE and health")
+    PE_AND_HEALTH("PE and health"),
+    
+    @SerializedName("arts and music")
+    ARTS_AND_MUSIC("arts and music"),
+    
+    @SerializedName("other")
+    OTHER("other");
+
+    private String value;
+
+    SubjectEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
   @SerializedName("subject")
-  private String subject = null;
+  private SubjectEnum subject = null;
 
   @SerializedName("teacher")
   private String teacher = null;
@@ -79,24 +192,6 @@ public class Section {
 
   @SerializedName("term")
   private Term term = null;
-
-  public Section id(String id) {
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(value = "")
-  public String getId() {
-    return id;
-  }
-
-  public void setId(String id) {
-    this.id = id;
-  }
 
   public Section courseDescription(String courseDescription) {
     this.courseDescription = courseDescription;
@@ -188,7 +283,7 @@ public class Section {
     this.district = district;
   }
 
-  public Section grade(String grade) {
+  public Section grade(GradeEnum grade) {
     this.grade = grade;
     return this;
   }
@@ -198,12 +293,30 @@ public class Section {
    * @return grade
   **/
   @ApiModelProperty(value = "")
-  public String getGrade() {
+  public GradeEnum getGrade() {
     return grade;
   }
 
-  public void setGrade(String grade) {
+  public void setGrade(GradeEnum grade) {
     this.grade = grade;
+  }
+
+  public Section id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @ApiModelProperty(value = "")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
   }
 
   public Section lastModified(String lastModified) {
@@ -337,7 +450,7 @@ public class Section {
     this.students = students;
   }
 
-  public Section subject(String subject) {
+  public Section subject(SubjectEnum subject) {
     this.subject = subject;
     return this;
   }
@@ -347,11 +460,11 @@ public class Section {
    * @return subject
   **/
   @ApiModelProperty(value = "")
-  public String getSubject() {
+  public SubjectEnum getSubject() {
     return subject;
   }
 
-  public void setSubject(String subject) {
+  public void setSubject(SubjectEnum subject) {
     this.subject = subject;
   }
 
@@ -424,13 +537,13 @@ public class Section {
       return false;
     }
     Section section = (Section) o;
-    return Objects.equals(this.id, section.id) &&
-        Objects.equals(this.courseDescription, section.courseDescription) &&
+    return Objects.equals(this.courseDescription, section.courseDescription) &&
         Objects.equals(this.courseName, section.courseName) &&
         Objects.equals(this.courseNumber, section.courseNumber) &&
         Objects.equals(this.created, section.created) &&
         Objects.equals(this.district, section.district) &&
         Objects.equals(this.grade, section.grade) &&
+        Objects.equals(this.id, section.id) &&
         Objects.equals(this.lastModified, section.lastModified) &&
         Objects.equals(this.name, section.name) &&
         Objects.equals(this.period, section.period) &&
@@ -446,7 +559,7 @@ public class Section {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, courseDescription, courseName, courseNumber, created, district, grade, lastModified, name, period, school, sectionNumber, sisId, students, subject, teacher, teachers, term);
+    return Objects.hash(courseDescription, courseName, courseNumber, created, district, grade, id, lastModified, name, period, school, sectionNumber, sisId, students, subject, teacher, teachers, term);
   }
 
 
@@ -455,13 +568,13 @@ public class Section {
     StringBuilder sb = new StringBuilder();
     sb.append("class Section {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    courseDescription: ").append(toIndentedString(courseDescription)).append("\n");
     sb.append("    courseName: ").append(toIndentedString(courseName)).append("\n");
     sb.append("    courseNumber: ").append(toIndentedString(courseNumber)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    district: ").append(toIndentedString(district)).append("\n");
     sb.append("    grade: ").append(toIndentedString(grade)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    period: ").append(toIndentedString(period)).append("\n");

@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.Credentials;
 import io.swagger.client.model.Location;
 import io.swagger.client.model.Name;
 import java.util.ArrayList;
@@ -25,13 +26,13 @@ import java.util.List;
 /**
  * Student
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class Student {
-  @SerializedName("id")
-  private String id = null;
-
   @SerializedName("created")
   private String created = null;
+
+  @SerializedName("credentials")
+  private Credentials credentials = null;
 
   @SerializedName("district")
   private String district = null;
@@ -39,23 +40,162 @@ public class Student {
   @SerializedName("dob")
   private String dob = null;
 
+  /**
+   * Gets or Sets ellStatus
+   */
+  public enum EllStatusEnum {
+    @SerializedName("Y")
+    Y("Y"),
+    
+    @SerializedName("N")
+    N("N"),
+    
+    @SerializedName("")
+    EMPTY("");
+
+    private String value;
+
+    EllStatusEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
   @SerializedName("ell_status")
-  private String ellStatus = null;
+  private EllStatusEnum ellStatus = null;
 
   @SerializedName("email")
   private String email = null;
 
-  @SerializedName("frl_status")
-  private String frlStatus = null;
+  /**
+   * Gets or Sets gender
+   */
+  public enum GenderEnum {
+    @SerializedName("M")
+    M("M"),
+    
+    @SerializedName("F")
+    F("F"),
+    
+    @SerializedName("")
+    EMPTY("");
+
+    private String value;
+
+    GenderEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
 
   @SerializedName("gender")
-  private String gender = null;
+  private GenderEnum gender = null;
+
+  /**
+   * Gets or Sets grade
+   */
+  public enum GradeEnum {
+    @SerializedName("1")
+    _1("1"),
+    
+    @SerializedName("2")
+    _2("2"),
+    
+    @SerializedName("3")
+    _3("3"),
+    
+    @SerializedName("4")
+    _4("4"),
+    
+    @SerializedName("5")
+    _5("5"),
+    
+    @SerializedName("6")
+    _6("6"),
+    
+    @SerializedName("7")
+    _7("7"),
+    
+    @SerializedName("8")
+    _8("8"),
+    
+    @SerializedName("9")
+    _9("9"),
+    
+    @SerializedName("10")
+    _10("10"),
+    
+    @SerializedName("11")
+    _11("11"),
+    
+    @SerializedName("12")
+    _12("12"),
+    
+    @SerializedName("PreKindergarten")
+    PREKINDERGARTEN("PreKindergarten"),
+    
+    @SerializedName("Kindergarten")
+    KINDERGARTEN("Kindergarten"),
+    
+    @SerializedName("PostGraduate")
+    POSTGRADUATE("PostGraduate"),
+    
+    @SerializedName("Other")
+    OTHER("Other");
+
+    private String value;
+
+    GradeEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
 
   @SerializedName("grade")
-  private String grade = null;
+  private GradeEnum grade = null;
+
+  /**
+   * Gets or Sets hispanicEthnicity
+   */
+  public enum HispanicEthnicityEnum {
+    @SerializedName("Y")
+    Y("Y"),
+    
+    @SerializedName("N")
+    N("N"),
+    
+    @SerializedName("")
+    EMPTY("");
+
+    private String value;
+
+    HispanicEthnicityEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
 
   @SerializedName("hispanic_ethnicity")
-  private String hispanicEthnicity = null;
+  private HispanicEthnicityEnum hispanicEthnicity = null;
+
+  @SerializedName("id")
+  private String id = null;
 
   @SerializedName("iep_status")
   private String iepStatus = null;
@@ -69,8 +209,48 @@ public class Student {
   @SerializedName("name")
   private Name name = null;
 
+  /**
+   * Gets or Sets race
+   */
+  public enum RaceEnum {
+    @SerializedName("Caucasian")
+    CAUCASIAN("Caucasian"),
+    
+    @SerializedName("Asian")
+    ASIAN("Asian"),
+    
+    @SerializedName("Black or African American")
+    BLACK_OR_AFRICAN_AMERICAN("Black or African American"),
+    
+    @SerializedName("American Indian")
+    AMERICAN_INDIAN("American Indian"),
+    
+    @SerializedName("Hawaiian or Other Pacific Islander")
+    HAWAIIAN_OR_OTHER_PACIFIC_ISLANDER("Hawaiian or Other Pacific Islander"),
+    
+    @SerializedName("Two or More Races")
+    TWO_OR_MORE_RACES("Two or More Races"),
+    
+    @SerializedName("Unknown")
+    UNKNOWN("Unknown"),
+    
+    @SerializedName("")
+    EMPTY("");
+
+    private String value;
+
+    RaceEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
   @SerializedName("race")
-  private String race = null;
+  private RaceEnum race = null;
 
   @SerializedName("school")
   private String school = null;
@@ -86,24 +266,6 @@ public class Student {
 
   @SerializedName("student_number")
   private String studentNumber = null;
-
-  public Student id(String id) {
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(value = "")
-  public String getId() {
-    return id;
-  }
-
-  public void setId(String id) {
-    this.id = id;
-  }
 
   public Student created(String created) {
     this.created = created;
@@ -121,6 +283,24 @@ public class Student {
 
   public void setCreated(String created) {
     this.created = created;
+  }
+
+  public Student credentials(Credentials credentials) {
+    this.credentials = credentials;
+    return this;
+  }
+
+   /**
+   * Get credentials
+   * @return credentials
+  **/
+  @ApiModelProperty(value = "")
+  public Credentials getCredentials() {
+    return credentials;
+  }
+
+  public void setCredentials(Credentials credentials) {
+    this.credentials = credentials;
   }
 
   public Student district(String district) {
@@ -159,7 +339,7 @@ public class Student {
     this.dob = dob;
   }
 
-  public Student ellStatus(String ellStatus) {
+  public Student ellStatus(EllStatusEnum ellStatus) {
     this.ellStatus = ellStatus;
     return this;
   }
@@ -169,11 +349,11 @@ public class Student {
    * @return ellStatus
   **/
   @ApiModelProperty(value = "")
-  public String getEllStatus() {
+  public EllStatusEnum getEllStatus() {
     return ellStatus;
   }
 
-  public void setEllStatus(String ellStatus) {
+  public void setEllStatus(EllStatusEnum ellStatus) {
     this.ellStatus = ellStatus;
   }
 
@@ -195,25 +375,7 @@ public class Student {
     this.email = email;
   }
 
-  public Student frlStatus(String frlStatus) {
-    this.frlStatus = frlStatus;
-    return this;
-  }
-
-   /**
-   * Get frlStatus
-   * @return frlStatus
-  **/
-  @ApiModelProperty(value = "")
-  public String getFrlStatus() {
-    return frlStatus;
-  }
-
-  public void setFrlStatus(String frlStatus) {
-    this.frlStatus = frlStatus;
-  }
-
-  public Student gender(String gender) {
+  public Student gender(GenderEnum gender) {
     this.gender = gender;
     return this;
   }
@@ -223,15 +385,15 @@ public class Student {
    * @return gender
   **/
   @ApiModelProperty(value = "")
-  public String getGender() {
+  public GenderEnum getGender() {
     return gender;
   }
 
-  public void setGender(String gender) {
+  public void setGender(GenderEnum gender) {
     this.gender = gender;
   }
 
-  public Student grade(String grade) {
+  public Student grade(GradeEnum grade) {
     this.grade = grade;
     return this;
   }
@@ -241,15 +403,15 @@ public class Student {
    * @return grade
   **/
   @ApiModelProperty(value = "")
-  public String getGrade() {
+  public GradeEnum getGrade() {
     return grade;
   }
 
-  public void setGrade(String grade) {
+  public void setGrade(GradeEnum grade) {
     this.grade = grade;
   }
 
-  public Student hispanicEthnicity(String hispanicEthnicity) {
+  public Student hispanicEthnicity(HispanicEthnicityEnum hispanicEthnicity) {
     this.hispanicEthnicity = hispanicEthnicity;
     return this;
   }
@@ -259,12 +421,30 @@ public class Student {
    * @return hispanicEthnicity
   **/
   @ApiModelProperty(value = "")
-  public String getHispanicEthnicity() {
+  public HispanicEthnicityEnum getHispanicEthnicity() {
     return hispanicEthnicity;
   }
 
-  public void setHispanicEthnicity(String hispanicEthnicity) {
+  public void setHispanicEthnicity(HispanicEthnicityEnum hispanicEthnicity) {
     this.hispanicEthnicity = hispanicEthnicity;
+  }
+
+  public Student id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @ApiModelProperty(value = "")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
   }
 
   public Student iepStatus(String iepStatus) {
@@ -339,7 +519,7 @@ public class Student {
     this.name = name;
   }
 
-  public Student race(String race) {
+  public Student race(RaceEnum race) {
     this.race = race;
     return this;
   }
@@ -349,11 +529,11 @@ public class Student {
    * @return race
   **/
   @ApiModelProperty(value = "")
-  public String getRace() {
+  public RaceEnum getRace() {
     return race;
   }
 
-  public void setRace(String race) {
+  public void setRace(RaceEnum race) {
     this.race = race;
   }
 
@@ -462,16 +642,16 @@ public class Student {
       return false;
     }
     Student student = (Student) o;
-    return Objects.equals(this.id, student.id) &&
-        Objects.equals(this.created, student.created) &&
+    return Objects.equals(this.created, student.created) &&
+        Objects.equals(this.credentials, student.credentials) &&
         Objects.equals(this.district, student.district) &&
         Objects.equals(this.dob, student.dob) &&
         Objects.equals(this.ellStatus, student.ellStatus) &&
         Objects.equals(this.email, student.email) &&
-        Objects.equals(this.frlStatus, student.frlStatus) &&
         Objects.equals(this.gender, student.gender) &&
         Objects.equals(this.grade, student.grade) &&
         Objects.equals(this.hispanicEthnicity, student.hispanicEthnicity) &&
+        Objects.equals(this.id, student.id) &&
         Objects.equals(this.iepStatus, student.iepStatus) &&
         Objects.equals(this.lastModified, student.lastModified) &&
         Objects.equals(this.location, student.location) &&
@@ -486,7 +666,7 @@ public class Student {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, created, district, dob, ellStatus, email, frlStatus, gender, grade, hispanicEthnicity, iepStatus, lastModified, location, name, race, school, schools, sisId, stateId, studentNumber);
+    return Objects.hash(created, credentials, district, dob, ellStatus, email, gender, grade, hispanicEthnicity, id, iepStatus, lastModified, location, name, race, school, schools, sisId, stateId, studentNumber);
   }
 
 
@@ -495,16 +675,16 @@ public class Student {
     StringBuilder sb = new StringBuilder();
     sb.append("class Student {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    sb.append("    credentials: ").append(toIndentedString(credentials)).append("\n");
     sb.append("    district: ").append(toIndentedString(district)).append("\n");
     sb.append("    dob: ").append(toIndentedString(dob)).append("\n");
     sb.append("    ellStatus: ").append(toIndentedString(ellStatus)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    frlStatus: ").append(toIndentedString(frlStatus)).append("\n");
     sb.append("    gender: ").append(toIndentedString(gender)).append("\n");
     sb.append("    grade: ").append(toIndentedString(grade)).append("\n");
     sb.append("    hispanicEthnicity: ").append(toIndentedString(hispanicEthnicity)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    iepStatus: ").append(toIndentedString(iepStatus)).append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
     sb.append("    location: ").append(toIndentedString(location)).append("\n");

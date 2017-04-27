@@ -21,16 +21,16 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Name
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class Name {
   @SerializedName("first")
   private String first = null;
 
-  @SerializedName("middle")
-  private String middle = null;
-
   @SerializedName("last")
   private String last = null;
+
+  @SerializedName("middle")
+  private String middle = null;
 
   public Name first(String first) {
     this.first = first;
@@ -48,24 +48,6 @@ public class Name {
 
   public void setFirst(String first) {
     this.first = first;
-  }
-
-  public Name middle(String middle) {
-    this.middle = middle;
-    return this;
-  }
-
-   /**
-   * Get middle
-   * @return middle
-  **/
-  @ApiModelProperty(value = "")
-  public String getMiddle() {
-    return middle;
-  }
-
-  public void setMiddle(String middle) {
-    this.middle = middle;
   }
 
   public Name last(String last) {
@@ -86,6 +68,24 @@ public class Name {
     this.last = last;
   }
 
+  public Name middle(String middle) {
+    this.middle = middle;
+    return this;
+  }
+
+   /**
+   * Get middle
+   * @return middle
+  **/
+  @ApiModelProperty(value = "")
+  public String getMiddle() {
+    return middle;
+  }
+
+  public void setMiddle(String middle) {
+    this.middle = middle;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -97,13 +97,13 @@ public class Name {
     }
     Name name = (Name) o;
     return Objects.equals(this.first, name.first) &&
-        Objects.equals(this.middle, name.middle) &&
-        Objects.equals(this.last, name.last);
+        Objects.equals(this.last, name.last) &&
+        Objects.equals(this.middle, name.middle);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(first, middle, last);
+    return Objects.hash(first, last, middle);
   }
 
 
@@ -113,8 +113,8 @@ public class Name {
     sb.append("class Name {\n");
     
     sb.append("    first: ").append(toIndentedString(first)).append("\n");
-    sb.append("    middle: ").append(toIndentedString(middle)).append("\n");
     sb.append("    last: ").append(toIndentedString(last)).append("\n");
+    sb.append("    middle: ").append(toIndentedString(middle)).append("\n");
     sb.append("}");
     return sb.toString();
   }

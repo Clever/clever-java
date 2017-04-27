@@ -35,7 +35,7 @@ public class EventsApiTest {
 
     
     /**
-     * Retrieves a single event.
+     * 
      *
      * Returns the specific event
      *
@@ -51,7 +51,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Retrieves all events
+     * 
      *
      * Returns a list of events
      *
@@ -69,7 +69,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Retrieves events for schools.
+     * 
      *
      * Returns a list of events for a school
      *
@@ -88,7 +88,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Retrieves events for school_admins.
+     * 
      *
      * Returns a list of events for a school admin
      *
@@ -107,7 +107,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Retrieves events for sections.
+     * 
      *
      * Returns a list of events for a section
      *
@@ -126,7 +126,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Retrieves events for students.
+     * 
      *
      * Returns a list of events for a student
      *
@@ -145,7 +145,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Retrieves events for teachers.
+     * 
      *
      * Returns a list of events for a teacher
      *

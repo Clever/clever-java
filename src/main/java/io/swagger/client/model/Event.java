@@ -21,31 +21,34 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Event
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 
 public class Event {
-  @SerializedName("type")
-  private String type = null;
+  @SerializedName("created")
+  private String created = null;
 
   @SerializedName("id")
   private String id = null;
 
-  public Event type(String type) {
-    this.type = type;
+  @SerializedName("type")
+  private String type = null;
+
+  public Event created(String created) {
+    this.created = created;
     return this;
   }
 
    /**
-   * Get type
-   * @return type
+   * Get created
+   * @return created
   **/
-  @ApiModelProperty(required = true, value = "")
-  public String getType() {
-    return type;
+  @ApiModelProperty(value = "")
+  public String getCreated() {
+    return created;
   }
 
-  public void setType(String type) {
-    this.type = type;
+  public void setCreated(String created) {
+    this.created = created;
   }
 
   public Event id(String id) {
@@ -66,6 +69,24 @@ public class Event {
     this.id = id;
   }
 
+  public Event type(String type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * Get type
+   * @return type
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -76,13 +97,14 @@ public class Event {
       return false;
     }
     Event event = (Event) o;
-    return Objects.equals(this.type, event.type) &&
-        Objects.equals(this.id, event.id);
+    return Objects.equals(this.created, event.created) &&
+        Objects.equals(this.id, event.id) &&
+        Objects.equals(this.type, event.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, id);
+    return Objects.hash(created, id, type);
   }
 
 
@@ -91,8 +113,9 @@ public class Event {
     StringBuilder sb = new StringBuilder();
     sb.append("class Event {\n");
     
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -21,16 +21,16 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * District
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class District {
   @SerializedName("id")
   private String id = null;
 
-  @SerializedName("name")
-  private String name = null;
-
   @SerializedName("mdr_number")
   private String mdrNumber = null;
+
+  @SerializedName("name")
+  private String name = null;
 
   public District id(String id) {
     this.id = id;
@@ -48,24 +48,6 @@ public class District {
 
   public void setId(String id) {
     this.id = id;
-  }
-
-  public District name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @ApiModelProperty(value = "")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
   }
 
   public District mdrNumber(String mdrNumber) {
@@ -86,6 +68,24 @@ public class District {
     this.mdrNumber = mdrNumber;
   }
 
+  public District name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @ApiModelProperty(value = "")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -97,13 +97,13 @@ public class District {
     }
     District district = (District) o;
     return Objects.equals(this.id, district.id) &&
-        Objects.equals(this.name, district.name) &&
-        Objects.equals(this.mdrNumber, district.mdrNumber);
+        Objects.equals(this.mdrNumber, district.mdrNumber) &&
+        Objects.equals(this.name, district.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, mdrNumber);
+    return Objects.hash(id, mdrNumber, name);
   }
 
 
@@ -113,8 +113,8 @@ public class District {
     sb.append("class District {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    mdrNumber: ").append(toIndentedString(mdrNumber)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

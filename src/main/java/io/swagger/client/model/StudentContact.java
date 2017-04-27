@@ -21,16 +21,16 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * StudentContact
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class StudentContact {
-  @SerializedName("id")
-  private String id = null;
-
   @SerializedName("district")
   private String district = null;
 
   @SerializedName("email")
   private String email = null;
+
+  @SerializedName("id")
+  private String id = null;
 
   @SerializedName("name")
   private String name = null;
@@ -49,24 +49,6 @@ public class StudentContact {
 
   @SerializedName("type")
   private String type = null;
-
-  public StudentContact id(String id) {
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(value = "")
-  public String getId() {
-    return id;
-  }
-
-  public void setId(String id) {
-    this.id = id;
-  }
 
   public StudentContact district(String district) {
     this.district = district;
@@ -102,6 +84,24 @@ public class StudentContact {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public StudentContact id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @ApiModelProperty(value = "")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
   }
 
   public StudentContact name(String name) {
@@ -222,9 +222,9 @@ public class StudentContact {
       return false;
     }
     StudentContact studentContact = (StudentContact) o;
-    return Objects.equals(this.id, studentContact.id) &&
-        Objects.equals(this.district, studentContact.district) &&
+    return Objects.equals(this.district, studentContact.district) &&
         Objects.equals(this.email, studentContact.email) &&
+        Objects.equals(this.id, studentContact.id) &&
         Objects.equals(this.name, studentContact.name) &&
         Objects.equals(this.phone, studentContact.phone) &&
         Objects.equals(this.phoneType, studentContact.phoneType) &&
@@ -235,7 +235,7 @@ public class StudentContact {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, district, email, name, phone, phoneType, relationship, student, type);
+    return Objects.hash(district, email, id, name, phone, phoneType, relationship, student, type);
   }
 
 
@@ -244,9 +244,9 @@ public class StudentContact {
     StringBuilder sb = new StringBuilder();
     sb.append("class StudentContact {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    district: ").append(toIndentedString(district)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
     sb.append("    phoneType: ").append(toIndentedString(phoneType)).append("\n");

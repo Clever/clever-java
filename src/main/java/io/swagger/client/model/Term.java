@@ -21,16 +21,34 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Term
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class Term {
+  @SerializedName("end_date")
+  private String endDate = null;
+
   @SerializedName("name")
   private String name = null;
 
   @SerializedName("start_date")
   private String startDate = null;
 
-  @SerializedName("end_date")
-  private String endDate = null;
+  public Term endDate(String endDate) {
+    this.endDate = endDate;
+    return this;
+  }
+
+   /**
+   * Get endDate
+   * @return endDate
+  **/
+  @ApiModelProperty(value = "")
+  public String getEndDate() {
+    return endDate;
+  }
+
+  public void setEndDate(String endDate) {
+    this.endDate = endDate;
+  }
 
   public Term name(String name) {
     this.name = name;
@@ -68,24 +86,6 @@ public class Term {
     this.startDate = startDate;
   }
 
-  public Term endDate(String endDate) {
-    this.endDate = endDate;
-    return this;
-  }
-
-   /**
-   * Get endDate
-   * @return endDate
-  **/
-  @ApiModelProperty(value = "")
-  public String getEndDate() {
-    return endDate;
-  }
-
-  public void setEndDate(String endDate) {
-    this.endDate = endDate;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -96,14 +96,14 @@ public class Term {
       return false;
     }
     Term term = (Term) o;
-    return Objects.equals(this.name, term.name) &&
-        Objects.equals(this.startDate, term.startDate) &&
-        Objects.equals(this.endDate, term.endDate);
+    return Objects.equals(this.endDate, term.endDate) &&
+        Objects.equals(this.name, term.name) &&
+        Objects.equals(this.startDate, term.startDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, startDate, endDate);
+    return Objects.hash(endDate, name, startDate);
   }
 
 
@@ -112,9 +112,9 @@ public class Term {
     StringBuilder sb = new StringBuilder();
     sb.append("class Term {\n");
     
+    sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
-    sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

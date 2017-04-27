@@ -4,20 +4,20 @@ All URIs are relative to *https://api.clever.com/v1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getEvent**](EventsApi.md#getEvent) | **GET** /events/{id} | Retrieves a single event.
-[**getEvents**](EventsApi.md#getEvents) | **GET** /events | Retrieves all events
-[**getEventsForSchool**](EventsApi.md#getEventsForSchool) | **GET** /schools/{id}/events | Retrieves events for schools.
-[**getEventsForSchoolAdmin**](EventsApi.md#getEventsForSchoolAdmin) | **GET** /school_admins/{id}/events | Retrieves events for school_admins.
-[**getEventsForSection**](EventsApi.md#getEventsForSection) | **GET** /sections/{id}/events | Retrieves events for sections.
-[**getEventsForStudent**](EventsApi.md#getEventsForStudent) | **GET** /students/{id}/events | Retrieves events for students.
-[**getEventsForTeacher**](EventsApi.md#getEventsForTeacher) | **GET** /teachers/{id}/events | Retrieves events for teachers.
+[**getEvent**](EventsApi.md#getEvent) | **GET** /events/{id} | 
+[**getEvents**](EventsApi.md#getEvents) | **GET** /events | 
+[**getEventsForSchool**](EventsApi.md#getEventsForSchool) | **GET** /schools/{id}/events | 
+[**getEventsForSchoolAdmin**](EventsApi.md#getEventsForSchoolAdmin) | **GET** /school_admins/{id}/events | 
+[**getEventsForSection**](EventsApi.md#getEventsForSection) | **GET** /sections/{id}/events | 
+[**getEventsForStudent**](EventsApi.md#getEventsForStudent) | **GET** /students/{id}/events | 
+[**getEventsForTeacher**](EventsApi.md#getEventsForTeacher) | **GET** /teachers/{id}/events | 
 
 
 <a name="getEvent"></a>
 # **getEvent**
 > EventResponse getEvent(id)
 
-Retrieves a single event.
+
 
 Returns the specific event
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **getEvents**
 > EventsResponse getEvents(limit, startingAfter, endingBefore)
 
-Retrieves all events
+
 
 Returns a list of events
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 # **getEventsForSchool**
 > EventsResponse getEventsForSchool(id, limit, startingAfter, endingBefore)
 
-Retrieves events for schools.
+
 
 Returns a list of events for a school
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 # **getEventsForSchoolAdmin**
 > EventsResponse getEventsForSchoolAdmin(id, limit, startingAfter, endingBefore)
 
-Retrieves events for school_admins.
+
 
 Returns a list of events for a school admin
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 # **getEventsForSection**
 > EventsResponse getEventsForSection(id, limit, startingAfter, endingBefore)
 
-Retrieves events for sections.
+
 
 Returns a list of events for a section
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 # **getEventsForStudent**
 > EventsResponse getEventsForStudent(id, limit, startingAfter, endingBefore)
 
-Retrieves events for students.
+
 
 Returns a list of events for a student
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 # **getEventsForTeacher**
 > EventsResponse getEventsForTeacher(id, limit, startingAfter, endingBefore)
 
-Retrieves events for teachers.
+
 
 Returns a list of events for a teacher
 

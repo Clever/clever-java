@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  |  [optional]
 **district** | **String** |  |  [optional]
 **email** | **String** |  |  [optional]
+**id** | **String** |  |  [optional]
 **name** | **String** |  |  [optional]
 **phone** | **String** |  |  [optional]
 **phoneType** | **String** |  |  [optional]
