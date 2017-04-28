@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.Credentials;
 import io.swagger.client.model.Name;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,16 +25,19 @@ import java.util.List;
 /**
  * SchoolAdmin
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class SchoolAdmin {
-  @SerializedName("id")
-  private String id = null;
+  @SerializedName("credentials")
+  private Credentials credentials = null;
 
   @SerializedName("district")
   private String district = null;
 
   @SerializedName("email")
   private String email = null;
+
+  @SerializedName("id")
+  private String id = null;
 
   @SerializedName("name")
   private Name name = null;
@@ -47,22 +51,22 @@ public class SchoolAdmin {
   @SerializedName("title")
   private String title = null;
 
-  public SchoolAdmin id(String id) {
-    this.id = id;
+  public SchoolAdmin credentials(Credentials credentials) {
+    this.credentials = credentials;
     return this;
   }
 
    /**
-   * Get id
-   * @return id
+   * Get credentials
+   * @return credentials
   **/
   @ApiModelProperty(value = "")
-  public String getId() {
-    return id;
+  public Credentials getCredentials() {
+    return credentials;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void setCredentials(Credentials credentials) {
+    this.credentials = credentials;
   }
 
   public SchoolAdmin district(String district) {
@@ -99,6 +103,24 @@ public class SchoolAdmin {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public SchoolAdmin id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @ApiModelProperty(value = "")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
   }
 
   public SchoolAdmin name(Name name) {
@@ -188,9 +210,10 @@ public class SchoolAdmin {
       return false;
     }
     SchoolAdmin schoolAdmin = (SchoolAdmin) o;
-    return Objects.equals(this.id, schoolAdmin.id) &&
+    return Objects.equals(this.credentials, schoolAdmin.credentials) &&
         Objects.equals(this.district, schoolAdmin.district) &&
         Objects.equals(this.email, schoolAdmin.email) &&
+        Objects.equals(this.id, schoolAdmin.id) &&
         Objects.equals(this.name, schoolAdmin.name) &&
         Objects.equals(this.schools, schoolAdmin.schools) &&
         Objects.equals(this.staffId, schoolAdmin.staffId) &&
@@ -199,7 +222,7 @@ public class SchoolAdmin {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, district, email, name, schools, staffId, title);
+    return Objects.hash(credentials, district, email, id, name, schools, staffId, title);
   }
 
 
@@ -208,9 +231,10 @@ public class SchoolAdmin {
     StringBuilder sb = new StringBuilder();
     sb.append("class SchoolAdmin {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    credentials: ").append(toIndentedString(credentials)).append("\n");
     sb.append("    district: ").append(toIndentedString(district)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    schools: ").append(toIndentedString(schools)).append("\n");
     sb.append("    staffId: ").append(toIndentedString(staffId)).append("\n");

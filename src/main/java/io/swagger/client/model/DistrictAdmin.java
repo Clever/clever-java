@@ -22,22 +22,58 @@ import io.swagger.client.model.Name;
 /**
  * DistrictAdmin
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class DistrictAdmin {
+  @SerializedName("district")
+  private String district = null;
+
+  @SerializedName("email")
+  private String email = null;
+
   @SerializedName("id")
   private String id = null;
 
   @SerializedName("name")
   private Name name = null;
 
-  @SerializedName("email")
-  private String email = null;
-
   @SerializedName("title")
   private String title = null;
 
-  @SerializedName("district")
-  private String district = null;
+  public DistrictAdmin district(String district) {
+    this.district = district;
+    return this;
+  }
+
+   /**
+   * Get district
+   * @return district
+  **/
+  @ApiModelProperty(value = "")
+  public String getDistrict() {
+    return district;
+  }
+
+  public void setDistrict(String district) {
+    this.district = district;
+  }
+
+  public DistrictAdmin email(String email) {
+    this.email = email;
+    return this;
+  }
+
+   /**
+   * Get email
+   * @return email
+  **/
+  @ApiModelProperty(value = "")
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
   public DistrictAdmin id(String id) {
     this.id = id;
@@ -75,24 +111,6 @@ public class DistrictAdmin {
     this.name = name;
   }
 
-  public DistrictAdmin email(String email) {
-    this.email = email;
-    return this;
-  }
-
-   /**
-   * Get email
-   * @return email
-  **/
-  @ApiModelProperty(value = "")
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
   public DistrictAdmin title(String title) {
     this.title = title;
     return this;
@@ -111,24 +129,6 @@ public class DistrictAdmin {
     this.title = title;
   }
 
-  public DistrictAdmin district(String district) {
-    this.district = district;
-    return this;
-  }
-
-   /**
-   * Get district
-   * @return district
-  **/
-  @ApiModelProperty(value = "")
-  public String getDistrict() {
-    return district;
-  }
-
-  public void setDistrict(String district) {
-    this.district = district;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -139,16 +139,16 @@ public class DistrictAdmin {
       return false;
     }
     DistrictAdmin districtAdmin = (DistrictAdmin) o;
-    return Objects.equals(this.id, districtAdmin.id) &&
-        Objects.equals(this.name, districtAdmin.name) &&
+    return Objects.equals(this.district, districtAdmin.district) &&
         Objects.equals(this.email, districtAdmin.email) &&
-        Objects.equals(this.title, districtAdmin.title) &&
-        Objects.equals(this.district, districtAdmin.district);
+        Objects.equals(this.id, districtAdmin.id) &&
+        Objects.equals(this.name, districtAdmin.name) &&
+        Objects.equals(this.title, districtAdmin.title);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, email, title, district);
+    return Objects.hash(district, email, id, name, title);
   }
 
 
@@ -157,11 +157,11 @@ public class DistrictAdmin {
     StringBuilder sb = new StringBuilder();
     sb.append("class DistrictAdmin {\n");
     
+    sb.append("    district: ").append(toIndentedString(district)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    district: ").append(toIndentedString(district)).append("\n");
     sb.append("}");
     return sb.toString();
   }

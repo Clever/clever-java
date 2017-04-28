@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.Credentials;
 import io.swagger.client.model.Name;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,19 +25,22 @@ import java.util.List;
 /**
  * Teacher
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class Teacher {
-  @SerializedName("id")
-  private String id = null;
-
   @SerializedName("created")
   private String created = null;
+
+  @SerializedName("credentials")
+  private Credentials credentials = null;
 
   @SerializedName("district")
   private String district = null;
 
   @SerializedName("email")
   private String email = null;
+
+  @SerializedName("id")
+  private String id = null;
 
   @SerializedName("last_modified")
   private String lastModified = null;
@@ -62,24 +66,6 @@ public class Teacher {
   @SerializedName("title")
   private String title = null;
 
-  public Teacher id(String id) {
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(value = "")
-  public String getId() {
-    return id;
-  }
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
   public Teacher created(String created) {
     this.created = created;
     return this;
@@ -96,6 +82,24 @@ public class Teacher {
 
   public void setCreated(String created) {
     this.created = created;
+  }
+
+  public Teacher credentials(Credentials credentials) {
+    this.credentials = credentials;
+    return this;
+  }
+
+   /**
+   * Get credentials
+   * @return credentials
+  **/
+  @ApiModelProperty(value = "")
+  public Credentials getCredentials() {
+    return credentials;
+  }
+
+  public void setCredentials(Credentials credentials) {
+    this.credentials = credentials;
   }
 
   public Teacher district(String district) {
@@ -132,6 +136,24 @@ public class Teacher {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public Teacher id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @ApiModelProperty(value = "")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
   }
 
   public Teacher lastModified(String lastModified) {
@@ -293,10 +315,11 @@ public class Teacher {
       return false;
     }
     Teacher teacher = (Teacher) o;
-    return Objects.equals(this.id, teacher.id) &&
-        Objects.equals(this.created, teacher.created) &&
+    return Objects.equals(this.created, teacher.created) &&
+        Objects.equals(this.credentials, teacher.credentials) &&
         Objects.equals(this.district, teacher.district) &&
         Objects.equals(this.email, teacher.email) &&
+        Objects.equals(this.id, teacher.id) &&
         Objects.equals(this.lastModified, teacher.lastModified) &&
         Objects.equals(this.name, teacher.name) &&
         Objects.equals(this.school, teacher.school) &&
@@ -309,7 +332,7 @@ public class Teacher {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, created, district, email, lastModified, name, school, schools, sisId, stateId, teacherNumber, title);
+    return Objects.hash(created, credentials, district, email, id, lastModified, name, school, schools, sisId, stateId, teacherNumber, title);
   }
 
 
@@ -318,10 +341,11 @@ public class Teacher {
     StringBuilder sb = new StringBuilder();
     sb.append("class Teacher {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    sb.append("    credentials: ").append(toIndentedString(credentials)).append("\n");
     sb.append("    district: ").append(toIndentedString(district)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    school: ").append(toIndentedString(school)).append("\n");

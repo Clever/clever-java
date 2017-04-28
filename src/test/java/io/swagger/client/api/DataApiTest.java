@@ -17,6 +17,7 @@ import io.swagger.client.ApiException;
 import io.swagger.client.model.DistrictAdminResponse;
 import io.swagger.client.model.DistrictAdminsResponse;
 import io.swagger.client.model.DistrictResponse;
+import io.swagger.client.model.DistrictStatusResponse;
 import io.swagger.client.model.DistrictsResponse;
 import io.swagger.client.model.GradeLevelsResponse;
 import io.swagger.client.model.NotFound;
@@ -50,7 +51,7 @@ public class DataApiTest {
 
     
     /**
-     * Get only a specific studentcontact&#39;s information.
+     * 
      *
      * Returns a specific student contact
      *
@@ -66,7 +67,7 @@ public class DataApiTest {
     }
     
     /**
-     * Gets a list of student contacts you have access to.
+     * 
      *
      * Returns a list of student contacts
      *
@@ -84,7 +85,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves all contacts for a student.
+     * 
      *
      * Returns the contacts for a student
      *
@@ -101,7 +102,7 @@ public class DataApiTest {
     }
     
     /**
-     * Get only a specific district&#39;s information.
+     * 
      *
      * Returns a specific district
      *
@@ -117,7 +118,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves a district admin
+     * 
      *
      * Returns a specific district admin
      *
@@ -133,7 +134,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves all users with admin access to a district.
+     * 
      *
      * Returns a list of district admins
      *
@@ -150,7 +151,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves district information for a school.
+     * 
      *
      * Returns the district for a school
      *
@@ -166,7 +167,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves district information for a section.
+     * 
      *
      * Returns the district for a section
      *
@@ -182,7 +183,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves district information for a student.
+     * 
      *
      * Returns the district for a student
      *
@@ -198,7 +199,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves the district for a contact.
+     * 
      *
      * Returns the district for a student contact
      *
@@ -214,7 +215,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves district information for a teacher.
+     * 
      *
      * Returns the district for a teacher
      *
@@ -230,7 +231,23 @@ public class DataApiTest {
     }
     
     /**
-     * Gets a list of districts you have access to.
+     * 
+     *
+     * Returns the status of the district
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getDistrictStatusTest() throws ApiException {
+        String id = null;
+        DistrictStatusResponse response = api.getDistrictStatus(id);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
      *
      * Returns a list of districts
      *
@@ -239,16 +256,13 @@ public class DataApiTest {
      */
     @Test
     public void getDistrictsTest() throws ApiException {
-        Integer limit = null;
-        String startingAfter = null;
-        String endingBefore = null;
-        DistrictsResponse response = api.getDistricts(limit, startingAfter, endingBefore);
+        DistrictsResponse response = api.getDistricts();
 
         // TODO: test validations
     }
     
     /**
-     * Retrieves a list of all grade levels taught by a specific teacher.
+     * 
      *
      * Returns the grade levels for sections a teacher teaches
      *
@@ -264,7 +278,7 @@ public class DataApiTest {
     }
     
     /**
-     * Get only a specific school&#39;s information.
+     * 
      *
      * Returns a specific school
      *
@@ -280,7 +294,7 @@ public class DataApiTest {
     }
     
     /**
-     * Get only a specific schooladmin&#39;s information.
+     * 
      *
      * Returns a specific school admin
      *
@@ -296,7 +310,7 @@ public class DataApiTest {
     }
     
     /**
-     * Gets a list of school_admins you have access to.
+     * 
      *
      * Returns a list of school admins
      *
@@ -314,7 +328,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves information about the school for a section
+     * 
      *
      * Returns the school for a section
      *
@@ -330,7 +344,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves information about the school for a student
+     * 
      *
      * Returns the primary school for a student
      *
@@ -346,7 +360,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves information about the school for a teacher
+     * 
      *
      * Retrieves school info for a teacher.
      *
@@ -362,7 +376,7 @@ public class DataApiTest {
     }
     
     /**
-     * Gets a list of schools you have access to.
+     * 
      *
      * Returns a list of schools
      *
@@ -380,7 +394,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves all schools for a school admin.
+     * 
      *
      * Returns the schools for a school admin
      *
@@ -399,7 +413,7 @@ public class DataApiTest {
     }
     
     /**
-     * Get only a specific section&#39;s information.
+     * 
      *
      * Returns a specific section
      *
@@ -415,7 +429,7 @@ public class DataApiTest {
     }
     
     /**
-     * Gets a list of sections you have access to.
+     * 
      *
      * Returns a list of sections
      *
@@ -433,7 +447,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves a list of all sections for a specific school.
+     * 
      *
      * Returns the sections for a school
      *
@@ -452,7 +466,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves a list of all sections for a student.
+     * 
      *
      * Returns the sections for a student
      *
@@ -471,7 +485,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves a list of all sections for a teacher.
+     * 
      *
      * Returns the sections for a teacher
      *
@@ -490,7 +504,7 @@ public class DataApiTest {
     }
     
     /**
-     * Get only a specific student&#39;s information.
+     * 
      *
      * Returns a specific student
      *
@@ -506,7 +520,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves the student for a contact.
+     * 
      *
      * Returns the student for a student contact
      *
@@ -522,7 +536,7 @@ public class DataApiTest {
     }
     
     /**
-     * Gets a list of students you have access to.
+     * 
      *
      * Returns a list of students
      *
@@ -540,7 +554,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves a list of all students for a specific school.
+     * 
      *
      * Returns the students for a school
      *
@@ -559,7 +573,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves a list of all the section&#39;s students.
+     * 
      *
      * Returns the students for a section
      *
@@ -578,7 +592,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves all students that a teacher has in their sections.
+     * 
      *
      * Returns the students for a teacher
      *
@@ -597,7 +611,7 @@ public class DataApiTest {
     }
     
     /**
-     * Get only a specific teacher&#39;s information.
+     * 
      *
      * Returns a specific teacher
      *
@@ -613,7 +627,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves information about the primary teacher of a section.
+     * 
      *
      * Returns the primary teacher for a section
      *
@@ -629,7 +643,7 @@ public class DataApiTest {
     }
     
     /**
-     * Gets a list of teachers you have access to.
+     * 
      *
      * Returns a list of teachers
      *
@@ -647,7 +661,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves a list of all teachers for a specific school.
+     * 
      *
      * Returns the teachers for a school
      *
@@ -666,7 +680,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves a list of all the section&#39;s teachers.
+     * 
      *
      * Returns the teachers for a section
      *
@@ -685,7 +699,7 @@ public class DataApiTest {
     }
     
     /**
-     * Retrieves all teachers for a student.
+     * 
      *
      * Returns the teachers for a student
      *

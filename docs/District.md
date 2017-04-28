@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  |  [optional]
-**name** | **String** |  |  [optional]
 **mdrNumber** | **String** |  |  [optional]
+**name** | **String** |  |  [optional]
 
 
 

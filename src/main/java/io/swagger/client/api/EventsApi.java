@@ -124,7 +124,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves a single event.
+     * 
      * Returns the specific event
      * @param id  (required)
      * @return EventResponse
@@ -136,7 +136,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves a single event.
+     * 
      * Returns the specific event
      * @param id  (required)
      * @return ApiResponse&lt;EventResponse&gt;
@@ -149,7 +149,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves a single event. (asynchronously)
+     *  (asynchronously)
      * Returns the specific event
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -252,7 +252,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves all events
+     * 
      * Returns a list of events
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -266,7 +266,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves all events
+     * 
      * Returns a list of events
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -281,7 +281,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves all events (asynchronously)
+     *  (asynchronously)
      * Returns a list of events
      * @param limit  (optional)
      * @param startingAfter  (optional)
@@ -393,7 +393,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for schools.
+     * 
      * Returns a list of events for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -408,7 +408,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for schools.
+     * 
      * Returns a list of events for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -424,7 +424,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for schools. (asynchronously)
+     *  (asynchronously)
      * Returns a list of events for a school
      * @param id  (required)
      * @param limit  (optional)
@@ -537,7 +537,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for school_admins.
+     * 
      * Returns a list of events for a school admin
      * @param id  (required)
      * @param limit  (optional)
@@ -552,7 +552,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for school_admins.
+     * 
      * Returns a list of events for a school admin
      * @param id  (required)
      * @param limit  (optional)
@@ -568,7 +568,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for school_admins. (asynchronously)
+     *  (asynchronously)
      * Returns a list of events for a school admin
      * @param id  (required)
      * @param limit  (optional)
@@ -681,7 +681,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for sections.
+     * 
      * Returns a list of events for a section
      * @param id  (required)
      * @param limit  (optional)
@@ -696,7 +696,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for sections.
+     * 
      * Returns a list of events for a section
      * @param id  (required)
      * @param limit  (optional)
@@ -712,7 +712,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for sections. (asynchronously)
+     *  (asynchronously)
      * Returns a list of events for a section
      * @param id  (required)
      * @param limit  (optional)
@@ -825,7 +825,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for students.
+     * 
      * Returns a list of events for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -840,7 +840,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for students.
+     * 
      * Returns a list of events for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -856,7 +856,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for students. (asynchronously)
+     *  (asynchronously)
      * Returns a list of events for a student
      * @param id  (required)
      * @param limit  (optional)
@@ -969,7 +969,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for teachers.
+     * 
      * Returns a list of events for a teacher
      * @param id  (required)
      * @param limit  (optional)
@@ -984,7 +984,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for teachers.
+     * 
      * Returns a list of events for a teacher
      * @param id  (required)
      * @param limit  (optional)
@@ -1000,7 +1000,7 @@ public class EventsApi {
     }
 
     /**
-     * Retrieves events for teachers. (asynchronously)
+     *  (asynchronously)
      * Returns a list of events for a teacher
      * @param id  (required)
      * @param limit  (optional)

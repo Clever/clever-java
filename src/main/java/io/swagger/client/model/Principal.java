@@ -21,31 +21,13 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Principal
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class Principal {
-  @SerializedName("name")
-  private String name = null;
-
   @SerializedName("email")
   private String email = null;
 
-  public Principal name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @ApiModelProperty(value = "")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
+  @SerializedName("name")
+  private String name = null;
 
   public Principal email(String email) {
     this.email = email;
@@ -65,6 +47,24 @@ public class Principal {
     this.email = email;
   }
 
+  public Principal name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @ApiModelProperty(value = "")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -75,13 +75,13 @@ public class Principal {
       return false;
     }
     Principal principal = (Principal) o;
-    return Objects.equals(this.name, principal.name) &&
-        Objects.equals(this.email, principal.email);
+    return Objects.equals(this.email, principal.email) &&
+        Objects.equals(this.name, principal.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, email);
+    return Objects.hash(email, name);
   }
 
 
@@ -90,8 +90,8 @@ public class Principal {
     StringBuilder sb = new StringBuilder();
     sb.append("class Principal {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

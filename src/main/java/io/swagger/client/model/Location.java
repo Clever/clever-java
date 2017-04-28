@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Location
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class Location {
   @SerializedName("address")
   private String address = null;
@@ -29,17 +29,17 @@ public class Location {
   @SerializedName("city")
   private String city = null;
 
-  @SerializedName("state")
-  private String state = null;
-
-  @SerializedName("zip")
-  private String zip = null;
-
   @SerializedName("lat")
   private String lat = null;
 
   @SerializedName("lon")
   private String lon = null;
+
+  @SerializedName("state")
+  private String state = null;
+
+  @SerializedName("zip")
+  private String zip = null;
 
   public Location address(String address) {
     this.address = address;
@@ -75,42 +75,6 @@ public class Location {
 
   public void setCity(String city) {
     this.city = city;
-  }
-
-  public Location state(String state) {
-    this.state = state;
-    return this;
-  }
-
-   /**
-   * Get state
-   * @return state
-  **/
-  @ApiModelProperty(value = "")
-  public String getState() {
-    return state;
-  }
-
-  public void setState(String state) {
-    this.state = state;
-  }
-
-  public Location zip(String zip) {
-    this.zip = zip;
-    return this;
-  }
-
-   /**
-   * Get zip
-   * @return zip
-  **/
-  @ApiModelProperty(value = "")
-  public String getZip() {
-    return zip;
-  }
-
-  public void setZip(String zip) {
-    this.zip = zip;
   }
 
   public Location lat(String lat) {
@@ -149,6 +113,42 @@ public class Location {
     this.lon = lon;
   }
 
+  public Location state(String state) {
+    this.state = state;
+    return this;
+  }
+
+   /**
+   * Get state
+   * @return state
+  **/
+  @ApiModelProperty(value = "")
+  public String getState() {
+    return state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public Location zip(String zip) {
+    this.zip = zip;
+    return this;
+  }
+
+   /**
+   * Get zip
+   * @return zip
+  **/
+  @ApiModelProperty(value = "")
+  public String getZip() {
+    return zip;
+  }
+
+  public void setZip(String zip) {
+    this.zip = zip;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -161,15 +161,15 @@ public class Location {
     Location location = (Location) o;
     return Objects.equals(this.address, location.address) &&
         Objects.equals(this.city, location.city) &&
-        Objects.equals(this.state, location.state) &&
-        Objects.equals(this.zip, location.zip) &&
         Objects.equals(this.lat, location.lat) &&
-        Objects.equals(this.lon, location.lon);
+        Objects.equals(this.lon, location.lon) &&
+        Objects.equals(this.state, location.state) &&
+        Objects.equals(this.zip, location.zip);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(address, city, state, zip, lat, lon);
+    return Objects.hash(address, city, lat, lon, state, zip);
   }
 
 
@@ -180,10 +180,10 @@ public class Location {
     
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    zip: ").append(toIndentedString(zip)).append("\n");
     sb.append("    lat: ").append(toIndentedString(lat)).append("\n");
     sb.append("    lon: ").append(toIndentedString(lon)).append("\n");
+    sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    sb.append("    zip: ").append(toIndentedString(zip)).append("\n");
     sb.append("}");
     return sb.toString();
   }

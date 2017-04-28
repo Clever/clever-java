@@ -17,38 +17,31 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * GradeLevelsResponse
+ * Credentials
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
-public class GradeLevelsResponse {
-  @SerializedName("data")
-  private List<String> data = new ArrayList<String>();
+public class Credentials {
+  @SerializedName("district_username")
+  private String districtUsername = null;
 
-  public GradeLevelsResponse data(List<String> data) {
-    this.data = data;
-    return this;
-  }
-
-  public GradeLevelsResponse addDataItem(String dataItem) {
-    this.data.add(dataItem);
+  public Credentials districtUsername(String districtUsername) {
+    this.districtUsername = districtUsername;
     return this;
   }
 
    /**
-   * Get data
-   * @return data
+   * Get districtUsername
+   * @return districtUsername
   **/
   @ApiModelProperty(value = "")
-  public List<String> getData() {
-    return data;
+  public String getDistrictUsername() {
+    return districtUsername;
   }
 
-  public void setData(List<String> data) {
-    this.data = data;
+  public void setDistrictUsername(String districtUsername) {
+    this.districtUsername = districtUsername;
   }
 
 
@@ -60,22 +53,22 @@ public class GradeLevelsResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    GradeLevelsResponse gradeLevelsResponse = (GradeLevelsResponse) o;
-    return Objects.equals(this.data, gradeLevelsResponse.data);
+    Credentials credentials = (Credentials) o;
+    return Objects.equals(this.districtUsername, credentials.districtUsername);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data);
+    return Objects.hash(districtUsername);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class GradeLevelsResponse {\n");
+    sb.append("class Credentials {\n");
     
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    districtUsername: ").append(toIndentedString(districtUsername)).append("\n");
     sb.append("}");
     return sb.toString();
   }

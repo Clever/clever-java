@@ -21,31 +21,77 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * DistrictStatus
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-06T11:52:21.984-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
 public class DistrictStatus {
+  @SerializedName("error")
+  private String error = null;
+
   @SerializedName("id")
   private String id = null;
-
-  @SerializedName("sis_type")
-  private String sisType = null;
-
-  @SerializedName("state")
-  private String state = null;
 
   @SerializedName("last_sync")
   private String lastSync = null;
 
-  @SerializedName("error")
-  private String error = null;
-
-  @SerializedName("pause_start")
-  private String pauseStart = null;
+  @SerializedName("launch_date")
+  private String launchDate = null;
 
   @SerializedName("pause_end")
   private String pauseEnd = null;
 
-  @SerializedName("launch_state")
-  private String launchState = null;
+  @SerializedName("pause_start")
+  private String pauseStart = null;
+
+  @SerializedName("sis_type")
+  private String sisType = null;
+
+  /**
+   * Gets or Sets state
+   */
+  public enum StateEnum {
+    @SerializedName("running")
+    RUNNING("running"),
+    
+    @SerializedName("pending")
+    PENDING("pending"),
+    
+    @SerializedName("error")
+    ERROR("error"),
+    
+    @SerializedName("pause")
+    PAUSE("pause");
+
+    private String value;
+
+    StateEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  @SerializedName("state")
+  private StateEnum state = null;
+
+  public DistrictStatus error(String error) {
+    this.error = error;
+    return this;
+  }
+
+   /**
+   * Get error
+   * @return error
+  **/
+  @ApiModelProperty(value = "")
+  public String getError() {
+    return error;
+  }
+
+  public void setError(String error) {
+    this.error = error;
+  }
 
   public DistrictStatus id(String id) {
     this.id = id;
@@ -63,42 +109,6 @@ public class DistrictStatus {
 
   public void setId(String id) {
     this.id = id;
-  }
-
-  public DistrictStatus sisType(String sisType) {
-    this.sisType = sisType;
-    return this;
-  }
-
-   /**
-   * Get sisType
-   * @return sisType
-  **/
-  @ApiModelProperty(value = "")
-  public String getSisType() {
-    return sisType;
-  }
-
-  public void setSisType(String sisType) {
-    this.sisType = sisType;
-  }
-
-  public DistrictStatus state(String state) {
-    this.state = state;
-    return this;
-  }
-
-   /**
-   * Get state
-   * @return state
-  **/
-  @ApiModelProperty(value = "")
-  public String getState() {
-    return state;
-  }
-
-  public void setState(String state) {
-    this.state = state;
   }
 
   public DistrictStatus lastSync(String lastSync) {
@@ -119,40 +129,22 @@ public class DistrictStatus {
     this.lastSync = lastSync;
   }
 
-  public DistrictStatus error(String error) {
-    this.error = error;
+  public DistrictStatus launchDate(String launchDate) {
+    this.launchDate = launchDate;
     return this;
   }
 
    /**
-   * Get error
-   * @return error
+   * Get launchDate
+   * @return launchDate
   **/
   @ApiModelProperty(value = "")
-  public String getError() {
-    return error;
+  public String getLaunchDate() {
+    return launchDate;
   }
 
-  public void setError(String error) {
-    this.error = error;
-  }
-
-  public DistrictStatus pauseStart(String pauseStart) {
-    this.pauseStart = pauseStart;
-    return this;
-  }
-
-   /**
-   * Get pauseStart
-   * @return pauseStart
-  **/
-  @ApiModelProperty(value = "")
-  public String getPauseStart() {
-    return pauseStart;
-  }
-
-  public void setPauseStart(String pauseStart) {
-    this.pauseStart = pauseStart;
+  public void setLaunchDate(String launchDate) {
+    this.launchDate = launchDate;
   }
 
   public DistrictStatus pauseEnd(String pauseEnd) {
@@ -173,22 +165,58 @@ public class DistrictStatus {
     this.pauseEnd = pauseEnd;
   }
 
-  public DistrictStatus launchState(String launchState) {
-    this.launchState = launchState;
+  public DistrictStatus pauseStart(String pauseStart) {
+    this.pauseStart = pauseStart;
     return this;
   }
 
    /**
-   * Get launchState
-   * @return launchState
+   * Get pauseStart
+   * @return pauseStart
   **/
   @ApiModelProperty(value = "")
-  public String getLaunchState() {
-    return launchState;
+  public String getPauseStart() {
+    return pauseStart;
   }
 
-  public void setLaunchState(String launchState) {
-    this.launchState = launchState;
+  public void setPauseStart(String pauseStart) {
+    this.pauseStart = pauseStart;
+  }
+
+  public DistrictStatus sisType(String sisType) {
+    this.sisType = sisType;
+    return this;
+  }
+
+   /**
+   * Get sisType
+   * @return sisType
+  **/
+  @ApiModelProperty(value = "")
+  public String getSisType() {
+    return sisType;
+  }
+
+  public void setSisType(String sisType) {
+    this.sisType = sisType;
+  }
+
+  public DistrictStatus state(StateEnum state) {
+    this.state = state;
+    return this;
+  }
+
+   /**
+   * Get state
+   * @return state
+  **/
+  @ApiModelProperty(value = "")
+  public StateEnum getState() {
+    return state;
+  }
+
+  public void setState(StateEnum state) {
+    this.state = state;
   }
 
 
@@ -201,19 +229,19 @@ public class DistrictStatus {
       return false;
     }
     DistrictStatus districtStatus = (DistrictStatus) o;
-    return Objects.equals(this.id, districtStatus.id) &&
-        Objects.equals(this.sisType, districtStatus.sisType) &&
-        Objects.equals(this.state, districtStatus.state) &&
+    return Objects.equals(this.error, districtStatus.error) &&
+        Objects.equals(this.id, districtStatus.id) &&
         Objects.equals(this.lastSync, districtStatus.lastSync) &&
-        Objects.equals(this.error, districtStatus.error) &&
-        Objects.equals(this.pauseStart, districtStatus.pauseStart) &&
+        Objects.equals(this.launchDate, districtStatus.launchDate) &&
         Objects.equals(this.pauseEnd, districtStatus.pauseEnd) &&
-        Objects.equals(this.launchState, districtStatus.launchState);
+        Objects.equals(this.pauseStart, districtStatus.pauseStart) &&
+        Objects.equals(this.sisType, districtStatus.sisType) &&
+        Objects.equals(this.state, districtStatus.state);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, sisType, state, lastSync, error, pauseStart, pauseEnd, launchState);
+    return Objects.hash(error, id, lastSync, launchDate, pauseEnd, pauseStart, sisType, state);
   }
 
 
@@ -222,14 +250,14 @@ public class DistrictStatus {
     StringBuilder sb = new StringBuilder();
     sb.append("class DistrictStatus {\n");
     
+    sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    lastSync: ").append(toIndentedString(lastSync)).append("\n");
+    sb.append("    launchDate: ").append(toIndentedString(launchDate)).append("\n");
+    sb.append("    pauseEnd: ").append(toIndentedString(pauseEnd)).append("\n");
+    sb.append("    pauseStart: ").append(toIndentedString(pauseStart)).append("\n");
     sb.append("    sisType: ").append(toIndentedString(sisType)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    lastSync: ").append(toIndentedString(lastSync)).append("\n");
-    sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    pauseStart: ").append(toIndentedString(pauseStart)).append("\n");
-    sb.append("    pauseEnd: ").append(toIndentedString(pauseEnd)).append("\n");
-    sb.append("    launchState: ").append(toIndentedString(launchState)).append("\n");
     sb.append("}");
     return sb.toString();
   }
