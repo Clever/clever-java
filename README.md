@@ -86,7 +86,7 @@ To publish this library first set up your settings.xml (~/.m2/settings.xml) as d
 
 Then run:
 ```
-make publish
+make release
 ```
 
 This will deploy to: https://oss.sonatype.org/content/groups/public/com/clever/client/
