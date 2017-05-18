@@ -25,6 +25,7 @@ import io.swagger.client.ApiException;
 import io.swagger.client.Configuration;
 import io.swagger.client.api.DefaultApi;
 import io.swagger.client.auth.OAuth;
+import io.swagger.client.model.*;
 
 public class CleverAPI {
 
@@ -35,10 +36,15 @@ public class CleverAPI {
         OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
         oauth.setAccessToken("TODO: SET ME!");
 
-        api = new DefaultApi();
-        StudentsResponse students = api.getStudents(10, null, null);
-        for (StudentResponse student : students.getData()) {
-            System.out.println("Student IDs: ", student.getData().getId());
+        DefaultApi api = new DefaultApi();
+        try {
+            StudentsResponse students = api.getStudents(10, null, null);
+            for (StudentResponse student : students.getData()) {
+                System.out.println("Student IDs: ", student.getData().getId());
+            }
+        } catch (ApiException e) {
+            System.err.println("Exception:");
+            e.printStackTrace();
         }
     }
 }
