@@ -40,7 +40,7 @@ public class CleverAPI {
         try {
             StudentsResponse students = api.getStudents(10, null, null);
             for (StudentResponse student : students.getData()) {
-                System.out.println("Student IDs: ", student.getData().getId());
+                System.out.println("Student IDs: " + student.getData().getId());
             }
         } catch (ApiException e) {
             System.err.println("Exception:");
