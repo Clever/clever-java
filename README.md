@@ -74,10 +74,10 @@ java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i
 5. Package the JAR
 
 ```
-mvn package
+make build
 ```
 
-That will put the jar in: `src/target/swagger-java-client-1.0.0-tests.jar`
+That will put the jar in: `target/client-0.3.0.jar`
 
 
 ## Publishing
