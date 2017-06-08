@@ -30,7 +30,7 @@ import java.io.IOException;
 import io.swagger.client.model.DistrictAdminResponse;
 import io.swagger.client.model.DistrictAdminsResponse;
 import io.swagger.client.model.DistrictResponse;
-import io.swagger.client.model.DistrictStatusResponse;
+import io.swagger.client.model.DistrictStatusResponses;
 import io.swagger.client.model.DistrictsResponse;
 import io.swagger.client.model.GradeLevelsResponse;
 import io.swagger.client.model.NotFound;
@@ -1545,11 +1545,11 @@ public class DataApi {
      * 
      * Returns the status of the district
      * @param id  (required)
-     * @return DistrictStatusResponse
+     * @return DistrictStatusResponses
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public DistrictStatusResponse getDistrictStatus(String id) throws ApiException {
-        ApiResponse<DistrictStatusResponse> resp = getDistrictStatusWithHttpInfo(id);
+    public DistrictStatusResponses getDistrictStatus(String id) throws ApiException {
+        ApiResponse<DistrictStatusResponses> resp = getDistrictStatusWithHttpInfo(id);
         return resp.getData();
     }
 
@@ -1557,12 +1557,12 @@ public class DataApi {
      * 
      * Returns the status of the district
      * @param id  (required)
-     * @return ApiResponse&lt;DistrictStatusResponse&gt;
+     * @return ApiResponse&lt;DistrictStatusResponses&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<DistrictStatusResponse> getDistrictStatusWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<DistrictStatusResponses> getDistrictStatusWithHttpInfo(String id) throws ApiException {
         com.squareup.okhttp.Call call = getDistrictStatusValidateBeforeCall(id, null, null);
-        Type localVarReturnType = new TypeToken<DistrictStatusResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<DistrictStatusResponses>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1574,7 +1574,7 @@ public class DataApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getDistrictStatusAsync(String id, final ApiCallback<DistrictStatusResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call getDistrictStatusAsync(String id, final ApiCallback<DistrictStatusResponses> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1596,7 +1596,7 @@ public class DataApi {
         }
 
         com.squareup.okhttp.Call call = getDistrictStatusValidateBeforeCall(id, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<DistrictStatusResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<DistrictStatusResponses>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

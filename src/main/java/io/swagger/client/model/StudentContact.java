@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * StudentContact
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-07T18:34:42.074-07:00")
 public class StudentContact {
   @SerializedName("district")
   private String district = null;
@@ -43,6 +43,9 @@ public class StudentContact {
 
   @SerializedName("relationship")
   private String relationship = null;
+
+  @SerializedName("sis_id")
+  private String sisId = null;
 
   @SerializedName("student")
   private String student = null;
@@ -176,6 +179,24 @@ public class StudentContact {
     this.relationship = relationship;
   }
 
+  public StudentContact sisId(String sisId) {
+    this.sisId = sisId;
+    return this;
+  }
+
+   /**
+   * Get sisId
+   * @return sisId
+  **/
+  @ApiModelProperty(value = "")
+  public String getSisId() {
+    return sisId;
+  }
+
+  public void setSisId(String sisId) {
+    this.sisId = sisId;
+  }
+
   public StudentContact student(String student) {
     this.student = student;
     return this;
@@ -229,13 +250,14 @@ public class StudentContact {
         Objects.equals(this.phone, studentContact.phone) &&
         Objects.equals(this.phoneType, studentContact.phoneType) &&
         Objects.equals(this.relationship, studentContact.relationship) &&
+        Objects.equals(this.sisId, studentContact.sisId) &&
         Objects.equals(this.student, studentContact.student) &&
         Objects.equals(this.type, studentContact.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(district, email, id, name, phone, phoneType, relationship, student, type);
+    return Objects.hash(district, email, id, name, phone, phoneType, relationship, sisId, student, type);
   }
 
 
@@ -251,6 +273,7 @@ public class StudentContact {
     sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
     sb.append("    phoneType: ").append(toIndentedString(phoneType)).append("\n");
     sb.append("    relationship: ").append(toIndentedString(relationship)).append("\n");
+    sb.append("    sisId: ").append(toIndentedString(sisId)).append("\n");
     sb.append("    student: ").append(toIndentedString(student)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");

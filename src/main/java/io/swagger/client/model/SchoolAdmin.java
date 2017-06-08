@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * SchoolAdmin
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-07T18:34:42.074-07:00")
 public class SchoolAdmin {
   @SerializedName("credentials")
   private Credentials credentials = null;

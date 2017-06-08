@@ -12,7 +12,9 @@ Name | Type | Description | Notes
 **email** | **String** |  |  [optional]
 **gender** | [**GenderEnum**](#GenderEnum) |  |  [optional]
 **grade** | [**GradeEnum**](#GradeEnum) |  |  [optional]
+**graduationYear** | **String** |  |  [optional]
 **hispanicEthnicity** | [**HispanicEthnicityEnum**](#HispanicEthnicityEnum) |  |  [optional]
+**homeLanguage** | [**HomeLanguageEnum**](#HomeLanguageEnum) |  |  [optional]
 **id** | **String** |  |  [optional]
 **iepStatus** | **String** |  |  [optional]
 **lastModified** | **String** |  |  [optional]
@@ -24,6 +26,8 @@ Name | Type | Description | Notes
 **sisId** | **String** |  |  [optional]
 **stateId** | **String** |  |  [optional]
 **studentNumber** | **String** |  |  [optional]
+**unweightedGpa** | **String** |  |  [optional]
+**weightedGpa** | **String** |  |  [optional]
 
 
 <a name="EllStatusEnum"></a>
@@ -73,6 +77,59 @@ Name | Value
 Y | &quot;Y&quot;
 N | &quot;N&quot;
 EMPTY | &quot;&quot;
+
+
+<a name="HomeLanguageEnum"></a>
+## Enum: HomeLanguageEnum
+Name | Value
+---- | -----
+ENGLISH | &quot;English&quot;
+ALBANIAN | &quot;Albanian&quot;
+AMHARIC | &quot;Amharic&quot;
+ARABIC | &quot;Arabic&quot;
+BENGALI | &quot;Bengali&quot;
+BOSNIAN | &quot;Bosnian&quot;
+BURMESE | &quot;Burmese&quot;
+CANTONESE | &quot;Cantonese&quot;
+CHINESE | &quot;Chinese&quot;
+DUTCH | &quot;Dutch&quot;
+FARSI | &quot;Farsi&quot;
+FRENCH | &quot;French&quot;
+GERMAN | &quot;German&quot;
+HEBREW | &quot;Hebrew&quot;
+HINDI | &quot;Hindi&quot;
+HMONG | &quot;Hmong&quot;
+ILOCANO | &quot;Ilocano&quot;
+JAPANESE | &quot;Japanese&quot;
+JAVANESE | &quot;Javanese&quot;
+KAREN | &quot;Karen&quot;
+KHMER | &quot;Khmer&quot;
+KOREAN | &quot;Korean&quot;
+LAOTIAN | &quot;Laotian&quot;
+LATVIAN | &quot;Latvian&quot;
+MALAY | &quot;Malay&quot;
+MANDARIN | &quot;Mandarin&quot;
+NEPALI | &quot;Nepali&quot;
+OROMO | &quot;Oromo&quot;
+POLISH | &quot;Polish&quot;
+PORTUGUESE | &quot;Portuguese&quot;
+PUNJABI | &quot;Punjabi&quot;
+ROMANIAN | &quot;Romanian&quot;
+RUSSIAN | &quot;Russian&quot;
+SAMOAN | &quot;Samoan&quot;
+SERBIAN | &quot;Serbian&quot;
+SOMALI | &quot;Somali&quot;
+SPANISH | &quot;Spanish&quot;
+SWAHILI | &quot;Swahili&quot;
+TAGALOG | &quot;Tagalog&quot;
+TAMIL | &quot;Tamil&quot;
+TELEGU | &quot;Telegu&quot;
+THAI | &quot;Thai&quot;
+TIGRINYA | &quot;Tigrinya&quot;
+TURKISH | &quot;Turkish&quot;
+UKRAINIAN | &quot;Ukrainian&quot;
+URDU | &quot;Urdu&quot;
+VIETNAMESE | &quot;Vietnamese&quot;
 
 
 <a name="RaceEnum"></a>
