@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * Student
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-27T16:04:29.480-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-07T18:34:42.074-07:00")
 public class Student {
   @SerializedName("created")
   private String created = null;
@@ -166,6 +166,9 @@ public class Student {
   @SerializedName("grade")
   private GradeEnum grade = null;
 
+  @SerializedName("graduation_year")
+  private String graduationYear = null;
+
   /**
    * Gets or Sets hispanicEthnicity
    */
@@ -193,6 +196,166 @@ public class Student {
 
   @SerializedName("hispanic_ethnicity")
   private HispanicEthnicityEnum hispanicEthnicity = null;
+
+  /**
+   * Gets or Sets homeLanguage
+   */
+  public enum HomeLanguageEnum {
+    @SerializedName("English")
+    ENGLISH("English"),
+    
+    @SerializedName("Albanian")
+    ALBANIAN("Albanian"),
+    
+    @SerializedName("Amharic")
+    AMHARIC("Amharic"),
+    
+    @SerializedName("Arabic")
+    ARABIC("Arabic"),
+    
+    @SerializedName("Bengali")
+    BENGALI("Bengali"),
+    
+    @SerializedName("Bosnian")
+    BOSNIAN("Bosnian"),
+    
+    @SerializedName("Burmese")
+    BURMESE("Burmese"),
+    
+    @SerializedName("Cantonese")
+    CANTONESE("Cantonese"),
+    
+    @SerializedName("Chinese")
+    CHINESE("Chinese"),
+    
+    @SerializedName("Dutch")
+    DUTCH("Dutch"),
+    
+    @SerializedName("Farsi")
+    FARSI("Farsi"),
+    
+    @SerializedName("French")
+    FRENCH("French"),
+    
+    @SerializedName("German")
+    GERMAN("German"),
+    
+    @SerializedName("Hebrew")
+    HEBREW("Hebrew"),
+    
+    @SerializedName("Hindi")
+    HINDI("Hindi"),
+    
+    @SerializedName("Hmong")
+    HMONG("Hmong"),
+    
+    @SerializedName("Ilocano")
+    ILOCANO("Ilocano"),
+    
+    @SerializedName("Japanese")
+    JAPANESE("Japanese"),
+    
+    @SerializedName("Javanese")
+    JAVANESE("Javanese"),
+    
+    @SerializedName("Karen")
+    KAREN("Karen"),
+    
+    @SerializedName("Khmer")
+    KHMER("Khmer"),
+    
+    @SerializedName("Korean")
+    KOREAN("Korean"),
+    
+    @SerializedName("Laotian")
+    LAOTIAN("Laotian"),
+    
+    @SerializedName("Latvian")
+    LATVIAN("Latvian"),
+    
+    @SerializedName("Malay")
+    MALAY("Malay"),
+    
+    @SerializedName("Mandarin")
+    MANDARIN("Mandarin"),
+    
+    @SerializedName("Nepali")
+    NEPALI("Nepali"),
+    
+    @SerializedName("Oromo")
+    OROMO("Oromo"),
+    
+    @SerializedName("Polish")
+    POLISH("Polish"),
+    
+    @SerializedName("Portuguese")
+    PORTUGUESE("Portuguese"),
+    
+    @SerializedName("Punjabi")
+    PUNJABI("Punjabi"),
+    
+    @SerializedName("Romanian")
+    ROMANIAN("Romanian"),
+    
+    @SerializedName("Russian")
+    RUSSIAN("Russian"),
+    
+    @SerializedName("Samoan")
+    SAMOAN("Samoan"),
+    
+    @SerializedName("Serbian")
+    SERBIAN("Serbian"),
+    
+    @SerializedName("Somali")
+    SOMALI("Somali"),
+    
+    @SerializedName("Spanish")
+    SPANISH("Spanish"),
+    
+    @SerializedName("Swahili")
+    SWAHILI("Swahili"),
+    
+    @SerializedName("Tagalog")
+    TAGALOG("Tagalog"),
+    
+    @SerializedName("Tamil")
+    TAMIL("Tamil"),
+    
+    @SerializedName("Telegu")
+    TELEGU("Telegu"),
+    
+    @SerializedName("Thai")
+    THAI("Thai"),
+    
+    @SerializedName("Tigrinya")
+    TIGRINYA("Tigrinya"),
+    
+    @SerializedName("Turkish")
+    TURKISH("Turkish"),
+    
+    @SerializedName("Ukrainian")
+    UKRAINIAN("Ukrainian"),
+    
+    @SerializedName("Urdu")
+    URDU("Urdu"),
+    
+    @SerializedName("Vietnamese")
+    VIETNAMESE("Vietnamese");
+
+    private String value;
+
+    HomeLanguageEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  @SerializedName("home_language")
+  private HomeLanguageEnum homeLanguage = null;
 
   @SerializedName("id")
   private String id = null;
@@ -266,6 +429,12 @@ public class Student {
 
   @SerializedName("student_number")
   private String studentNumber = null;
+
+  @SerializedName("unweighted_gpa")
+  private String unweightedGpa = null;
+
+  @SerializedName("weighted_gpa")
+  private String weightedGpa = null;
 
   public Student created(String created) {
     this.created = created;
@@ -411,6 +580,24 @@ public class Student {
     this.grade = grade;
   }
 
+  public Student graduationYear(String graduationYear) {
+    this.graduationYear = graduationYear;
+    return this;
+  }
+
+   /**
+   * Get graduationYear
+   * @return graduationYear
+  **/
+  @ApiModelProperty(value = "")
+  public String getGraduationYear() {
+    return graduationYear;
+  }
+
+  public void setGraduationYear(String graduationYear) {
+    this.graduationYear = graduationYear;
+  }
+
   public Student hispanicEthnicity(HispanicEthnicityEnum hispanicEthnicity) {
     this.hispanicEthnicity = hispanicEthnicity;
     return this;
@@ -427,6 +614,24 @@ public class Student {
 
   public void setHispanicEthnicity(HispanicEthnicityEnum hispanicEthnicity) {
     this.hispanicEthnicity = hispanicEthnicity;
+  }
+
+  public Student homeLanguage(HomeLanguageEnum homeLanguage) {
+    this.homeLanguage = homeLanguage;
+    return this;
+  }
+
+   /**
+   * Get homeLanguage
+   * @return homeLanguage
+  **/
+  @ApiModelProperty(value = "")
+  public HomeLanguageEnum getHomeLanguage() {
+    return homeLanguage;
+  }
+
+  public void setHomeLanguage(HomeLanguageEnum homeLanguage) {
+    this.homeLanguage = homeLanguage;
   }
 
   public Student id(String id) {
@@ -632,6 +837,42 @@ public class Student {
     this.studentNumber = studentNumber;
   }
 
+  public Student unweightedGpa(String unweightedGpa) {
+    this.unweightedGpa = unweightedGpa;
+    return this;
+  }
+
+   /**
+   * Get unweightedGpa
+   * @return unweightedGpa
+  **/
+  @ApiModelProperty(value = "")
+  public String getUnweightedGpa() {
+    return unweightedGpa;
+  }
+
+  public void setUnweightedGpa(String unweightedGpa) {
+    this.unweightedGpa = unweightedGpa;
+  }
+
+  public Student weightedGpa(String weightedGpa) {
+    this.weightedGpa = weightedGpa;
+    return this;
+  }
+
+   /**
+   * Get weightedGpa
+   * @return weightedGpa
+  **/
+  @ApiModelProperty(value = "")
+  public String getWeightedGpa() {
+    return weightedGpa;
+  }
+
+  public void setWeightedGpa(String weightedGpa) {
+    this.weightedGpa = weightedGpa;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -650,7 +891,9 @@ public class Student {
         Objects.equals(this.email, student.email) &&
         Objects.equals(this.gender, student.gender) &&
         Objects.equals(this.grade, student.grade) &&
+        Objects.equals(this.graduationYear, student.graduationYear) &&
         Objects.equals(this.hispanicEthnicity, student.hispanicEthnicity) &&
+        Objects.equals(this.homeLanguage, student.homeLanguage) &&
         Objects.equals(this.id, student.id) &&
         Objects.equals(this.iepStatus, student.iepStatus) &&
         Objects.equals(this.lastModified, student.lastModified) &&
@@ -661,12 +904,14 @@ public class Student {
         Objects.equals(this.schools, student.schools) &&
         Objects.equals(this.sisId, student.sisId) &&
         Objects.equals(this.stateId, student.stateId) &&
-        Objects.equals(this.studentNumber, student.studentNumber);
+        Objects.equals(this.studentNumber, student.studentNumber) &&
+        Objects.equals(this.unweightedGpa, student.unweightedGpa) &&
+        Objects.equals(this.weightedGpa, student.weightedGpa);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(created, credentials, district, dob, ellStatus, email, gender, grade, hispanicEthnicity, id, iepStatus, lastModified, location, name, race, school, schools, sisId, stateId, studentNumber);
+    return Objects.hash(created, credentials, district, dob, ellStatus, email, gender, grade, graduationYear, hispanicEthnicity, homeLanguage, id, iepStatus, lastModified, location, name, race, school, schools, sisId, stateId, studentNumber, unweightedGpa, weightedGpa);
   }
 
 
@@ -683,7 +928,9 @@ public class Student {
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    gender: ").append(toIndentedString(gender)).append("\n");
     sb.append("    grade: ").append(toIndentedString(grade)).append("\n");
+    sb.append("    graduationYear: ").append(toIndentedString(graduationYear)).append("\n");
     sb.append("    hispanicEthnicity: ").append(toIndentedString(hispanicEthnicity)).append("\n");
+    sb.append("    homeLanguage: ").append(toIndentedString(homeLanguage)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    iepStatus: ").append(toIndentedString(iepStatus)).append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
@@ -695,6 +942,8 @@ public class Student {
     sb.append("    sisId: ").append(toIndentedString(sisId)).append("\n");
     sb.append("    stateId: ").append(toIndentedString(stateId)).append("\n");
     sb.append("    studentNumber: ").append(toIndentedString(studentNumber)).append("\n");
+    sb.append("    unweightedGpa: ").append(toIndentedString(unweightedGpa)).append("\n");
+    sb.append("    weightedGpa: ").append(toIndentedString(weightedGpa)).append("\n");
     sb.append("}");
     return sb.toString();
   }

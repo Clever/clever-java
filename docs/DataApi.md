@@ -638,7 +638,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictStatus"></a>
 # **getDistrictStatus**
-> DistrictStatusResponse getDistrictStatus(id)
+> DistrictStatusResponses getDistrictStatus(id)
 
 
 
@@ -662,7 +662,7 @@ oauth.setAccessToken("YOUR ACCESS TOKEN");
 DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
-    DistrictStatusResponse result = apiInstance.getDistrictStatus(id);
+    DistrictStatusResponses result = apiInstance.getDistrictStatus(id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DataApi#getDistrictStatus");
@@ -678,7 +678,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DistrictStatusResponse**](DistrictStatusResponse.md)
+[**DistrictStatusResponses**](DistrictStatusResponses.md)
 
 ### Authorization
 

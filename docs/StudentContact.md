@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **phone** | **String** |  |  [optional]
 **phoneType** | **String** |  |  [optional]
 **relationship** | **String** |  |  [optional]
+**sisId** | **String** |  |  [optional]
 **student** | **String** |  |  [optional]
 **type** | **String** |  |  [optional]
 

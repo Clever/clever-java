@@ -7,7 +7,7 @@
   <name>Clever Java Client</name>
   <description>Client Library for the Clever API</description>
   <url>http://www.clever.com</url>
-  <version>0.3.1</version>
+  <version>0.3.2</version>
   <prerequisites>
     <maven>2.2.0</maven>
   </prerequisites>

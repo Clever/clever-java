@@ -17,7 +17,7 @@ import io.swagger.client.ApiException;
 import io.swagger.client.model.DistrictAdminResponse;
 import io.swagger.client.model.DistrictAdminsResponse;
 import io.swagger.client.model.DistrictResponse;
-import io.swagger.client.model.DistrictStatusResponse;
+import io.swagger.client.model.DistrictStatusResponses;
 import io.swagger.client.model.DistrictsResponse;
 import io.swagger.client.model.GradeLevelsResponse;
 import io.swagger.client.model.NotFound;
@@ -241,7 +241,7 @@ public class DataApiTest {
     @Test
     public void getDistrictStatusTest() throws ApiException {
         String id = null;
-        DistrictStatusResponse response = api.getDistrictStatus(id);
+        DistrictStatusResponses response = api.getDistrictStatus(id);
 
         // TODO: test validations
     }
