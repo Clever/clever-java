@@ -77,7 +77,7 @@ java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i
 make build
 ```
 
-That will put the jar in: `target/client-0.3.0.jar`
+That will put the jar in: `target/client-X.Y.Z.jar`
 
 
 ## Publishing
