@@ -29,6 +29,7 @@ import io.swagger.client.model.SectionResponse;
 import io.swagger.client.model.SectionsResponse;
 import io.swagger.client.model.StudentContactResponse;
 import io.swagger.client.model.StudentContactsResponse;
+import io.swagger.client.model.StudentContactsByStudentResponse;
 import io.swagger.client.model.StudentResponse;
 import io.swagger.client.model.StudentsResponse;
 import io.swagger.client.model.TeacherResponse;
@@ -96,7 +97,7 @@ public class DataApiTest {
     public void getContactsForStudentTest() throws ApiException {
         String id = null;
         Integer limit = null;
-        StudentContactsResponse response = api.getContactsForStudent(id, limit);
+        StudentContactsByStudentResponse response = api.getContactsForStudent(id, limit);
 
         // TODO: test validations
     }

@@ -14,14 +14,19 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * DistrictStatus
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-07T18:34:42.074-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-15T20:43:34.953Z")
 public class DistrictStatus {
   @SerializedName("error")
   private String error = null;
@@ -47,17 +52,14 @@ public class DistrictStatus {
   /**
    * Gets or Sets state
    */
+  @JsonAdapter(StateEnum.Adapter.class)
   public enum StateEnum {
-    @SerializedName("running")
     RUNNING("running"),
     
-    @SerializedName("pending")
     PENDING("pending"),
     
-    @SerializedName("error")
     ERROR("error"),
     
-    @SerializedName("pause")
     PAUSE("pause");
 
     private String value;
@@ -66,9 +68,35 @@ public class DistrictStatus {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static StateEnum fromValue(String text) {
+      for (StateEnum b : StateEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<StateEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final StateEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public StateEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return StateEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 

@@ -14,17 +14,22 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Term;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Section
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-07T18:34:42.074-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-15T20:43:34.953Z")
 public class Section {
   @SerializedName("course_description")
   private String courseDescription = null;
@@ -44,53 +49,38 @@ public class Section {
   /**
    * Gets or Sets grade
    */
+  @JsonAdapter(GradeEnum.Adapter.class)
   public enum GradeEnum {
-    @SerializedName("1")
     _1("1"),
     
-    @SerializedName("2")
     _2("2"),
     
-    @SerializedName("3")
     _3("3"),
     
-    @SerializedName("4")
     _4("4"),
     
-    @SerializedName("5")
     _5("5"),
     
-    @SerializedName("6")
     _6("6"),
     
-    @SerializedName("7")
     _7("7"),
     
-    @SerializedName("8")
     _8("8"),
     
-    @SerializedName("9")
     _9("9"),
     
-    @SerializedName("10")
     _10("10"),
     
-    @SerializedName("11")
     _11("11"),
     
-    @SerializedName("12")
     _12("12"),
     
-    @SerializedName("PreKindergarten")
     PREKINDERGARTEN("PreKindergarten"),
     
-    @SerializedName("Kindergarten")
     KINDERGARTEN("Kindergarten"),
     
-    @SerializedName("PostGraduate")
     POSTGRADUATE("PostGraduate"),
     
-    @SerializedName("Other")
     OTHER("Other");
 
     private String value;
@@ -99,9 +89,35 @@ public class Section {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static GradeEnum fromValue(String text) {
+      for (GradeEnum b : GradeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<GradeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final GradeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public GradeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return GradeEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 
@@ -130,43 +146,33 @@ public class Section {
   private String sisId = null;
 
   @SerializedName("students")
-  private List<String> students = new ArrayList<String>();
+  private List<String> students = null;
 
   /**
    * Gets or Sets subject
    */
+  @JsonAdapter(SubjectEnum.Adapter.class)
   public enum SubjectEnum {
-    @SerializedName("english/language arts")
     ENGLISH_LANGUAGE_ARTS("english/language arts"),
     
-    @SerializedName("math")
     MATH("math"),
     
-    @SerializedName("science")
     SCIENCE("science"),
     
-    @SerializedName("social studies")
     SOCIAL_STUDIES("social studies"),
     
-    @SerializedName("language")
     LANGUAGE("language"),
     
-    @SerializedName("homeroom/advisory")
     HOMEROOM_ADVISORY("homeroom/advisory"),
     
-    @SerializedName("interventions/online learning")
     INTERVENTIONS_ONLINE_LEARNING("interventions/online learning"),
     
-    @SerializedName("technology and engineering")
     TECHNOLOGY_AND_ENGINEERING("technology and engineering"),
     
-    @SerializedName("PE and health")
     PE_AND_HEALTH("PE and health"),
     
-    @SerializedName("arts and music")
     ARTS_AND_MUSIC("arts and music"),
     
-    @SerializedName("other")
     OTHER("other");
 
     private String value;
@@ -175,9 +181,35 @@ public class Section {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static SubjectEnum fromValue(String text) {
+      for (SubjectEnum b : SubjectEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<SubjectEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final SubjectEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public SubjectEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return SubjectEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 
@@ -188,7 +220,7 @@ public class Section {
   private String teacher = null;
 
   @SerializedName("teachers")
-  private List<String> teachers = new ArrayList<String>();
+  private List<String> teachers = null;
 
   @SerializedName("term")
   private Term term = null;
@@ -433,6 +465,9 @@ public class Section {
   }
 
   public Section addStudentsItem(String studentsItem) {
+    if (this.students == null) {
+      this.students = new ArrayList<String>();
+    }
     this.students.add(studentsItem);
     return this;
   }
@@ -492,6 +527,9 @@ public class Section {
   }
 
   public Section addTeachersItem(String teachersItem) {
+    if (this.teachers == null) {
+      this.teachers = new ArrayList<String>();
+    }
     this.teachers.add(teachersItem);
     return this;
   }

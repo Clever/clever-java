@@ -21,27 +21,27 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.SchoolAdminResponse;
+import io.swagger.client.model.StudentContact;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * SchoolAdminsResponse
+ * StudentContactsByStudentResponse
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-15T20:43:34.953Z")
-public class SchoolAdminsResponse {
+public class StudentContactsByStudentResponse {
   @SerializedName("data")
-  private List<SchoolAdminResponse> data = null;
+  private List<StudentContact> data = null;
 
-  public SchoolAdminsResponse data(List<SchoolAdminResponse> data) {
+  public StudentContactsByStudentResponse data(List<StudentContact> data) {
     this.data = data;
     return this;
   }
 
-  public SchoolAdminsResponse addDataItem(SchoolAdminResponse dataItem) {
+  public StudentContactsByStudentResponse addDataItem(StudentContact dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<SchoolAdminResponse>();
+      this.data = new ArrayList<StudentContact>();
     }
     this.data.add(dataItem);
     return this;
@@ -52,11 +52,11 @@ public class SchoolAdminsResponse {
    * @return data
   **/
   @ApiModelProperty(value = "")
-  public List<SchoolAdminResponse> getData() {
+  public List<StudentContact> getData() {
     return data;
   }
 
-  public void setData(List<SchoolAdminResponse> data) {
+  public void setData(List<StudentContact> data) {
     this.data = data;
   }
 
@@ -69,8 +69,8 @@ public class SchoolAdminsResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SchoolAdminsResponse schoolAdminsResponse = (SchoolAdminsResponse) o;
-    return Objects.equals(this.data, schoolAdminsResponse.data);
+    StudentContactsByStudentResponse studentContactsByStudentResponse = (StudentContactsByStudentResponse) o;
+    return Objects.equals(this.data, studentContactsByStudentResponse.data);
   }
 
   @Override
@@ -82,7 +82,7 @@ public class SchoolAdminsResponse {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SchoolAdminsResponse {\n");
+    sb.append("class StudentContactsByStudentResponse {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");

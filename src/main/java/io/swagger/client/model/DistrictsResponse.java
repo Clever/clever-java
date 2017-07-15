@@ -14,20 +14,25 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.DistrictResponse;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * DistrictsResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-07T18:34:42.074-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-15T20:43:34.953Z")
 public class DistrictsResponse {
   @SerializedName("data")
-  private List<DistrictResponse> data = new ArrayList<DistrictResponse>();
+  private List<DistrictResponse> data = null;
 
   public DistrictsResponse data(List<DistrictResponse> data) {
     this.data = data;
@@ -35,6 +40,9 @@ public class DistrictsResponse {
   }
 
   public DistrictsResponse addDataItem(DistrictResponse dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<DistrictResponse>();
+    }
     this.data.add(dataItem);
     return this;
   }
