@@ -1,5 +1,5 @@
 
-# StudentContactsByStudentResponse
+# StudentContactsForStudentResponse
 
 ## Properties
 Name | Type | Description | Notes

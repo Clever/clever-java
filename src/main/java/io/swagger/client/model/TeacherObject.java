@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * TeacherObject
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-15T20:43:34.953Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-17T20:00:26.398Z")
 public class TeacherObject {
   @SerializedName("object")
   private Teacher object = null;

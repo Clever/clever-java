@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 <a name="getContactsForStudent"></a>
 # **getContactsForStudent**
-> StudentContactsByStudentResponse getContactsForStudent(id, limit)
+> StudentContactsForStudentResponse getContactsForStudent(id, limit)
 
 
 
@@ -182,7 +182,7 @@ DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
 try {
-    StudentContactsByStudentResponse result = apiInstance.getContactsForStudent(id, limit);
+    StudentContactsForStudentResponse result = apiInstance.getContactsForStudent(id, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DataApi#getContactsForStudent");
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StudentContactsByStudentResponse**](StudentContactsByStudentResponse.md)
+[**StudentContactsForStudentResponse**](StudentContactsForStudentResponse.md)
 
 ### Authorization
 

@@ -27,19 +27,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * StudentContactsByStudentResponse
+ * StudentContactsForStudentResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-15T20:43:34.953Z")
-public class StudentContactsByStudentResponse {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-17T20:00:26.398Z")
+public class StudentContactsForStudentResponse {
   @SerializedName("data")
   private List<StudentContact> data = null;
 
-  public StudentContactsByStudentResponse data(List<StudentContact> data) {
+  public StudentContactsForStudentResponse data(List<StudentContact> data) {
     this.data = data;
     return this;
   }
 
-  public StudentContactsByStudentResponse addDataItem(StudentContact dataItem) {
+  public StudentContactsForStudentResponse addDataItem(StudentContact dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<StudentContact>();
     }
@@ -69,8 +69,8 @@ public class StudentContactsByStudentResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    StudentContactsByStudentResponse studentContactsByStudentResponse = (StudentContactsByStudentResponse) o;
-    return Objects.equals(this.data, studentContactsByStudentResponse.data);
+    StudentContactsForStudentResponse studentContactsForStudentResponse = (StudentContactsForStudentResponse) o;
+    return Objects.equals(this.data, studentContactsForStudentResponse.data);
   }
 
   @Override
@@ -82,7 +82,7 @@ public class StudentContactsByStudentResponse {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class StudentContactsByStudentResponse {\n");
+    sb.append("class StudentContactsForStudentResponse {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");

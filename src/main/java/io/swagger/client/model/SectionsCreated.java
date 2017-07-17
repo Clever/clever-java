@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * SectionsCreated
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-15T20:43:34.953Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-17T20:00:26.398Z")
 public class SectionsCreated extends Event {
   @SerializedName("data")
   private SectionObject data = null;
