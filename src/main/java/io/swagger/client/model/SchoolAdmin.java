@@ -14,18 +14,23 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Credentials;
 import io.swagger.client.model.Name;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * SchoolAdmin
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-07T18:34:42.074-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-17T20:00:26.398Z")
 public class SchoolAdmin {
   @SerializedName("credentials")
   private Credentials credentials = null;
@@ -43,7 +48,7 @@ public class SchoolAdmin {
   private Name name = null;
 
   @SerializedName("schools")
-  private List<String> schools = new ArrayList<String>();
+  private List<String> schools = null;
 
   @SerializedName("staff_id")
   private String staffId = null;
@@ -147,6 +152,9 @@ public class SchoolAdmin {
   }
 
   public SchoolAdmin addSchoolsItem(String schoolsItem) {
+    if (this.schools == null) {
+      this.schools = new ArrayList<String>();
+    }
     this.schools.add(schoolsItem);
     return this;
   }

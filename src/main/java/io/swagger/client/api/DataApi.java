@@ -41,6 +41,7 @@ import io.swagger.client.model.SchoolsResponse;
 import io.swagger.client.model.SectionResponse;
 import io.swagger.client.model.SectionsResponse;
 import io.swagger.client.model.StudentContactResponse;
+import io.swagger.client.model.StudentContactsForStudentResponse;
 import io.swagger.client.model.StudentContactsResponse;
 import io.swagger.client.model.StudentResponse;
 import io.swagger.client.model.StudentsResponse;
@@ -407,11 +408,11 @@ public class DataApi {
      * Returns the contacts for a student
      * @param id  (required)
      * @param limit  (optional)
-     * @return StudentContactsResponse
+     * @return StudentContactsForStudentResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public StudentContactsResponse getContactsForStudent(String id, Integer limit) throws ApiException {
-        ApiResponse<StudentContactsResponse> resp = getContactsForStudentWithHttpInfo(id, limit);
+    public StudentContactsForStudentResponse getContactsForStudent(String id, Integer limit) throws ApiException {
+        ApiResponse<StudentContactsForStudentResponse> resp = getContactsForStudentWithHttpInfo(id, limit);
         return resp.getData();
     }
 
@@ -420,12 +421,12 @@ public class DataApi {
      * Returns the contacts for a student
      * @param id  (required)
      * @param limit  (optional)
-     * @return ApiResponse&lt;StudentContactsResponse&gt;
+     * @return ApiResponse&lt;StudentContactsForStudentResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<StudentContactsResponse> getContactsForStudentWithHttpInfo(String id, Integer limit) throws ApiException {
+    public ApiResponse<StudentContactsForStudentResponse> getContactsForStudentWithHttpInfo(String id, Integer limit) throws ApiException {
         com.squareup.okhttp.Call call = getContactsForStudentValidateBeforeCall(id, limit, null, null);
-        Type localVarReturnType = new TypeToken<StudentContactsResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<StudentContactsForStudentResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -438,7 +439,7 @@ public class DataApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getContactsForStudentAsync(String id, Integer limit, final ApiCallback<StudentContactsResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call getContactsForStudentAsync(String id, Integer limit, final ApiCallback<StudentContactsForStudentResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -460,7 +461,7 @@ public class DataApi {
         }
 
         com.squareup.okhttp.Call call = getContactsForStudentValidateBeforeCall(id, limit, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<StudentContactsResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<StudentContactsForStudentResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

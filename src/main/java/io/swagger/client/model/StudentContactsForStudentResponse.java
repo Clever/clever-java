@@ -21,20 +21,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.Event;
-import io.swagger.client.model.StudentObject;
+import io.swagger.client.model.StudentContact;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * StudentsCreated
+ * StudentContactsForStudentResponse
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-17T20:00:26.398Z")
-public class StudentsCreated extends Event {
+public class StudentContactsForStudentResponse {
   @SerializedName("data")
-  private StudentObject data = null;
+  private List<StudentContact> data = null;
 
-  public StudentsCreated data(StudentObject data) {
+  public StudentContactsForStudentResponse data(List<StudentContact> data) {
     this.data = data;
+    return this;
+  }
+
+  public StudentContactsForStudentResponse addDataItem(StudentContact dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<StudentContact>();
+    }
+    this.data.add(dataItem);
     return this;
   }
 
@@ -43,11 +52,11 @@ public class StudentsCreated extends Event {
    * @return data
   **/
   @ApiModelProperty(value = "")
-  public StudentObject getData() {
+  public List<StudentContact> getData() {
     return data;
   }
 
-  public void setData(StudentObject data) {
+  public void setData(List<StudentContact> data) {
     this.data = data;
   }
 
@@ -60,22 +69,21 @@ public class StudentsCreated extends Event {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    StudentsCreated studentsCreated = (StudentsCreated) o;
-    return Objects.equals(this.data, studentsCreated.data) &&
-        super.equals(o);
+    StudentContactsForStudentResponse studentContactsForStudentResponse = (StudentContactsForStudentResponse) o;
+    return Objects.equals(this.data, studentContactsForStudentResponse.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, super.hashCode());
+    return Objects.hash(data);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class StudentsCreated {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("class StudentContactsForStudentResponse {\n");
+    
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();

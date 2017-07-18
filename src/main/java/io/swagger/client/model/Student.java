@@ -14,19 +14,24 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Credentials;
 import io.swagger.client.model.Location;
 import io.swagger.client.model.Name;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Student
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-07T18:34:42.074-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-17T20:00:26.398Z")
 public class Student {
   @SerializedName("created")
   private String created = null;
@@ -43,14 +48,12 @@ public class Student {
   /**
    * Gets or Sets ellStatus
    */
+  @JsonAdapter(EllStatusEnum.Adapter.class)
   public enum EllStatusEnum {
-    @SerializedName("Y")
     Y("Y"),
     
-    @SerializedName("N")
     N("N"),
     
-    @SerializedName("")
     EMPTY("");
 
     private String value;
@@ -59,9 +62,35 @@ public class Student {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static EllStatusEnum fromValue(String text) {
+      for (EllStatusEnum b : EllStatusEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<EllStatusEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final EllStatusEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public EllStatusEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return EllStatusEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 
@@ -74,14 +103,12 @@ public class Student {
   /**
    * Gets or Sets gender
    */
+  @JsonAdapter(GenderEnum.Adapter.class)
   public enum GenderEnum {
-    @SerializedName("M")
     M("M"),
     
-    @SerializedName("F")
     F("F"),
     
-    @SerializedName("")
     EMPTY("");
 
     private String value;
@@ -90,9 +117,35 @@ public class Student {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static GenderEnum fromValue(String text) {
+      for (GenderEnum b : GenderEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<GenderEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final GenderEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public GenderEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return GenderEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 
@@ -102,53 +155,38 @@ public class Student {
   /**
    * Gets or Sets grade
    */
+  @JsonAdapter(GradeEnum.Adapter.class)
   public enum GradeEnum {
-    @SerializedName("1")
     _1("1"),
     
-    @SerializedName("2")
     _2("2"),
     
-    @SerializedName("3")
     _3("3"),
     
-    @SerializedName("4")
     _4("4"),
     
-    @SerializedName("5")
     _5("5"),
     
-    @SerializedName("6")
     _6("6"),
     
-    @SerializedName("7")
     _7("7"),
     
-    @SerializedName("8")
     _8("8"),
     
-    @SerializedName("9")
     _9("9"),
     
-    @SerializedName("10")
     _10("10"),
     
-    @SerializedName("11")
     _11("11"),
     
-    @SerializedName("12")
     _12("12"),
     
-    @SerializedName("PreKindergarten")
     PREKINDERGARTEN("PreKindergarten"),
     
-    @SerializedName("Kindergarten")
     KINDERGARTEN("Kindergarten"),
     
-    @SerializedName("PostGraduate")
     POSTGRADUATE("PostGraduate"),
     
-    @SerializedName("Other")
     OTHER("Other");
 
     private String value;
@@ -157,9 +195,35 @@ public class Student {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static GradeEnum fromValue(String text) {
+      for (GradeEnum b : GradeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<GradeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final GradeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public GradeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return GradeEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 
@@ -172,14 +236,12 @@ public class Student {
   /**
    * Gets or Sets hispanicEthnicity
    */
+  @JsonAdapter(HispanicEthnicityEnum.Adapter.class)
   public enum HispanicEthnicityEnum {
-    @SerializedName("Y")
     Y("Y"),
     
-    @SerializedName("N")
     N("N"),
     
-    @SerializedName("")
     EMPTY("");
 
     private String value;
@@ -188,9 +250,35 @@ public class Student {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static HispanicEthnicityEnum fromValue(String text) {
+      for (HispanicEthnicityEnum b : HispanicEthnicityEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<HispanicEthnicityEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final HispanicEthnicityEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public HispanicEthnicityEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return HispanicEthnicityEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 
@@ -200,146 +288,100 @@ public class Student {
   /**
    * Gets or Sets homeLanguage
    */
+  @JsonAdapter(HomeLanguageEnum.Adapter.class)
   public enum HomeLanguageEnum {
-    @SerializedName("English")
     ENGLISH("English"),
     
-    @SerializedName("Albanian")
     ALBANIAN("Albanian"),
     
-    @SerializedName("Amharic")
     AMHARIC("Amharic"),
     
-    @SerializedName("Arabic")
     ARABIC("Arabic"),
     
-    @SerializedName("Bengali")
     BENGALI("Bengali"),
     
-    @SerializedName("Bosnian")
     BOSNIAN("Bosnian"),
     
-    @SerializedName("Burmese")
     BURMESE("Burmese"),
     
-    @SerializedName("Cantonese")
     CANTONESE("Cantonese"),
     
-    @SerializedName("Chinese")
     CHINESE("Chinese"),
     
-    @SerializedName("Dutch")
     DUTCH("Dutch"),
     
-    @SerializedName("Farsi")
     FARSI("Farsi"),
     
-    @SerializedName("French")
     FRENCH("French"),
     
-    @SerializedName("German")
     GERMAN("German"),
     
-    @SerializedName("Hebrew")
     HEBREW("Hebrew"),
     
-    @SerializedName("Hindi")
     HINDI("Hindi"),
     
-    @SerializedName("Hmong")
     HMONG("Hmong"),
     
-    @SerializedName("Ilocano")
     ILOCANO("Ilocano"),
     
-    @SerializedName("Japanese")
     JAPANESE("Japanese"),
     
-    @SerializedName("Javanese")
     JAVANESE("Javanese"),
     
-    @SerializedName("Karen")
     KAREN("Karen"),
     
-    @SerializedName("Khmer")
     KHMER("Khmer"),
     
-    @SerializedName("Korean")
     KOREAN("Korean"),
     
-    @SerializedName("Laotian")
     LAOTIAN("Laotian"),
     
-    @SerializedName("Latvian")
     LATVIAN("Latvian"),
     
-    @SerializedName("Malay")
     MALAY("Malay"),
     
-    @SerializedName("Mandarin")
     MANDARIN("Mandarin"),
     
-    @SerializedName("Nepali")
     NEPALI("Nepali"),
     
-    @SerializedName("Oromo")
     OROMO("Oromo"),
     
-    @SerializedName("Polish")
     POLISH("Polish"),
     
-    @SerializedName("Portuguese")
     PORTUGUESE("Portuguese"),
     
-    @SerializedName("Punjabi")
     PUNJABI("Punjabi"),
     
-    @SerializedName("Romanian")
     ROMANIAN("Romanian"),
     
-    @SerializedName("Russian")
     RUSSIAN("Russian"),
     
-    @SerializedName("Samoan")
     SAMOAN("Samoan"),
     
-    @SerializedName("Serbian")
     SERBIAN("Serbian"),
     
-    @SerializedName("Somali")
     SOMALI("Somali"),
     
-    @SerializedName("Spanish")
     SPANISH("Spanish"),
     
-    @SerializedName("Swahili")
     SWAHILI("Swahili"),
     
-    @SerializedName("Tagalog")
     TAGALOG("Tagalog"),
     
-    @SerializedName("Tamil")
     TAMIL("Tamil"),
     
-    @SerializedName("Telegu")
     TELEGU("Telegu"),
     
-    @SerializedName("Thai")
     THAI("Thai"),
     
-    @SerializedName("Tigrinya")
     TIGRINYA("Tigrinya"),
     
-    @SerializedName("Turkish")
     TURKISH("Turkish"),
     
-    @SerializedName("Ukrainian")
     UKRAINIAN("Ukrainian"),
     
-    @SerializedName("Urdu")
     URDU("Urdu"),
     
-    @SerializedName("Vietnamese")
     VIETNAMESE("Vietnamese");
 
     private String value;
@@ -348,9 +390,35 @@ public class Student {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static HomeLanguageEnum fromValue(String text) {
+      for (HomeLanguageEnum b : HomeLanguageEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<HomeLanguageEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final HomeLanguageEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public HomeLanguageEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return HomeLanguageEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 
@@ -375,29 +443,22 @@ public class Student {
   /**
    * Gets or Sets race
    */
+  @JsonAdapter(RaceEnum.Adapter.class)
   public enum RaceEnum {
-    @SerializedName("Caucasian")
     CAUCASIAN("Caucasian"),
     
-    @SerializedName("Asian")
     ASIAN("Asian"),
     
-    @SerializedName("Black or African American")
     BLACK_OR_AFRICAN_AMERICAN("Black or African American"),
     
-    @SerializedName("American Indian")
     AMERICAN_INDIAN("American Indian"),
     
-    @SerializedName("Hawaiian or Other Pacific Islander")
     HAWAIIAN_OR_OTHER_PACIFIC_ISLANDER("Hawaiian or Other Pacific Islander"),
     
-    @SerializedName("Two or More Races")
     TWO_OR_MORE_RACES("Two or More Races"),
     
-    @SerializedName("Unknown")
     UNKNOWN("Unknown"),
     
-    @SerializedName("")
     EMPTY("");
 
     private String value;
@@ -406,9 +467,35 @@ public class Student {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static RaceEnum fromValue(String text) {
+      for (RaceEnum b : RaceEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<RaceEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final RaceEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public RaceEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return RaceEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 
@@ -419,7 +506,7 @@ public class Student {
   private String school = null;
 
   @SerializedName("schools")
-  private List<String> schools = new ArrayList<String>();
+  private List<String> schools = null;
 
   @SerializedName("sis_id")
   private String sisId = null;
@@ -766,6 +853,9 @@ public class Student {
   }
 
   public Student addSchoolsItem(String schoolsItem) {
+    if (this.schools == null) {
+      this.schools = new ArrayList<String>();
+    }
     this.schools.add(schoolsItem);
     return this;
   }

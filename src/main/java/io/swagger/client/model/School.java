@@ -14,16 +14,21 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Location;
 import io.swagger.client.model.Principal;
+import java.io.IOException;
 
 /**
  * School
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-07T18:34:42.074-07:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-17T20:00:26.398Z")
 public class School {
   @SerializedName("created")
   private String created = null;
@@ -34,53 +39,38 @@ public class School {
   /**
    * Gets or Sets highGrade
    */
+  @JsonAdapter(HighGradeEnum.Adapter.class)
   public enum HighGradeEnum {
-    @SerializedName("1")
     _1("1"),
     
-    @SerializedName("2")
     _2("2"),
     
-    @SerializedName("3")
     _3("3"),
     
-    @SerializedName("4")
     _4("4"),
     
-    @SerializedName("5")
     _5("5"),
     
-    @SerializedName("6")
     _6("6"),
     
-    @SerializedName("7")
     _7("7"),
     
-    @SerializedName("8")
     _8("8"),
     
-    @SerializedName("9")
     _9("9"),
     
-    @SerializedName("10")
     _10("10"),
     
-    @SerializedName("11")
     _11("11"),
     
-    @SerializedName("12")
     _12("12"),
     
-    @SerializedName("PreKindergarten")
     PREKINDERGARTEN("PreKindergarten"),
     
-    @SerializedName("Kindergarten")
     KINDERGARTEN("Kindergarten"),
     
-    @SerializedName("PostGraduate")
     POSTGRADUATE("PostGraduate"),
     
-    @SerializedName("Other")
     OTHER("Other");
 
     private String value;
@@ -89,9 +79,35 @@ public class School {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static HighGradeEnum fromValue(String text) {
+      for (HighGradeEnum b : HighGradeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<HighGradeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final HighGradeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public HighGradeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return HighGradeEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 
@@ -110,53 +126,38 @@ public class School {
   /**
    * Gets or Sets lowGrade
    */
+  @JsonAdapter(LowGradeEnum.Adapter.class)
   public enum LowGradeEnum {
-    @SerializedName("1")
     _1("1"),
     
-    @SerializedName("2")
     _2("2"),
     
-    @SerializedName("3")
     _3("3"),
     
-    @SerializedName("4")
     _4("4"),
     
-    @SerializedName("5")
     _5("5"),
     
-    @SerializedName("6")
     _6("6"),
     
-    @SerializedName("7")
     _7("7"),
     
-    @SerializedName("8")
     _8("8"),
     
-    @SerializedName("9")
     _9("9"),
     
-    @SerializedName("10")
     _10("10"),
     
-    @SerializedName("11")
     _11("11"),
     
-    @SerializedName("12")
     _12("12"),
     
-    @SerializedName("PreKindergarten")
     PREKINDERGARTEN("PreKindergarten"),
     
-    @SerializedName("Kindergarten")
     KINDERGARTEN("Kindergarten"),
     
-    @SerializedName("PostGraduate")
     POSTGRADUATE("PostGraduate"),
     
-    @SerializedName("Other")
     OTHER("Other");
 
     private String value;
@@ -165,9 +166,35 @@ public class School {
       this.value = value;
     }
 
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
+    }
+
+    public static LowGradeEnum fromValue(String text) {
+      for (LowGradeEnum b : LowGradeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<LowGradeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final LowGradeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public LowGradeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return LowGradeEnum.fromValue(String.valueOf(value));
+      }
     }
   }
 
