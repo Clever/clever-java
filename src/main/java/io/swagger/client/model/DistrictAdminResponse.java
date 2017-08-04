@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * DistrictAdminResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-17T20:00:26.398Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-04T15:10:30.801Z")
 public class DistrictAdminResponse {
   @SerializedName("data")
   private DistrictAdmin data = null;
