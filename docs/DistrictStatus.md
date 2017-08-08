@@ -21,7 +21,7 @@ Name | Value
 RUNNING | &quot;running&quot;
 PENDING | &quot;pending&quot;
 ERROR | &quot;error&quot;
-PAUSE | &quot;pause&quot;
+PAUSED | &quot;paused&quot;
 
 
 
