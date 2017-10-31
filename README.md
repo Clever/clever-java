@@ -6,17 +6,6 @@ Client library for the Clever API
 
 Manually install the Clever JAR: https://github.com/Clever/clever-java/releases
 
-Manually install these additional JARs:
-* gson-2.6.2.jar
-* gson-fire-1.8.0.jar
-* hamcrest-core-1.3.jar
-* joda-time-2.9.3.jar
-* junit-4.12.jar
-* logging-interceptor-2.7.5.jar
-* okhttp-2.7.5.jar
-* okio-1.6.0.jar
-* swagger-annotations-1.5.9.jar
-
 
 ## Usage
 ```
@@ -72,12 +61,16 @@ public void processEvents(DefaultApi api) {
 
 3. Install Java and Maven
 
-4. In the root directory of the swagger repo run:
+4. Consider removing existing files from `docs/` and `src/` before regenerating files
+
+5. Consider override files that need to be updated in `override/`, including the client version in `override/pom/xml`
+
+6. In the root directory of the swagger repo run:
 ```
-java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i $PATH_TO_SWAGGER_API_REPO/v1.2-client.yml -l java -o $PATH_TO_THIS_REPO
+java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i $PATH_TO_SWAGGER_API_REPO/v2.0-client.yml -l java -o $PATH_TO_THIS_REPO
 ```
 
-5. Package the JAR
+7. Package the JAR
 
 ```
 make build
