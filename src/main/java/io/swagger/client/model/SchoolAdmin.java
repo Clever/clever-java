@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * SchoolAdmin
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-31T00:24:10.936Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-02T23:26:03.472Z")
 public class SchoolAdmin {
   @SerializedName("credentials")
   private Credentials credentials = null;

@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * Contact
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-31T00:24:10.936Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-02T23:26:03.472Z")
 public class Contact {
   @SerializedName("district")
   private String district = null;
@@ -45,8 +45,61 @@ public class Contact {
   @SerializedName("phone")
   private String phone = null;
 
+  /**
+   * Gets or Sets phoneType
+   */
+  @JsonAdapter(PhoneTypeEnum.Adapter.class)
+  public enum PhoneTypeEnum {
+    CELL("Cell"),
+    
+    HOME("Home"),
+    
+    WORK("Work"),
+    
+    OTHER("Other"),
+    
+    EMPTY("");
+
+    private String value;
+
+    PhoneTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static PhoneTypeEnum fromValue(String text) {
+      for (PhoneTypeEnum b : PhoneTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<PhoneTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final PhoneTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public PhoneTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return PhoneTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
   @SerializedName("phone_type")
-  private String phoneType = null;
+  private PhoneTypeEnum phoneType = null;
 
   /**
    * Gets or Sets relationship
@@ -264,7 +317,7 @@ public class Contact {
     this.phone = phone;
   }
 
-  public Contact phoneType(String phoneType) {
+  public Contact phoneType(PhoneTypeEnum phoneType) {
     this.phoneType = phoneType;
     return this;
   }
@@ -274,11 +327,11 @@ public class Contact {
    * @return phoneType
   **/
   @ApiModelProperty(value = "")
-  public String getPhoneType() {
+  public PhoneTypeEnum getPhoneType() {
     return phoneType;
   }
 
-  public void setPhoneType(String phoneType) {
+  public void setPhoneType(PhoneTypeEnum phoneType) {
     this.phoneType = phoneType;
   }
 

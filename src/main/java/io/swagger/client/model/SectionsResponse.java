@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * SectionsResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-31T00:24:10.936Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-02T23:26:03.472Z")
 public class SectionsResponse {
   @SerializedName("data")
   private List<SectionResponse> data = null;

@@ -9,11 +9,22 @@ Name | Type | Description | Notes
 **id** | **String** |  |  [optional]
 **name** | **String** |  |  [optional]
 **phone** | **String** |  |  [optional]
-**phoneType** | **String** |  |  [optional]
+**phoneType** | [**PhoneTypeEnum**](#PhoneTypeEnum) |  |  [optional]
 **relationship** | [**RelationshipEnum**](#RelationshipEnum) |  |  [optional]
 **sisId** | **String** |  |  [optional]
 **students** | **List&lt;String&gt;** |  |  [optional]
 **type** | [**TypeEnum**](#TypeEnum) |  |  [optional]
+
+
+<a name="PhoneTypeEnum"></a>
+## Enum: PhoneTypeEnum
+Name | Value
+---- | -----
+CELL | &quot;Cell&quot;
+HOME | &quot;Home&quot;
+WORK | &quot;Work&quot;
+OTHER | &quot;Other&quot;
+EMPTY | &quot;&quot;
 
 
 <a name="RelationshipEnum"></a>
