@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;DistrictAdmin&gt;**](DistrictAdmin.md) |  |  [optional]
+**data** | [**List&lt;DistrictAdminResponse&gt;**](DistrictAdminResponse.md) |  |  [optional]
 
 
 

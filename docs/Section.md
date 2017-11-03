@@ -4,9 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**courseDescription** | **String** |  |  [optional]
-**courseName** | **String** |  |  [optional]
-**courseNumber** | **String** |  |  [optional]
+**course** | **String** |  |  [optional]
 **created** | **String** |  |  [optional]
 **district** | **String** |  |  [optional]
 **grade** | [**GradeEnum**](#GradeEnum) |  |  [optional]
@@ -21,7 +19,7 @@ Name | Type | Description | Notes
 **subject** | [**SubjectEnum**](#SubjectEnum) |  |  [optional]
 **teacher** | **String** |  |  [optional]
 **teachers** | **List&lt;String&gt;** |  |  [optional]
-**term** | [**Term**](Term.md) |  |  [optional]
+**termId** | **String** |  |  [optional]
 
 
 <a name="GradeEnum"></a>

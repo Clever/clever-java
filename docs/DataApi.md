@@ -1,23 +1,28 @@
 # DataApi
 
-All URIs are relative to *https://api.clever.com/v1.2*
+All URIs are relative to *https://api.clever.com/v2.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getContact**](DataApi.md#getContact) | **GET** /contacts/{id} | 
 [**getContacts**](DataApi.md#getContacts) | **GET** /contacts | 
 [**getContactsForStudent**](DataApi.md#getContactsForStudent) | **GET** /students/{id}/contacts | 
+[**getCourse**](DataApi.md#getCourse) | **GET** /courses/{id} | 
+[**getCourseForSection**](DataApi.md#getCourseForSection) | **GET** /sections/{id}/course | 
+[**getCourses**](DataApi.md#getCourses) | **GET** /courses | 
 [**getDistrict**](DataApi.md#getDistrict) | **GET** /districts/{id} | 
 [**getDistrictAdmin**](DataApi.md#getDistrictAdmin) | **GET** /district_admins/{id} | 
 [**getDistrictAdmins**](DataApi.md#getDistrictAdmins) | **GET** /district_admins | 
+[**getDistrictForContact**](DataApi.md#getDistrictForContact) | **GET** /contacts/{id}/district | 
+[**getDistrictForCourse**](DataApi.md#getDistrictForCourse) | **GET** /courses/{id}/district | 
+[**getDistrictForDistrictAdmin**](DataApi.md#getDistrictForDistrictAdmin) | **GET** /district_admins/{id}/district | 
 [**getDistrictForSchool**](DataApi.md#getDistrictForSchool) | **GET** /schools/{id}/district | 
+[**getDistrictForSchoolAdmin**](DataApi.md#getDistrictForSchoolAdmin) | **GET** /school_admins/{id}/district | 
 [**getDistrictForSection**](DataApi.md#getDistrictForSection) | **GET** /sections/{id}/district | 
 [**getDistrictForStudent**](DataApi.md#getDistrictForStudent) | **GET** /students/{id}/district | 
-[**getDistrictForStudentContact**](DataApi.md#getDistrictForStudentContact) | **GET** /contacts/{id}/district | 
 [**getDistrictForTeacher**](DataApi.md#getDistrictForTeacher) | **GET** /teachers/{id}/district | 
-[**getDistrictStatus**](DataApi.md#getDistrictStatus) | **GET** /districts/{id}/status | 
+[**getDistrictForTerm**](DataApi.md#getDistrictForTerm) | **GET** /terms/{id}/district | 
 [**getDistricts**](DataApi.md#getDistricts) | **GET** /districts | 
-[**getGradeLevelsForTeacher**](DataApi.md#getGradeLevelsForTeacher) | **GET** /teachers/{id}/grade_levels | 
 [**getSchool**](DataApi.md#getSchool) | **GET** /schools/{id} | 
 [**getSchoolAdmin**](DataApi.md#getSchoolAdmin) | **GET** /school_admins/{id} | 
 [**getSchoolAdmins**](DataApi.md#getSchoolAdmins) | **GET** /school_admins | 
@@ -26,14 +31,18 @@ Method | HTTP request | Description
 [**getSchoolForTeacher**](DataApi.md#getSchoolForTeacher) | **GET** /teachers/{id}/school | 
 [**getSchools**](DataApi.md#getSchools) | **GET** /schools | 
 [**getSchoolsForSchoolAdmin**](DataApi.md#getSchoolsForSchoolAdmin) | **GET** /school_admins/{id}/schools | 
+[**getSchoolsForStudent**](DataApi.md#getSchoolsForStudent) | **GET** /students/{id}/schools | 
+[**getSchoolsForTeacher**](DataApi.md#getSchoolsForTeacher) | **GET** /teachers/{id}/schools | 
 [**getSection**](DataApi.md#getSection) | **GET** /sections/{id} | 
 [**getSections**](DataApi.md#getSections) | **GET** /sections | 
+[**getSectionsForCourse**](DataApi.md#getSectionsForCourse) | **GET** /courses/{id}/sections | 
 [**getSectionsForSchool**](DataApi.md#getSectionsForSchool) | **GET** /schools/{id}/sections | 
 [**getSectionsForStudent**](DataApi.md#getSectionsForStudent) | **GET** /students/{id}/sections | 
 [**getSectionsForTeacher**](DataApi.md#getSectionsForTeacher) | **GET** /teachers/{id}/sections | 
+[**getSectionsForTerm**](DataApi.md#getSectionsForTerm) | **GET** /terms/{id}/sections | 
 [**getStudent**](DataApi.md#getStudent) | **GET** /students/{id} | 
-[**getStudentForContact**](DataApi.md#getStudentForContact) | **GET** /contacts/{id}/student | 
 [**getStudents**](DataApi.md#getStudents) | **GET** /students | 
+[**getStudentsForContact**](DataApi.md#getStudentsForContact) | **GET** /contacts/{id}/students | 
 [**getStudentsForSchool**](DataApi.md#getStudentsForSchool) | **GET** /schools/{id}/students | 
 [**getStudentsForSection**](DataApi.md#getStudentsForSection) | **GET** /sections/{id}/students | 
 [**getStudentsForTeacher**](DataApi.md#getStudentsForTeacher) | **GET** /teachers/{id}/students | 
@@ -43,11 +52,14 @@ Method | HTTP request | Description
 [**getTeachersForSchool**](DataApi.md#getTeachersForSchool) | **GET** /schools/{id}/teachers | 
 [**getTeachersForSection**](DataApi.md#getTeachersForSection) | **GET** /sections/{id}/teachers | 
 [**getTeachersForStudent**](DataApi.md#getTeachersForStudent) | **GET** /students/{id}/teachers | 
+[**getTerm**](DataApi.md#getTerm) | **GET** /terms/{id} | 
+[**getTermForSection**](DataApi.md#getTermForSection) | **GET** /sections/{id}/term | 
+[**getTerms**](DataApi.md#getTerms) | **GET** /terms | 
 
 
 <a name="getContact"></a>
 # **getContact**
-> StudentContactResponse getContact(id)
+> ContactResponse getContact(id)
 
 
 
@@ -71,7 +83,7 @@ oauth.setAccessToken("YOUR ACCESS TOKEN");
 DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
-    StudentContactResponse result = apiInstance.getContact(id);
+    ContactResponse result = apiInstance.getContact(id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DataApi#getContact");
@@ -87,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StudentContactResponse**](StudentContactResponse.md)
+[**ContactResponse**](ContactResponse.md)
 
 ### Authorization
 
@@ -100,7 +112,7 @@ Name | Type | Description  | Notes
 
 <a name="getContacts"></a>
 # **getContacts**
-> StudentContactsResponse getContacts(limit, startingAfter, endingBefore)
+> ContactsResponse getContacts(limit, startingAfter, endingBefore)
 
 
 
@@ -126,7 +138,7 @@ Integer limit = 56; // Integer |
 String startingAfter = "startingAfter_example"; // String | 
 String endingBefore = "endingBefore_example"; // String | 
 try {
-    StudentContactsResponse result = apiInstance.getContacts(limit, startingAfter, endingBefore);
+    ContactsResponse result = apiInstance.getContacts(limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DataApi#getContacts");
@@ -144,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StudentContactsResponse**](StudentContactsResponse.md)
+[**ContactsResponse**](ContactsResponse.md)
 
 ### Authorization
 
@@ -157,7 +169,7 @@ Name | Type | Description  | Notes
 
 <a name="getContactsForStudent"></a>
 # **getContactsForStudent**
-> StudentContactsForStudentResponse getContactsForStudent(id, limit)
+> ContactsResponse getContactsForStudent(id, limit, startingAfter, endingBefore)
 
 
 
@@ -181,8 +193,10 @@ oauth.setAccessToken("YOUR ACCESS TOKEN");
 DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 Integer limit = 56; // Integer | 
+String startingAfter = "startingAfter_example"; // String | 
+String endingBefore = "endingBefore_example"; // String | 
 try {
-    StudentContactsForStudentResponse result = apiInstance.getContactsForStudent(id, limit);
+    ContactsResponse result = apiInstance.getContactsForStudent(id, limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DataApi#getContactsForStudent");
@@ -196,10 +210,175 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **limit** | **Integer**|  | [optional]
+ **startingAfter** | **String**|  | [optional]
+ **endingBefore** | **String**|  | [optional]
 
 ### Return type
 
-[**StudentContactsForStudentResponse**](StudentContactsForStudentResponse.md)
+[**ContactsResponse**](ContactsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCourse"></a>
+# **getCourse**
+> CourseResponse getCourse(id)
+
+
+
+Returns a specific course
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+try {
+    CourseResponse result = apiInstance.getCourse(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getCourse");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**CourseResponse**](CourseResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCourseForSection"></a>
+# **getCourseForSection**
+> CourseResponse getCourseForSection(id)
+
+
+
+Returns the course for a section
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+try {
+    CourseResponse result = apiInstance.getCourseForSection(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getCourseForSection");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**CourseResponse**](CourseResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCourses"></a>
+# **getCourses**
+> CoursesResponse getCourses(limit, startingAfter, endingBefore)
+
+
+
+Returns a list of courses
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+Integer limit = 56; // Integer | 
+String startingAfter = "startingAfter_example"; // String | 
+String endingBefore = "endingBefore_example"; // String | 
+try {
+    CoursesResponse result = apiInstance.getCourses(limit, startingAfter, endingBefore);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getCourses");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**|  | [optional]
+ **startingAfter** | **String**|  | [optional]
+ **endingBefore** | **String**|  | [optional]
+
+### Return type
+
+[**CoursesResponse**](CoursesResponse.md)
 
 ### Authorization
 
@@ -318,7 +497,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictAdmins"></a>
 # **getDistrictAdmins**
-> DistrictAdminsResponse getDistrictAdmins(startingAfter, endingBefore)
+> DistrictAdminsResponse getDistrictAdmins(limit, startingAfter, endingBefore)
 
 
 
@@ -340,10 +519,11 @@ OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
 oauth.setAccessToken("YOUR ACCESS TOKEN");
 
 DataApi apiInstance = new DataApi();
+Integer limit = 56; // Integer | 
 String startingAfter = "startingAfter_example"; // String | 
 String endingBefore = "endingBefore_example"; // String | 
 try {
-    DistrictAdminsResponse result = apiInstance.getDistrictAdmins(startingAfter, endingBefore);
+    DistrictAdminsResponse result = apiInstance.getDistrictAdmins(limit, startingAfter, endingBefore);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DataApi#getDistrictAdmins");
@@ -355,12 +535,172 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**|  | [optional]
  **startingAfter** | **String**|  | [optional]
  **endingBefore** | **String**|  | [optional]
 
 ### Return type
 
 [**DistrictAdminsResponse**](DistrictAdminsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getDistrictForContact"></a>
+# **getDistrictForContact**
+> DistrictResponse getDistrictForContact(id)
+
+
+
+Returns the district for a student contact
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+try {
+    DistrictResponse result = apiInstance.getDistrictForContact(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getDistrictForContact");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**DistrictResponse**](DistrictResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getDistrictForCourse"></a>
+# **getDistrictForCourse**
+> DistrictResponse getDistrictForCourse(id)
+
+
+
+Returns the district for a course
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+try {
+    DistrictResponse result = apiInstance.getDistrictForCourse(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getDistrictForCourse");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**DistrictResponse**](DistrictResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getDistrictForDistrictAdmin"></a>
+# **getDistrictForDistrictAdmin**
+> DistrictResponse getDistrictForDistrictAdmin(id)
+
+
+
+Returns the district for a district admin
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+try {
+    DistrictResponse result = apiInstance.getDistrictForDistrictAdmin(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getDistrictForDistrictAdmin");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**DistrictResponse**](DistrictResponse.md)
 
 ### Authorization
 
@@ -401,6 +741,59 @@ try {
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DataApi#getDistrictForSchool");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**DistrictResponse**](DistrictResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getDistrictForSchoolAdmin"></a>
+# **getDistrictForSchoolAdmin**
+> DistrictResponse getDistrictForSchoolAdmin(id)
+
+
+
+Returns the district for a school admin
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+try {
+    DistrictResponse result = apiInstance.getDistrictForSchoolAdmin(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getDistrictForSchoolAdmin");
     e.printStackTrace();
 }
 ```
@@ -530,59 +923,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getDistrictForStudentContact"></a>
-# **getDistrictForStudentContact**
-> DistrictResponse getDistrictForStudentContact(id)
-
-
-
-Returns the district for a student contact
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DataApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth
-OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-oauth.setAccessToken("YOUR ACCESS TOKEN");
-
-DataApi apiInstance = new DataApi();
-String id = "id_example"; // String | 
-try {
-    DistrictResponse result = apiInstance.getDistrictForStudentContact(id);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DataApi#getDistrictForStudentContact");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
-
-### Return type
-
-[**DistrictResponse**](DistrictResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a name="getDistrictForTeacher"></a>
 # **getDistrictForTeacher**
 > DistrictResponse getDistrictForTeacher(id)
@@ -636,13 +976,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getDistrictStatus"></a>
-# **getDistrictStatus**
-> DistrictStatusResponses getDistrictStatus(id)
+<a name="getDistrictForTerm"></a>
+# **getDistrictForTerm**
+> DistrictResponse getDistrictForTerm(id)
 
 
 
-Returns the status of the district
+Returns the district for a term
 
 ### Example
 ```java
@@ -662,10 +1002,10 @@ oauth.setAccessToken("YOUR ACCESS TOKEN");
 DataApi apiInstance = new DataApi();
 String id = "id_example"; // String | 
 try {
-    DistrictStatusResponses result = apiInstance.getDistrictStatus(id);
+    DistrictResponse result = apiInstance.getDistrictForTerm(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DataApi#getDistrictStatus");
+    System.err.println("Exception when calling DataApi#getDistrictForTerm");
     e.printStackTrace();
 }
 ```
@@ -678,7 +1018,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DistrictStatusResponses**](DistrictStatusResponses.md)
+[**DistrictResponse**](DistrictResponse.md)
 
 ### Authorization
 
@@ -728,59 +1068,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**DistrictsResponse**](DistrictsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getGradeLevelsForTeacher"></a>
-# **getGradeLevelsForTeacher**
-> GradeLevelsResponse getGradeLevelsForTeacher(id)
-
-
-
-Returns the grade levels for sections a teacher teaches
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DataApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth
-OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-oauth.setAccessToken("YOUR ACCESS TOKEN");
-
-DataApi apiInstance = new DataApi();
-String id = "id_example"; // String | 
-try {
-    GradeLevelsResponse result = apiInstance.getGradeLevelsForTeacher(id);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DataApi#getGradeLevelsForTeacher");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
-
-### Return type
-
-[**GradeLevelsResponse**](GradeLevelsResponse.md)
 
 ### Authorization
 
@@ -1229,6 +1516,124 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="getSchoolsForStudent"></a>
+# **getSchoolsForStudent**
+> SchoolsResponse getSchoolsForStudent(id, limit, startingAfter, endingBefore)
+
+
+
+Returns the schools for a student
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+Integer limit = 56; // Integer | 
+String startingAfter = "startingAfter_example"; // String | 
+String endingBefore = "endingBefore_example"; // String | 
+try {
+    SchoolsResponse result = apiInstance.getSchoolsForStudent(id, limit, startingAfter, endingBefore);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getSchoolsForStudent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+ **limit** | **Integer**|  | [optional]
+ **startingAfter** | **String**|  | [optional]
+ **endingBefore** | **String**|  | [optional]
+
+### Return type
+
+[**SchoolsResponse**](SchoolsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getSchoolsForTeacher"></a>
+# **getSchoolsForTeacher**
+> SchoolsResponse getSchoolsForTeacher(id, limit, startingAfter, endingBefore)
+
+
+
+Returns the schools for a teacher
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+Integer limit = 56; // Integer | 
+String startingAfter = "startingAfter_example"; // String | 
+String endingBefore = "endingBefore_example"; // String | 
+try {
+    SchoolsResponse result = apiInstance.getSchoolsForTeacher(id, limit, startingAfter, endingBefore);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getSchoolsForTeacher");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+ **limit** | **Integer**|  | [optional]
+ **startingAfter** | **String**|  | [optional]
+ **endingBefore** | **String**|  | [optional]
+
+### Return type
+
+[**SchoolsResponse**](SchoolsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="getSection"></a>
 # **getSection**
 > SectionResponse getSection(id)
@@ -1322,6 +1727,65 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**|  | [optional]
+ **startingAfter** | **String**|  | [optional]
+ **endingBefore** | **String**|  | [optional]
+
+### Return type
+
+[**SectionsResponse**](SectionsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getSectionsForCourse"></a>
+# **getSectionsForCourse**
+> SectionsResponse getSectionsForCourse(id, limit, startingAfter, endingBefore)
+
+
+
+Returns the sections for a Courses
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+Integer limit = 56; // Integer | 
+String startingAfter = "startingAfter_example"; // String | 
+String endingBefore = "endingBefore_example"; // String | 
+try {
+    SectionsResponse result = apiInstance.getSectionsForCourse(id, limit, startingAfter, endingBefore);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getSectionsForCourse");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
  **limit** | **Integer**|  | [optional]
  **startingAfter** | **String**|  | [optional]
  **endingBefore** | **String**|  | [optional]
@@ -1516,6 +1980,65 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="getSectionsForTerm"></a>
+# **getSectionsForTerm**
+> SectionsResponse getSectionsForTerm(id, limit, startingAfter, endingBefore)
+
+
+
+Returns the sections for a term
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+Integer limit = 56; // Integer | 
+String startingAfter = "startingAfter_example"; // String | 
+String endingBefore = "endingBefore_example"; // String | 
+try {
+    SectionsResponse result = apiInstance.getSectionsForTerm(id, limit, startingAfter, endingBefore);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getSectionsForTerm");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+ **limit** | **Integer**|  | [optional]
+ **startingAfter** | **String**|  | [optional]
+ **endingBefore** | **String**|  | [optional]
+
+### Return type
+
+[**SectionsResponse**](SectionsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="getStudent"></a>
 # **getStudent**
 > StudentResponse getStudent(id)
@@ -1546,59 +2069,6 @@ try {
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DataApi#getStudent");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
-
-### Return type
-
-[**StudentResponse**](StudentResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getStudentForContact"></a>
-# **getStudentForContact**
-> StudentResponse getStudentForContact(id)
-
-
-
-Returns the student for a student contact
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DataApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth
-OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
-oauth.setAccessToken("YOUR ACCESS TOKEN");
-
-DataApi apiInstance = new DataApi();
-String id = "id_example"; // String | 
-try {
-    StudentResponse result = apiInstance.getStudentForContact(id);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DataApi#getStudentForContact");
     e.printStackTrace();
 }
 ```
@@ -1662,6 +2132,65 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**|  | [optional]
+ **startingAfter** | **String**|  | [optional]
+ **endingBefore** | **String**|  | [optional]
+
+### Return type
+
+[**StudentsResponse**](StudentsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getStudentsForContact"></a>
+# **getStudentsForContact**
+> StudentsResponse getStudentsForContact(id, limit, startingAfter, endingBefore)
+
+
+
+Returns the students for a student contact
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+Integer limit = 56; // Integer | 
+String startingAfter = "startingAfter_example"; // String | 
+String endingBefore = "endingBefore_example"; // String | 
+try {
+    StudentsResponse result = apiInstance.getStudentsForContact(id, limit, startingAfter, endingBefore);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getStudentsForContact");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
  **limit** | **Integer**|  | [optional]
  **startingAfter** | **String**|  | [optional]
  **endingBefore** | **String**|  | [optional]
@@ -2186,6 +2715,169 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TeachersResponse**](TeachersResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getTerm"></a>
+# **getTerm**
+> TermResponse getTerm(id)
+
+
+
+Returns a specific term
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+try {
+    TermResponse result = apiInstance.getTerm(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getTerm");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**TermResponse**](TermResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getTermForSection"></a>
+# **getTermForSection**
+> TermResponse getTermForSection(id)
+
+
+
+Returns the term for a section
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+String id = "id_example"; // String | 
+try {
+    TermResponse result = apiInstance.getTermForSection(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getTermForSection");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**TermResponse**](TermResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getTerms"></a>
+# **getTerms**
+> TermsResponse getTerms(limit, startingAfter, endingBefore)
+
+
+
+Returns a list of terms
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.DataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth
+OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
+oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+DataApi apiInstance = new DataApi();
+Integer limit = 56; // Integer | 
+String startingAfter = "startingAfter_example"; // String | 
+String endingBefore = "endingBefore_example"; // String | 
+try {
+    TermsResponse result = apiInstance.getTerms(limit, startingAfter, endingBefore);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DataApi#getTerms");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**|  | [optional]
+ **startingAfter** | **String**|  | [optional]
+ **endingBefore** | **String**|  | [optional]
+
+### Return type
+
+[**TermsResponse**](TermsResponse.md)
 
 ### Authorization
 
