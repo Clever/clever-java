@@ -4,3 +4,4 @@
 cp build.sbt ../build.sbt
 cp pom.xml ../pom.xml
 cp JSON.java ../src/main/java/io/swagger/client/JSON.java
+cp EventsApiClassTest.java ../src/test/java/io/swagger/client/api/EventsApiClassTest.java
