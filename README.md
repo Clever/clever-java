@@ -61,16 +61,18 @@ public void processEvents(DefaultApi api) {
 
 3. Install Java and Maven
 
-4. Consider removing existing files from `docs/` and `src/` before regenerating files
+4. Are you removing some old models? Consider removing existing files from `docs/` and `src/` before regenerating files
 
-5. Consider override files that need to be updated in `override/`, including the client version in `override/pom/xml`
+5. Are you adding new event types? Consider override files that need to be updated in `override/`
 
-6. In the root directory of the swagger repo run:
+6. Update the client version in `override/pom.xml`
+
+7. In the root directory of the swagger repo run:
 ```
 java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i $PATH_TO_SWAGGER_API_REPO/v2.0-client.yml -l java -o $PATH_TO_THIS_REPO
 ```
 
-7. Package the JAR
+8. Package the JAR
 
 ```
 make build
