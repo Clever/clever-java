@@ -40,7 +40,7 @@ public class EventsApiTest {
     @Test
     public void getEventsClassTest() throws ApiException {
         OAuth oauth = (OAuth) client.getAuthentication("oauth");
-        oauth.setAccessToken("DEMO_EVENTS_TOKEN");
+        oauth.setAccessToken("TEST_TOKEN");
         Integer limit = 1;
         String startingAfter = null;
         String endingBefore = null;
