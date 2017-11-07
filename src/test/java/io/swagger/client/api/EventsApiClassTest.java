@@ -32,7 +32,7 @@ import java.util.Map;
 /**
  * API tests for EventsApi
  */
-public class EventsApiTest {
+public class EventsApiClassTest {
 
     private final ApiClient client = Configuration.getDefaultApiClient();
     private final EventsApi api = new EventsApi();
