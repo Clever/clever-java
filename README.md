@@ -83,12 +83,31 @@ That will put the jar in: `target/client-X.Y.Z.jar`
 
 ## Publishing
 
-To publish this library first set up your settings.xml (~/.m2/settings.xml) as described here: http://central.sonatype.org/pages/apache-maven.html. In particular setting up the ossrh profile using the clever-eng username / password and setting up the GPG profile with the security@clever.com PGP key.
+To publish this library you need to have a `~/.m2/settings.xml` file that looks like this:
+```
+<settings>
+  <servers>
+    <server>
+      <id>ossrh</id>
+      <username>clever-eng</username>
+      <password>SEE-1PASSWORD-FOR-TEAMS</password>
+    </server>
+  </servers>
+</settings>
+```
+You can get the password from 1PFT under `Sonatype - Maven Repository`.
+
+You will also need the PGP private key and passphrase for security@clever.com (ask the Security team for this!). Download the private key and set up as follows:
+```
+gpg --import private.security.key
+```
 
 Then run:
 ```
 make release
 ```
+
+You will need to enter the PGP passphrase 5 times during the process.
 
 This will deploy to: https://oss.sonatype.org/content/groups/public/com/clever/client/
 
