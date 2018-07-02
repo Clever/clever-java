@@ -66,12 +66,13 @@ public class EventsApi {
      */
     public com.squareup.okhttp.Call getEventCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/events/{id}"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -102,9 +103,9 @@ public class EventsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getEventValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -113,14 +114,10 @@ public class EventsApi {
             throw new ApiException("Missing the required parameter 'id' when calling getEvent(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getEventCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -194,17 +191,18 @@ public class EventsApi {
      */
     public com.squareup.okhttp.Call getEventsCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/events";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -235,20 +233,16 @@ public class EventsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getEventsValidateBeforeCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        
+
         com.squareup.okhttp.Call call = getEventsCall(limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -329,18 +323,19 @@ public class EventsApi {
      */
     public com.squareup.okhttp.Call getEventsForSchoolCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/schools/{id}/events"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -371,9 +366,9 @@ public class EventsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getEventsForSchoolValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -382,14 +377,10 @@ public class EventsApi {
             throw new ApiException("Missing the required parameter 'id' when calling getEventsForSchool(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getEventsForSchoolCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -473,18 +464,19 @@ public class EventsApi {
      */
     public com.squareup.okhttp.Call getEventsForSchoolAdminCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/school_admins/{id}/events"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -515,9 +507,9 @@ public class EventsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getEventsForSchoolAdminValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -526,14 +518,10 @@ public class EventsApi {
             throw new ApiException("Missing the required parameter 'id' when calling getEventsForSchoolAdmin(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getEventsForSchoolAdminCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -617,18 +605,19 @@ public class EventsApi {
      */
     public com.squareup.okhttp.Call getEventsForSectionCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/sections/{id}/events"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -659,9 +648,9 @@ public class EventsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getEventsForSectionValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -670,14 +659,10 @@ public class EventsApi {
             throw new ApiException("Missing the required parameter 'id' when calling getEventsForSection(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getEventsForSectionCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -761,18 +746,19 @@ public class EventsApi {
      */
     public com.squareup.okhttp.Call getEventsForStudentCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/students/{id}/events"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -803,9 +789,9 @@ public class EventsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getEventsForStudentValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -814,14 +800,10 @@ public class EventsApi {
             throw new ApiException("Missing the required parameter 'id' when calling getEventsForStudent(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getEventsForStudentCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -905,18 +887,19 @@ public class EventsApi {
      */
     public com.squareup.okhttp.Call getEventsForTeacherCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/teachers/{id}/events"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -947,9 +930,9 @@ public class EventsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getEventsForTeacherValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -958,14 +941,10 @@ public class EventsApi {
             throw new ApiException("Missing the required parameter 'id' when calling getEventsForTeacher(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getEventsForTeacherCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**

@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * SchoolsUpdated
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-04T15:10:30.801Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-02T16:50:27.930-07:00")
 public class SchoolsUpdated extends Event {
   @SerializedName("data")
   private SchoolObject data = null;
@@ -91,6 +91,6 @@ public class SchoolsUpdated extends Event {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

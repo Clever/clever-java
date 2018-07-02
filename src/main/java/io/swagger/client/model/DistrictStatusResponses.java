@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * DistrictStatusResponses
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-04T15:10:30.801Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-02T16:50:27.930-07:00")
 public class DistrictStatusResponses {
   @SerializedName("data")
   private List<DistrictStatusResponse> data = null;
@@ -99,6 +99,6 @@ public class DistrictStatusResponses {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

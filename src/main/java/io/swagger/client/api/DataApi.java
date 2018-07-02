@@ -83,12 +83,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getContactCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/contacts/{id}"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -119,9 +120,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getContactValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -130,14 +131,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getContact(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getContactCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -211,17 +208,18 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getContactsCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/contacts";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -252,20 +250,16 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getContactsValidateBeforeCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        
+
         com.squareup.okhttp.Call call = getContactsCall(limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -344,14 +338,15 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getContactsForStudentCall(String id, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/students/{id}/contacts"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -382,9 +377,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getContactsForStudentValidateBeforeCall(String id, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -393,14 +388,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getContactsForStudent(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getContactsForStudentCall(id, limit, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -475,12 +466,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getDistrictCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/districts/{id}"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -511,9 +503,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getDistrictValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -522,14 +514,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getDistrict(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getDistrictCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -601,12 +589,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getDistrictAdminCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/district_admins/{id}"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -637,9 +626,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getDistrictAdminValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -648,14 +637,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getDistrictAdmin(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getDistrictAdminCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -728,15 +713,16 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getDistrictAdminsCall(String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/district_admins";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -767,20 +753,16 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getDistrictAdminsValidateBeforeCall(String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        
+
         com.squareup.okhttp.Call call = getDistrictAdminsCall(startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -855,12 +837,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getDistrictForSchoolCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/schools/{id}/district"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -891,9 +874,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getDistrictForSchoolValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -902,14 +885,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getDistrictForSchool(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getDistrictForSchoolCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -981,12 +960,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getDistrictForSectionCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/sections/{id}/district"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1017,9 +997,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getDistrictForSectionValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -1028,14 +1008,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getDistrictForSection(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getDistrictForSectionCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -1107,12 +1083,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getDistrictForStudentCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/students/{id}/district"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1143,9 +1120,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getDistrictForStudentValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -1154,14 +1131,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getDistrictForStudent(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getDistrictForStudentCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -1233,12 +1206,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getDistrictForStudentContactCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/contacts/{id}/district"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1269,9 +1243,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getDistrictForStudentContactValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -1280,14 +1254,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getDistrictForStudentContact(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getDistrictForStudentContactCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -1359,12 +1329,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getDistrictForTeacherCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/teachers/{id}/district"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1395,9 +1366,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getDistrictForTeacherValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -1406,14 +1377,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getDistrictForTeacher(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getDistrictForTeacherCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -1485,12 +1452,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getDistrictStatusCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/districts/{id}/status"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1521,9 +1489,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getDistrictStatusValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -1532,14 +1500,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getDistrictStatus(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getDistrictStatusCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -1610,11 +1574,12 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getDistrictsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/districts";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1645,20 +1610,16 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getDistrictsValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        
+
         com.squareup.okhttp.Call call = getDistrictsCall(progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -1727,12 +1688,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getGradeLevelsForTeacherCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/teachers/{id}/grade_levels"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1763,9 +1725,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getGradeLevelsForTeacherValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -1774,14 +1736,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getGradeLevelsForTeacher(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getGradeLevelsForTeacherCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -1853,12 +1811,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSchoolCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/schools/{id}"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1889,9 +1848,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSchoolValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -1900,14 +1859,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getSchool(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getSchoolCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -1979,12 +1934,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSchoolAdminCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/school_admins/{id}"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -2015,9 +1971,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSchoolAdminValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -2026,14 +1982,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getSchoolAdmin(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getSchoolAdminCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -2107,17 +2059,18 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSchoolAdminsCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/school_admins";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -2148,20 +2101,16 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSchoolAdminsValidateBeforeCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        
+
         com.squareup.okhttp.Call call = getSchoolAdminsCall(limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -2239,12 +2188,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSchoolForSectionCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/sections/{id}/school"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -2275,9 +2225,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSchoolForSectionValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -2286,14 +2236,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getSchoolForSection(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getSchoolForSectionCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -2365,12 +2311,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSchoolForStudentCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/students/{id}/school"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -2401,9 +2348,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSchoolForStudentValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -2412,14 +2359,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getSchoolForStudent(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getSchoolForStudentCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -2491,12 +2434,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSchoolForTeacherCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/teachers/{id}/school"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -2527,9 +2471,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSchoolForTeacherValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -2538,14 +2482,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getSchoolForTeacher(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getSchoolForTeacherCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -2619,17 +2559,18 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSchoolsCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/schools";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -2660,20 +2601,16 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSchoolsValidateBeforeCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        
+
         com.squareup.okhttp.Call call = getSchoolsCall(limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -2754,18 +2691,19 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSchoolsForSchoolAdminCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/school_admins/{id}/schools"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -2796,9 +2734,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSchoolsForSchoolAdminValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -2807,14 +2745,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getSchoolsForSchoolAdmin(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getSchoolsForSchoolAdminCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -2895,12 +2829,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSectionCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/sections/{id}"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -2931,9 +2866,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSectionValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -2942,14 +2877,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getSection(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getSectionCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -3023,17 +2954,18 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSectionsCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/sections";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -3064,20 +2996,16 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSectionsValidateBeforeCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        
+
         com.squareup.okhttp.Call call = getSectionsCall(limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -3158,18 +3086,19 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSectionsForSchoolCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/schools/{id}/sections"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -3200,9 +3129,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSectionsForSchoolValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -3211,14 +3140,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getSectionsForSchool(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getSectionsForSchoolCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -3302,18 +3227,19 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSectionsForStudentCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/students/{id}/sections"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -3344,9 +3270,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSectionsForStudentValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -3355,14 +3281,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getSectionsForStudent(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getSectionsForStudentCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -3446,18 +3368,19 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getSectionsForTeacherCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/teachers/{id}/sections"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -3488,9 +3411,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getSectionsForTeacherValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -3499,14 +3422,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getSectionsForTeacher(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getSectionsForTeacherCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -3587,12 +3506,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getStudentCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/students/{id}"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -3623,9 +3543,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getStudentValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -3634,14 +3554,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getStudent(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getStudentCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -3713,12 +3629,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getStudentForContactCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/contacts/{id}/student"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -3749,9 +3666,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getStudentForContactValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -3760,14 +3677,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getStudentForContact(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getStudentForContactCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -3841,17 +3754,18 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getStudentsCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/students";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -3882,20 +3796,16 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getStudentsValidateBeforeCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        
+
         com.squareup.okhttp.Call call = getStudentsCall(limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -3976,18 +3886,19 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getStudentsForSchoolCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/schools/{id}/students"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -4018,9 +3929,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getStudentsForSchoolValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -4029,14 +3940,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getStudentsForSchool(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getStudentsForSchoolCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -4120,18 +4027,19 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getStudentsForSectionCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/sections/{id}/students"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -4162,9 +4070,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getStudentsForSectionValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -4173,14 +4081,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getStudentsForSection(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getStudentsForSectionCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -4264,18 +4168,19 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getStudentsForTeacherCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/teachers/{id}/students"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -4306,9 +4211,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getStudentsForTeacherValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -4317,14 +4222,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getStudentsForTeacher(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getStudentsForTeacherCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -4405,12 +4306,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getTeacherCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/teachers/{id}"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -4441,9 +4343,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getTeacherValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -4452,14 +4354,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getTeacher(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getTeacherCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -4531,12 +4429,13 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getTeacherForSectionCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/sections/{id}/teacher"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -4567,9 +4466,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getTeacherForSectionValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -4578,14 +4477,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getTeacherForSection(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getTeacherForSectionCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -4659,17 +4554,18 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getTeachersCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/teachers";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -4700,20 +4596,16 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getTeachersValidateBeforeCall(Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        
+
         com.squareup.okhttp.Call call = getTeachersCall(limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -4794,18 +4686,19 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getTeachersForSchoolCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/schools/{id}/teachers"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -4836,9 +4729,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getTeachersForSchoolValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -4847,14 +4740,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getTeachersForSchool(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getTeachersForSchoolCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -4938,18 +4827,19 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getTeachersForSectionCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/sections/{id}/teachers"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -4980,9 +4870,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getTeachersForSectionValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -4991,14 +4881,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getTeachersForSection(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getTeachersForSectionCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -5082,18 +4968,19 @@ public class DataApi {
      */
     public com.squareup.okhttp.Call getTeachersForStudentCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/students/{id}/teachers"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (startingAfter != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "starting_after", startingAfter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
         if (endingBefore != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ending_before", endingBefore));
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -5124,9 +5011,9 @@ public class DataApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getTeachersForStudentValidateBeforeCall(String id, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -5135,14 +5022,10 @@ public class DataApi {
             throw new ApiException("Missing the required parameter 'id' when calling getTeachersForStudent(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getTeachersForStudentCall(id, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**

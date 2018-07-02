@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * Term
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-04T15:10:30.801Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-02T16:50:27.930-07:00")
 public class Term {
   @SerializedName("end_date")
   private String endDate = null;
@@ -134,6 +134,6 @@ public class Term {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 
