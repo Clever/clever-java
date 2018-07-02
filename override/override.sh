@@ -1,6 +1,9 @@
-# Note that these files are based off the files in:
-# https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen/src/main/resources/Java/libraries/okhttp-gson
+cp override/EventsApiClassTest.java src/test/java/io/swagger/client/api/EventsApiClassTest.java
 
-cp build.sbt ../build.sbt
-cp pom.xml ../pom.xml
-cp JSON.java ../src/main/java/io/swagger/client/JSON.java
+if [ "$(uname)" == "Darwin" ]; then
+    # Do something under Mac OS X platform
+    sed -i "" 's/<name>client<\/name>/<name>Clever Java Client<\/name>/g' pom.xml
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    # Do something under GNU/Linux platform
+    sed -i"" 's/<name>client<\/name>/<name>Clever Java Client<\/name>/g' pom.xml
+fi
