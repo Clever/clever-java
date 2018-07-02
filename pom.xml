@@ -4,7 +4,7 @@
     <groupId>com.clever</groupId>
     <artifactId>client</artifactId>
     <packaging>jar</packaging>
-    <name>client</name>
+    <name>Clever Java Client</name>
     <version>0.3.5</version>
     <url>http://www.clever.com</url>
     <description>Client Library for the Clever API</description>
