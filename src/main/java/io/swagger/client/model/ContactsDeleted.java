@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * ContactsDeleted
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-02T23:26:03.472Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-01T21:58:05.926-07:00")
 public class ContactsDeleted extends Event {
   @SerializedName("data")
   private ContactObject data = null;
