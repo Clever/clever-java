@@ -66,7 +66,7 @@ public class EventsApi {
      */
     public com.squareup.okhttp.Call getEventCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/events/{id}"
             .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
@@ -105,7 +105,7 @@ public class EventsApi {
         String[] localVarAuthNames = new String[] { "oauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getEventValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -114,14 +114,10 @@ public class EventsApi {
             throw new ApiException("Missing the required parameter 'id' when calling getEvent(Async)");
         }
         
-        
+
         com.squareup.okhttp.Call call = getEventCall(id, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**
@@ -197,7 +193,7 @@ public class EventsApi {
      */
     public com.squareup.okhttp.Call getEventsCall(Integer limit, String startingAfter, String endingBefore, String school, List<String> recordType, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-        
+
         // create path and map variables
         String localVarPath = "/events";
 
@@ -245,18 +241,14 @@ public class EventsApi {
         String[] localVarAuthNames = new String[] { "oauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-    
+
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getEventsValidateBeforeCall(Integer limit, String startingAfter, String endingBefore, String school, List<String> recordType, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        
+
         com.squareup.okhttp.Call call = getEventsCall(limit, startingAfter, endingBefore, school, recordType, progressListener, progressRequestListener);
         return call;
 
-        
-        
-        
-        
     }
 
     /**

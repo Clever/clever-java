@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * Student
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-02T23:26:03.472Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-01T21:58:05.926-07:00")
 public class Student {
   @SerializedName("created")
   private String created = null;
@@ -370,7 +370,7 @@ public class Student {
     
     TAMIL("Tamil"),
     
-    TELEGU("Telegu"),
+    TELUGU("Telugu"),
     
     THAI("Thai"),
     
