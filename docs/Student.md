@@ -123,7 +123,7 @@ SPANISH | &quot;Spanish&quot;
 SWAHILI | &quot;Swahili&quot;
 TAGALOG | &quot;Tagalog&quot;
 TAMIL | &quot;Tamil&quot;
-TELEGU | &quot;Telegu&quot;
+TELUGU | &quot;Telugu&quot;
 THAI | &quot;Thai&quot;
 TIGRINYA | &quot;Tigrinya&quot;
 TURKISH | &quot;Turkish&quot;
