@@ -16,12 +16,15 @@ jobs:
     - run:
         command: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
         name: Set up CircleCI artifacts directories
+    - run: sudo apt-get update
+    - run:
+        command: sudo apt-get install -y maven
+        name: Install maven
     - run: make build
     - run: make test
     - run:
         command: |-
           cd /tmp/ && wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
-          sudo apt-get update
           sudo apt-get install python-dev
           sudo pip install --upgrade awscli && aws --version
           pip install --upgrade --user awscli
