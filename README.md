@@ -45,7 +45,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 import io.swagger.client.ApiClient;
 import io.swagger.client.ApiException;
 import io.swagger.client.Configuration;
-import io.swagger.client.api.DefaultApi;
+import io.swagger.client.api.DataApi;
 import io.swagger.client.auth.OAuth;
 import io.swagger.client.model.*;
 
@@ -60,7 +60,8 @@ public class CleverAPI {
         OAuth oauth = (OAuth) defaultClient.getAuthentication("oauth");
         oauth.setAccessToken("TEST_TOKEN");
 
-        DefaultApi api = new DefaultApi();
+        DataApi api = new DataApi();
+
         try {
             StudentsResponse students = api.getStudents(10, null, null);
             for (StudentResponse student : students.getData()) {
@@ -77,8 +78,8 @@ public class CleverAPI {
 ### Events Usage
 Since events are polymorphic, we use the type to determine how to cast them. For example:
 ```
-public void processEvents(DefaultApi api) {
-    EventsResponse eventsResponse = api.getEvents(10, null, null);
+public void processEvents(EventsApi api) {
+    EventsResponse eventsResponse = api.getEvents(10, null, null, null, null);
 
     for (EventResponse eventResp : eventsResponse.getData()) {
         if (eventResp.getData().getType() == "students.created") {
