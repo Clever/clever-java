@@ -1,6 +1,6 @@
-# Deprecated
-This project has been deprecated, please see https://github.com/Clever/swagger-api to generate 
-a client library
+# Notice
+
+This library is no longer maintained by Clever, but if you would like to generate your own using the swagger file, it is available at https://github.com/Clever/swagger-api.
 
 Client library for the Clever API
 
