@@ -1,4 +1,6 @@
-# Clever Java Library
+# Deprecated
+This project has been deprecated, please see https://github.com/Clever/swagger-api to generate 
+a client library
 
 Client library for the Clever API
 
